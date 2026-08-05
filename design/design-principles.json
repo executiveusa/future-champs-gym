@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Future Champs Humane Design Principles",
+  "version": "1.0.0",
+  "status": "locked-draft",
+  "purpose": "Guide every human and AI agent producing strategy, copy, brand, interface, code, campaigns, or operations for Future Champs.",
+  "north_star": "Use disciplined design and technology to increase human dignity, agency, belonging, safety, and opportunity while producing verifiable outcomes.",
+  "governance": {
+    "human_control": [
+      "purpose",
+      "ethics",
+      "relationships",
+      "money movement",
+      "legal commitments",
+      "public promises",
+      "youth safety",
+      "production approval",
+      "irreversible actions"
+    ],
+    "ai_leads": [
+      "research synthesis",
+      "systems mapping",
+      "specifications",
+      "prototyping",
+      "implementation",
+      "testing",
+      "documentation",
+      "reversible execution",
+      "risk discovery",
+      "evidence organization"
+    ],
+    "independent_review_required": true,
+    "builder_may_self_approve": false
+  },
+  "humanity": {
+    "design_with_not_for": true,
+    "preserve_voice": true,
+    "withhold_judgment": true,
+    "avoid_deficit_framing": true,
+    "show_people_as_capable": true,
+    "never_use_children_as_emotional_props": true,
+    "consent_required_for_identity_likeness_and_testimony": true,
+    "language_rules": [
+      "Speak plainly and respectfully.",
+      "Describe present reality separately from future vision.",
+      "Use evidence before aspiration.",
+      "Avoid savior language, pity language, hype, and manipulation.",
+      "Write to increase understanding and agency, not dependence."
+    ]
+  },
+  "design_theory": {
+    "blend": [
+      "human-centered design",
+      "systems thinking",
+      "Steve Krug usability",
+      "Collins-style brand clarity and cultural relevance",
+      "editorial luxury restraint",
+      "Awwwards-level craft",
+      "evidence-based nonprofit communications"
+    ],
+    "decision_filter": [
+      "desirable",
+      "feasible",
+      "viable",
+      "safe",
+      "sovereign",
+      "verifiable"
+    ],
+    "ship_rule": "Do not ship when any decision-filter dimension fails.",
+    "hierarchy_rules": [
+      "One primary message per screen.",
+      "One primary action per section.",
+      "Recognition before decoration.",
+      "Clarity before cleverness.",
+      "Structure before styling.",
+      "Typography before effects.",
+      "Real photography before synthetic imagery.",
+      "Remove before adding."
+    ]
+  },
+  "visual_system": {
+    "character": [
+      "disciplined",
+      "hopeful",
+      "institutional",
+      "local",
+      "documentary",
+      "premium",
+      "nonviolent",
+      "youth-safe"
+    ],
+    "palette": {
+      "future_red": "#B31F2B",
+      "championship_black": "#111111",
+      "pure_white": "#FFFFFF",
+      "warm_bone": "#F3EEE7",
+      "steel_gray": "#6D7378",
+      "deep_red": "#75151D"
+    },
+    "typography": {
+      "display": "refined editorial serif",
+      "interface": "neutral modern sans-serif",
+      "utility": "condensed athletic face used sparingly",
+      "max_families": 3,
+      "body_max_width_ch": 65,
+      "minimum_body_px": 16
+    },
+    "forbidden_patterns": [
+      "gradients used as art direction",
+      "glassmorphism",
+      "glowing borders",
+      "excessive rounded cards",
+      "generic icon grids",
+      "template hero layouts",
+      "fake statistics",
+      "fake testimonials",
+      "stock AI portraits",
+      "aggressive boxing imagery",
+      "cannabis imagery in youth-facing materials",
+      "decorative motion without meaning",
+      "raster artwork embedded inside SVG files",
+      "unverified partner or tax claims"
+    ]
+  },
+  "copy_system": {
+    "voice": [
+      "grounded",
+      "dignified",
+      "direct",
+      "encouraging",
+      "specific",
+      "never patronizing"
+    ],
+    "formula": "human truth + specific action + verified status + clear next step",
+    "prohibited": [
+      "grandiose claims",
+      "guaranteed outcomes",
+      "poverty porn",
+      "trauma extraction",
+      "AI filler",
+      "generic empowerment language without evidence",
+      "tax-deductibility language before approval"
+    ]
+  },
+  "operating_rules": {
+    "portfolio_limit": 3,
+    "active_workstreams": [
+      "one revenue offer",
+      "one shared platform",
+      "one bounded experiment"
+    ],
+    "new_work_must_replace_existing": true,
+    "inspect_before_change": true,
+    "reuse_before_add": true,
+    "specify_before_build": true,
+    "one_verifiable_slice_at_a_time": true,
+    "rollback_required": true,
+    "secrets_forbidden_in_repo": true,
+    "production_requires_evidence": true
+  },
+  "quality_gate": {
+    "minimum_overall_score": 8.5,
+    "minimum_category_score": 7.5,
+    "categories": [
+      "human value",
+      "clarity",
+      "brand consistency",
+      "usability",
+      "mobile",
+      "accessibility",
+      "content integrity",
+      "performance",
+      "security",
+      "sovereignty"
+    ]
+  },
+  "agent_behavior": {
+    "on_entry": [
+      "Read AGENTS.md.",
+      "Read 00_CONTEXT/PROJECT_STATE.md.",
+      "Run or review beads ready work.",
+      "Record an entry note in the agent log.",
+      "State the current stage, intended outcome, constraints, and proof before changing files."
+    ],
+    "during_work": [
+      "Load only stage-relevant context.",
+      "Keep evidence, inference, and aspiration separate.",
+      "Avoid broad rewrites when a surgical change will work.",
+      "Update the project state when facts change."
+    ],
+    "on_exit": [
+      "Record changed files and decisions.",
+      "Record tests and evidence.",
+      "Record unresolved risks and the single next action.",
+      "Update or close beads tasks.",
+      "Leave the repository easier for the next agent to understand."
+    ]
+  }
+}
