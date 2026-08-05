@@ -1,0 +1,44 @@
+{
+  "project": "Future Champs",
+  "publication": "The Corner",
+  "mode": "brownfield",
+  "date": "2026-08-04",
+  "company_truth": {
+    "name": {"value": "Future Champs", "confidence": "verified", "safe_for_publication": true},
+    "founder": {"value": "Glenn Singleton Jr.", "confidence": "verified", "safe_for_publication": true},
+    "stage": {"value": "founding stage", "confidence": "verified", "safe_for_publication": true},
+    "service_area": {"value": "Northwest Washington, initially between Arlington and Seattle", "confidence": "verified", "safe_for_publication": true},
+    "master_offer": {"value": "youth boxing and mentorship", "confidence": "verified", "safe_for_publication": true},
+    "pilot": {"value": "The First Five", "confidence": "verified", "safe_for_publication": true},
+    "fundraiser": {"value": "A Taste of Nawlins", "confidence": "verified", "safe_for_publication": true},
+    "permanent_gym": {"value": null, "confidence": "unknown", "safe_for_publication": false},
+    "event_date": {"value": null, "confidence": "unknown", "safe_for_publication": false},
+    "food_prices": {"value": null, "confidence": "unknown", "safe_for_publication": false},
+    "fiscal_sponsor": {"value": null, "confidence": "unknown", "safe_for_publication": false}
+  },
+  "audiences": [
+    "parents and guardians",
+    "young people and families",
+    "local sponsors",
+    "coaches and mentors",
+    "community partners",
+    "food fundraiser customers"
+  ],
+  "publication_role": "Explain the work, answer real questions, document verified progress, and help the community understand how to participate.",
+  "primary_conversion": "Join the next menu drop or express approved adult interest.",
+  "editorial_principles": [
+    "truth before polish",
+    "people before promotion",
+    "proof before scale",
+    "useful before frequent",
+    "verified claims only",
+    "human approval before publication"
+  ],
+  "brand_platform": {
+    "central_idea": "The Corner",
+    "emotional_promise": "Every young person deserves someone in their corner.",
+    "organizational_line": "Building Champions In and Out of the Ring",
+    "master_family": "red, white, and black institutional championship",
+    "heritage_accent": "restrained gold"
+  }
+}

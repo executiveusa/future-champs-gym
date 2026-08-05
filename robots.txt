@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /content-admin/
+Disallow: /api/content-mcp
+
+Sitemap: https://futurechampsgym.org/sitemap.xml
