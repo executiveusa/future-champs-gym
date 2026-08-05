@@ -6,129 +6,65 @@
   <title>Future Champs | Youth Boxing & Mentorship</title>
   <meta name="description" content="Future Champs is building a youth boxing and mentorship pilot in Northwest Washington, beginning with the A Taste of Nawlins community fundraiser." />
   <style>
-    :root{--red:#b31f2b;--deep:#75151d;--black:#111;--bone:#f3eee7;--white:#fff;--gray:#6d7378;--line:rgba(17,17,17,.15)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bone);color:var(--black);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.serif{font-family:Georgia,"Times New Roman",serif}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:700}.nav{position:sticky;top:0;z-index:20;background:rgba(243,238,231,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:900;letter-spacing:-.04em;font-size:1.15rem}.links{display:flex;gap:24px;font-size:.92rem}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--black);background:var(--black);color:var(--white);border-radius:3px;font-weight:700}.cta.alt{background:transparent;color:var(--black)}.hero{min-height:760px;display:grid;grid-template-columns:1.15fr .85fr;border-bottom:1px solid var(--line)}.hero-copy{padding:110px 7vw 90px max(16px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center}.hero-art{background:var(--red);color:white;display:flex;align-items:flex-end;padding:48px;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border:2px solid rgba(255,255,255,.85);border-radius:50%;width:520px;height:520px;right:-160px;top:80px}.hero-art:after{width:320px;height:320px;right:-60px;top:180px}.hero h1{font-size:clamp(4rem,8vw,8rem);line-height:.88;letter-spacing:-.055em;margin:18px 0 28px;max-width:850px}.hero p{font-size:1.18rem;max-width:680px;color:#2d2d2d}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.status{margin-top:28px;font-size:.86rem;color:#555;max-width:680px}.art-copy{position:relative;z-index:2;max-width:420px}.art-copy h2{font-size:clamp(2.6rem,4.5vw,5rem);line-height:.95;margin:8px 0 0;letter-spacing:-.04em}.section{padding:96px 0;border-bottom:1px solid var(--line)}.section h2{font-size:clamp(2.6rem,5vw,5.4rem);line-height:.96;letter-spacing:-.045em;margin:0 0 24px}.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}.lead{font-size:1.24rem;max-width:760px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}.tile{background:var(--bone);padding:28px;min-height:220px}.tile b{display:block;margin-bottom:14px}.menu-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}.menu-list{border-top:1px solid var(--black)}.menu-item{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}.tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:800}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}.step{border-top:3px solid var(--red);padding-top:18px}.dark{background:var(--black);color:var(--white)}.dark .lead{color:#ddd}.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.2);margin-top:44px}.panel{padding:34px;background:var(--black)}.panel ul{padding-left:18px;color:#ddd}.pathways{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.path{border:1px solid var(--line);padding:26px;min-height:180px;background:rgba(255,255,255,.3)}.milestones{display:grid;gap:12px;margin-top:34px}.mile{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}.state{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--gray)}.form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}.field{display:grid;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:700}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:white;padding:14px;border-radius:2px}.note{font-size:.82rem;color:#666}.footer{padding:46px 0;background:var(--black);color:#fff}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.mobile{display:none}@media(max-width:900px){.links{display:none}.mobile{display:block}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:84px 20px}.hero-art{min-height:420px}.intro,.menu-grid{grid-template-columns:1fr}.grid3,.pathways{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.form{grid-template-columns:1fr}.field.full{grid-column:auto}.section{padding:72px 0}}@media(max-width:560px){.hero h1{font-size:3.8rem}.flow{grid-template-columns:1fr}.hero-art{padding:28px}.section h2{font-size:3rem}}
+    :root{--red:#b31f2b;--black:#111;--bone:#f3eee7;--white:#fff;--gray:#6d7378;--line:rgba(17,17,17,.16)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bone);color:var(--black);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.serif{font-family:Georgia,"Times New Roman",serif}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:800}.nav{position:sticky;top:0;z-index:20;background:rgba(243,238,231,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:900;letter-spacing:-.04em}.links{display:flex;gap:22px;font-size:.92rem}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--black);background:var(--black);color:var(--white);border-radius:3px;font-weight:800;cursor:pointer}.cta.alt{background:transparent;color:var(--black)}.hero{min-height:720px;display:grid;grid-template-columns:1.12fr .88fr;border-bottom:1px solid var(--line)}.hero-copy{padding:100px 7vw 84px max(16px,calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center}.hero-art{background:var(--red);color:white;display:flex;align-items:flex-end;padding:48px;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border:2px solid rgba(255,255,255,.8);border-radius:50%;width:520px;height:520px;right:-160px;top:80px}.hero-art:after{width:320px;height:320px;right:-60px;top:180px}.hero h1{font-size:clamp(4rem,8vw,8rem);line-height:.88;letter-spacing:-.055em;margin:18px 0 28px;max-width:850px}.hero p{font-size:1.18rem;max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.status{margin-top:24px;font-size:.86rem;color:#555}.art-copy{position:relative;z-index:2}.art-copy h2{font-size:clamp(2.6rem,4.5vw,5rem);line-height:.95;margin:8px 0 0;letter-spacing:-.04em}.section{padding:90px 0;border-bottom:1px solid var(--line)}.section h2{font-size:clamp(2.6rem,5vw,5.2rem);line-height:.96;letter-spacing:-.045em;margin:0 0 24px}.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}.lead{font-size:1.22rem;max-width:760px}.menu-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px}.menu-list{border-top:1px solid var(--black)}.menu-item{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}.tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:800}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}.step{border-top:3px solid var(--red);padding-top:18px}.dark{background:var(--black);color:var(--white)}.dark .lead{color:#ddd}.grid3,.pathways{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}.tile,.path{border:1px solid var(--line);padding:26px;min-height:180px}.dark .tile{border-color:rgba(255,255,255,.2)}.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.2);margin-top:40px}.panel{padding:34px;background:var(--black);color:white}.panel ul{padding-left:18px;color:#ddd}.milestones{display:grid;gap:12px;margin-top:34px}.mile{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}.state{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--gray)}.form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}.field{display:grid;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:800}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:white;padding:14px;border-radius:2px}.check{display:flex;gap:10px;align-items:flex-start}.check input{margin-top:4px}.note{font-size:.84rem;color:#666}.success{color:#17633d}.error{color:#8a1c24}.footer{padding:46px 0;background:var(--black);color:#fff}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}@media(max-width:900px){.links{display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:84px 20px}.hero-art{min-height:400px}.intro,.menu-grid{grid-template-columns:1fr}.grid3,.pathways{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.form{grid-template-columns:1fr}.field.full{grid-column:auto}.section{padding:70px 0}}@media(max-width:560px){.hero h1{font-size:3.7rem}.flow{grid-template-columns:1fr}.hero-art{padding:28px}.section h2{font-size:3rem}}
   </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap navin">
-      <a class="brand" href="#top">FUTURE CHAMPS</a>
-      <nav class="links" aria-label="Primary">
-        <a href="#nawlins">Fundraiser</a><a href="#first-five">The First Five</a><a href="#about">About</a><a href="#involved">Get Involved</a><a href="#updates">Updates</a>
-      </nav>
-      <a class="cta" href="#join">Join the Menu Drop</a>
-    </div>
-  </header>
-
+  <header class="nav"><div class="wrap navin"><a class="brand" href="#top">FUTURE CHAMPS</a><nav class="links" aria-label="Primary"><a href="#nawlins">Fundraiser</a><a href="#first-five">The First Five</a><a href="#about">About</a><a href="#involved">Get Involved</a><a href="#updates">Updates</a></nav><a class="cta" href="#join">Join the Menu Drop</a></div></header>
   <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">Founding Stage — Northwest Washington</div>
-        <h1 class="serif">Feed the movement. Build the first five.</h1>
-        <p>A Taste of Nawlins is the first community fundraising engine for Future Champs, an early-stage youth boxing and mentorship initiative being built between Arlington and Seattle.</p>
-        <div class="actions"><a class="cta" href="#join">Join the Next Menu Drop</a><a class="cta alt" href="#first-five">See the First Five</a></div>
-        <p class="status">This is a founder-review V1. Menu, pricing, dates, locations, permits, and program details remain pending final confirmation.</p>
-      </div>
-      <div class="hero-art">
-        <div class="art-copy"><div class="eyebrow">A Taste of Nawlins</div><h2 class="serif">Southern comfort with a purpose.</h2></div>
-      </div>
-    </section>
+    <section class="hero"><div class="hero-copy"><div class="eyebrow">Founding Stage — Northwest Washington</div><h1 class="serif">Feed the movement. Build the first five.</h1><p>A Taste of Nawlins is the first community fundraising engine for Future Champs, an early-stage youth boxing and mentorship initiative being built between Arlington and Seattle.</p><div class="actions"><a class="cta" href="#join">Join the Next Menu Drop</a><a class="cta alt" href="#first-five">See the First Five</a></div><p class="status">Menu, pricing, dates, locations, permits, and program details remain pending final confirmation.</p></div><div class="hero-art"><div class="art-copy"><div class="eyebrow">A Taste of Nawlins</div><h2 class="serif">Southern comfort with a purpose.</h2></div></div></section>
 
-    <section class="section" id="nawlins">
-      <div class="wrap menu-grid">
-        <div>
-          <div class="eyebrow">Portable food fundraiser</div>
-          <h2 class="serif">A kitchen that can move with the community.</h2>
-          <p class="lead">A Taste of Nawlins is being designed as a flexible food concept for scheduled menu drops, pop-ups, pickup days, and later delivery-platform pilots. Follow the schedule to see where the next service will appear.</p>
-        </div>
-        <div class="menu-list" aria-label="Draft menu">
-          <div class="menu-item"><div><span class="tag">Testing</span><strong>Red beans & rice</strong></div><span>Price pending</span></div>
-          <div class="menu-item"><div><span class="tag">Coming next</span><strong>Protein option</strong></div><span>Pending</span></div>
-          <div class="menu-item"><div><span class="tag">Coming next</span><strong>Vegetarian option</strong></div><span>Pending</span></div>
-          <div class="menu-item"><div><span class="tag">Coming next</span><strong>Southern side</strong></div><span>Pending</span></div>
-          <div class="menu-item"><div><span class="tag">Coming next</span><strong>Dessert</strong></div><span>Pending</span></div>
-        </div>
-      </div>
-      <div class="wrap flow">
-        <div class="step"><b>01</b><p>Join the menu-drop list.</p></div>
-        <div class="step"><b>02</b><p>Receive confirmed date, price, location, and pickup details.</p></div>
-        <div class="step"><b>03</b><p>Order food through the approved channel.</p></div>
-        <div class="step"><b>04</b><p>Follow what the fundraiser helped make possible.</p></div>
-      </div>
-    </section>
+    <section class="section" id="nawlins"><div class="wrap menu-grid"><div><div class="eyebrow">Portable food fundraiser</div><h2 class="serif">A kitchen that can move with the community.</h2><p class="lead">A Taste of Nawlins is being designed for scheduled menu drops, pop-ups, pickup days, and later delivery-platform pilots. Follow the schedule to see where the next service will appear.</p></div><div class="menu-list"><div class="menu-item"><div><span class="tag">Testing</span><strong>Red beans & rice</strong></div><span>Price pending</span></div><div class="menu-item"><div><span class="tag">Coming next</span><strong>Protein option</strong></div><span>Pending</span></div><div class="menu-item"><div><span class="tag">Coming next</span><strong>Vegetarian option</strong></div><span>Pending</span></div><div class="menu-item"><div><span class="tag">Coming next</span><strong>Southern side</strong></div><span>Pending</span></div><div class="menu-item"><div><span class="tag">Coming next</span><strong>Dessert</strong></div><span>Pending</span></div></div></div><div class="wrap flow"><div class="step"><b>01</b><p>Join the menu-drop list.</p></div><div class="step"><b>02</b><p>Receive confirmed date, price, location, and pickup details.</p></div><div class="step"><b>03</b><p>Order through the approved channel.</p></div><div class="step"><b>04</b><p>Follow what the fundraiser helped make possible.</p></div></div></section>
 
-    <section class="section dark" id="first-five">
-      <div class="wrap intro">
-        <div><div class="eyebrow">The First Five</div></div>
-        <div><h2 class="serif">Start small. Prove the program. Grow responsibly.</h2><p class="lead">The initial concept is a controlled five-participant youth boxing and mentorship pilot built around boxing fundamentals, fitness, discipline, mentorship, parent involvement, and documented progress.</p></div>
-      </div>
-      <div class="wrap grid3">
-        <div class="tile" style="background:#111;color:#fff"><b>Five participants</b><p>A deliberately limited first cohort.</p></div>
-        <div class="tile" style="background:#111;color:#fff"><b>Proposed eight weeks</b><p>Final schedule pending facility and family approval.</p></div>
-        <div class="tile" style="background:#111;color:#fff"><b>Evidence before expansion</b><p>Attendance, consent, progress notes, parent feedback, and a closing report.</p></div>
-      </div>
-    </section>
+    <section class="section dark" id="first-five"><div class="wrap intro"><div><div class="eyebrow">The First Five</div></div><div><h2 class="serif">Start small. Prove the program. Grow responsibly.</h2><p class="lead">A controlled five-participant youth boxing and mentorship pilot built around fundamentals, fitness, discipline, mentorship, parent involvement, and documented progress.</p></div></div><div class="wrap grid3"><div class="tile"><b>Five participants</b><p>A deliberately limited first cohort.</p></div><div class="tile"><b>Proposed eight weeks</b><p>Final schedule pending facility and family approval.</p></div><div class="tile"><b>Evidence before expansion</b><p>Attendance, consent, progress notes, parent feedback, and a closing report.</p></div></div></section>
 
-    <section class="section" id="about">
-      <div class="wrap intro">
-        <div><div class="eyebrow">Founder story</div></div>
-        <div><h2 class="serif">A boxing legacy becoming a disciplined community program.</h2><p class="lead">Future Champs is being developed by Glenn Singleton Jr. from family boxing history, community service, and a desire to give young people a safe environment for confidence, fitness, discipline, and mentorship.</p><p class="note">Detailed founder and legacy claims will be published only after Glenn reviews and approves the final biography and supporting materials.</p></div>
-      </div>
-      <div class="wrap split">
-        <div class="panel"><div class="eyebrow">Current reality</div><ul><li>Founder and concept established</li><li>Food fundraiser selected</li><li>First pilot being structured</li><li>Brand and digital systems in development</li><li>Community and facility relationships being formalized</li></ul></div>
-        <div class="panel"><div class="eyebrow">Future vision</div><ul><li>Dedicated youth boxing facility</li><li>Expanded mentoring and community programming</li><li>Boxing heritage and legacy center</li><li>Scholarships and regional partnerships</li></ul></div>
-      </div>
-    </section>
+    <section class="section" id="about"><div class="wrap intro"><div><div class="eyebrow">Founder story</div></div><div><h2 class="serif">A boxing legacy becoming a disciplined community program.</h2><p class="lead">Future Champs is being developed by Glenn Singleton Jr. from family boxing history, community service, and a desire to give young people a safe environment for confidence, fitness, discipline, and mentorship.</p><p class="note">Detailed founder and legacy claims will be published only after Glenn approves the final biography and supporting materials.</p></div></div><div class="wrap split"><div class="panel"><div class="eyebrow">Current reality</div><ul><li>Founder and concept established</li><li>Food fundraiser selected</li><li>First pilot being structured</li><li>Brand and digital systems in development</li><li>Community and facility relationships being formalized</li></ul></div><div class="panel"><div class="eyebrow">Future vision</div><ul><li>Dedicated youth boxing facility</li><li>Expanded mentoring and community programming</li><li>Boxing heritage and legacy center</li><li>Scholarships and regional partnerships</li></ul></div></div></section>
 
-    <section class="section" id="involved">
-      <div class="wrap"><div class="eyebrow">Get involved</div><h2 class="serif">Different ways to help build the first real proof.</h2>
-        <div class="pathways">
-          <div class="path"><b>Join a menu drop</b><p>Get notified when the next food day is confirmed.</p></div>
-          <div class="path"><b>Parent interest</b><p>Share adult contact information for later protected enrollment.</p></div>
-          <div class="path"><b>Sponsor</b><p>Support startup equipment, facility access, and pilot operations.</p></div>
-          <div class="path"><b>Volunteer</b><p>Offer time, logistics, outreach, or event support.</p></div>
-          <div class="path"><b>Coach or mentor</b><p>Express interest for later screening and role definition.</p></div>
-          <div class="path"><b>Equipment support</b><p>Help fund or supply approved youth training gear.</p></div>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="involved"><div class="wrap"><div class="eyebrow">Get involved</div><h2 class="serif">Different ways to help build the first real proof.</h2><div class="pathways"><div class="path"><b>Join a menu drop</b><p>Get notified when the next food day is confirmed.</p></div><div class="path"><b>Parent interest</b><p>Share adult contact information for later protected enrollment.</p></div><div class="path"><b>Sponsor</b><p>Support startup equipment, facility access, and pilot operations.</p></div><div class="path"><b>Volunteer</b><p>Offer time, logistics, outreach, or event support.</p></div><div class="path"><b>Coach or mentor</b><p>Express interest for later screening and role definition.</p></div><div class="path"><b>Equipment support</b><p>Help fund or supply approved youth training gear.</p></div></div></div></section>
 
-    <section class="section" id="updates">
-      <div class="wrap"><div class="eyebrow">Built in public</div><h2 class="serif">Milestones instead of broad promises.</h2>
-        <div class="milestones">
-          <div class="mile"><span>Founder facts and public story approved</span><span class="state">In progress</span></div>
-          <div class="mile"><span>Menu, prices, and order capacity locked</span><span class="state">Not started</span></div>
-          <div class="mile"><span>Kitchen and operating permission confirmed</span><span class="state">Not started</span></div>
-          <div class="mile"><span>First fundraiser completed</span><span class="state">Not started</span></div>
-          <div class="mile"><span>Five participants enrolled</span><span class="state">Not started</span></div>
-          <div class="mile"><span>Pilot sessions begun</span><span class="state">Not started</span></div>
-          <div class="mile"><span>Closing report published</span><span class="state">Not started</span></div>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="updates"><div class="wrap"><div class="eyebrow">Built in public</div><h2 class="serif">Milestones instead of broad promises.</h2><div class="milestones" id="milestones"><div class="mile"><span>Loading verified milestones…</span><span class="state">Loading</span></div></div></div></section>
 
-    <section class="section" id="join">
-      <div class="wrap intro">
-        <div><div class="eyebrow">Stay connected</div></div>
-        <div><h2 class="serif">Join the next menu drop.</h2><p class="lead">This preview does not process payments or formal enrollment. Submit interest after the secure form backend is connected, or contact the founder directly once public contact details are approved.</p>
-          <form class="form" id="interest-form">
-            <div class="field"><label for="name">Adult name</label><input id="name" required /></div>
-            <div class="field"><label for="email">Email</label><input id="email" type="email" required /></div>
-            <div class="field"><label for="interest">I am interested in</label><select id="interest"><option>Next menu drop</option><option>Parent or guardian information</option><option>Sponsorship</option><option>Volunteering</option><option>Coaching or mentoring</option><option>Equipment support</option></select></div>
-            <div class="field"><label for="zip">City or ZIP</label><input id="zip" /></div>
-            <div class="field full"><label for="message">Message</label><textarea id="message" rows="4"></textarea></div>
-            <div class="field full"><button class="cta" type="submit">Save Draft Interest</button><p class="note" id="form-status" aria-live="polite">Preview only: submissions are not transmitted or stored.</p></div>
-          </form>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="join"><div class="wrap intro"><div><div class="eyebrow">Stay connected</div></div><div><h2 class="serif">Join the next menu drop.</h2><p class="lead">Submit your interest below. This form does not process payment or formal youth enrollment.</p><form class="form" id="interest-form"><div class="field"><label for="name">Adult name</label><input id="name" name="name" required maxlength="120" /></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /></div><div class="field"><label for="interest">I am interested in</label><select id="interest" name="interest"><option value="menu_drop">Next menu drop</option><option value="parent_guardian">Parent or guardian information</option><option value="sponsor">Sponsorship</option><option value="volunteer">Volunteering</option><option value="coach_mentor">Coaching or mentoring</option><option value="equipment_support">Equipment support</option><option value="community_partner">Community partnership</option></select></div><div class="field"><label for="zip">City or ZIP</label><input id="zip" name="zip" maxlength="120" /></div><div class="field full"><label for="message">Message</label><textarea id="message" name="message" rows="4" maxlength="2000"></textarea></div><div class="field full check"><input id="consent" type="checkbox" /><label for="consent">I agree to receive Future Champs updates. I can unsubscribe later.</label></div><div class="field full"><button class="cta" id="submit-button" type="submit">Submit interest</button><p class="note" id="form-status" aria-live="polite"></p></div></form></div></div></section>
   </main>
-
-  <footer class="footer"><div class="wrap foot"><div><strong>FUTURE CHAMPS</strong><br><span>Building Champions In and Out of the Ring</span></div><div>FutureChampsGym.org<br><span class="note" style="color:#aaa">Founding-stage preview. No tax-deductibility claim.</span></div></div></footer>
+  <footer class="footer"><div class="wrap foot"><div><b>FUTURE CHAMPS</b><div>Youth Boxing & Mentorship</div></div><div>Building Champions In and Out of the Ring</div><div>Founding-stage preview · Northwest Washington</div></div></footer>
 
   <script>
-    document.getElementById('interest-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-status').textContent='Interest captured in this preview only. The production backend is not connected yet.';});
+    const SUPABASE_URL='https://cyxdevcjycmffhmwxojh.supabase.co';
+    const SUPABASE_KEY='sb_publishable_PoqI-3PsCqewtJWJ0Z73Ag_5hIE0oKI';
+    const headers={apikey:SUPABASE_KEY,Authorization:`Bearer ${SUPABASE_KEY}`,'Content-Type':'application/json'};
+
+    async function loadMilestones(){
+      const box=document.getElementById('milestones');
+      try{
+        const res=await fetch(`${SUPABASE_URL}/rest/v1/future_champs_milestones?select=label,status&order=sort_order.asc`,{headers});
+        if(!res.ok) throw new Error('Unable to load milestones');
+        const rows=await res.json();
+        box.innerHTML=rows.map(r=>`<div class="mile"><span>${escapeHtml(r.label)}</span><span class="state">${escapeHtml(r.status.replaceAll('_',' '))}</span></div>`).join('');
+      }catch(e){box.innerHTML='<div class="mile"><span>Milestone feed temporarily unavailable</span><span class="state">Check back</span></div>';}
+    }
+
+    document.getElementById('interest-form').addEventListener('submit',async function(e){
+      e.preventDefault();
+      const status=document.getElementById('form-status');
+      const button=document.getElementById('submit-button');
+      button.disabled=true;status.className='note';status.textContent='Submitting…';
+      const interest=document.getElementById('interest').value;
+      const common={email:document.getElementById('email').value.trim(),phone:null,city_or_zip:document.getElementById('zip').value.trim()||null,consent_to_updates:document.getElementById('consent').checked,status:'new',source:'futurechampsgym.org'};
+      const isCommunity=['parent_guardian','coach_mentor'].includes(interest);
+      const table=isCommunity?'future_champs_community_interest':'future_champs_event_interest';
+      const payload=isCommunity?{...common,interest_type:interest,adult_name:document.getElementById('name').value.trim(),organization:null,message:document.getElementById('message').value.trim()||null}:{...common,interest_type:interest,full_name:document.getElementById('name').value.trim(),party_size:null,preferred_contact:'email'};
+      try{
+        const res=await fetch(`${SUPABASE_URL}/rest/v1/${table}`,{method:'POST',headers:{...headers,Prefer:'return=minimal'},body:JSON.stringify(payload)});
+        if(!res.ok) throw new Error(await res.text());
+        status.className='note success';status.textContent='Your interest was received. Future Champs will follow up after details are confirmed.';
+        this.reset();
+      }catch(err){status.className='note error';status.textContent='Submission failed. Please try again shortly.';}
+      finally{button.disabled=false;}
+    });
+
+    function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+    loadMilestones();
   </script>
 </body>
 </html>
