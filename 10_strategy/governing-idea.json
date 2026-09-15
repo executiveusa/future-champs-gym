@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0-draft",
+  "project": "future-champs",
+  "status": "HOLD_FOR_HUMAN_APPROVAL",
+  "statement": "Every fighter starts somewhere. Future Champs documents the work before the spotlight and gives young and beginning fighters someone in their corner.",
+  "short_form": "Start in the corner.",
+  "tension": "Boxing media tends to reward the finished fighter and the big moment, while young and beginning fighters need attention, guidance, and a credible record of the work that comes first.",
+  "audience_truth": "Hypothesis to validate with Glenn, beginning fighters, parents, coaches, and local boxing audiences: people want to see the human work behind progress, not only polished fight results.",
+  "cultural_truth": "Hypothesis: the boxing gym is a place where identity, discipline, mentorship, and belonging are built before public recognition arrives.",
+  "business_truth": "Future Champs has access to real boxing relationships and footage before it has a large production operation. One conversation must be able to become an episode, short clips, a fighter profile, and a repeatable publishing package.",
+  "must_feel": [
+    "first-class",
+    "documentary",
+    "protective",
+    "disciplined",
+    "young and alive",
+    "earned rather than manufactured"
+  ],
+  "must_not_feel": [
+    "generic sports template",
+    "fight-promotion spectacle",
+    "pity-based nonprofit",
+    "overproduced celebrity media",
+    "fake institutional maturity",
+    "AI-generated or stock-boxing slop"
+  ],
+  "proof": [
+    "Punch by Punch is a valid reference for boxing stories and featured-person content, but its public homepage does not establish Future Champs's youth-and-beginning-fighter territory.",
+    "Existing Future Champs materials include youth outreach, fighter/community imagery, and a founder with boxing relationships; the content rights and approved biographies still require confirmation.",
+    "The current repository already contains The Corner identity territory and a video-first prototype; this artifact narrows the idea before identity execution."
+  ],
+  "score": 8.8,
+  "score_note": "Draft strategic assessment only. The 9.0 gate is not claimed until Glenn and representative audience members confirm the idea."
+}
