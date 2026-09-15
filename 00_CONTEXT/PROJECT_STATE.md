@@ -1,29 +1,31 @@
 # Future Champs Project State
 
-**As of:** 2026-08-04  
-**Mode:** Greenfield  
-**Classification:** SELL + USE  
-**Status:** Founding-stage strategy, brand system, and first public prototype  
+**As of:** 2026-09-15
+**Mode:** Brownfield reframing
+**Classification:** SELL + USE
+**Status:** Governing-idea draft; full identity and site rebuild held behind approval
 **Primary domain:** FutureChampsGym.org  
 
 ## Current objective
 
-Prepare a credible founder-review package and first-round public site for the meeting with Glenn, without publishing invented event, food, legal, sponsor, or youth-program details.
+Reframe the existing gym/fundraiser prototype into a first-class youth-and-beginning-fighter boxing media platform. Use The Corner as the flagship content system, start with one approved interview and Shorts package, and use the Collins/Punch by Punch benchmarks through an independent gauntlet.
+
+The proposed governing idea is: **Every fighter starts somewhere. Future Champs documents the work before the spotlight and gives young and beginning fighters someone in their corner.** This is a draft and requires Glenn's approval before identity production.
 
 ## Three active workstreams
 
-1. **Revenue offer — A Taste of Nawlins**
-   - Portable ghost-kitchen and pop-up food fundraiser.
-   - Menu, prices, date, address, permit status, kitchen, delivery-platform status, and order cap remain unconfirmed.
+1. **Revenue offer — MACS Digital Media × Future Champs content launch**
+   - A real client run for positioning, brand kit, site, content packaging, and distribution operations.
+   - The paid offer and ownership split must be documented before external selling.
 
-2. **Shared platform — Future Champs digital headquarters**
-   - Public site, interest forms, menu status, updates, support pathways, and later admin operations.
-   - Hostinger Horizons draft exists.
+2. **Shared platform — Future Champs media headquarters**
+   - Public site, Watch/Shorts archive, people and gym profiles, stories, interest forms, approvals, and later admin operations.
+   - Existing static prototype is preserved as rollback baseline.
    - GitHub repository is the source of truth for specifications and future sovereign code.
 
-3. **Bounded experiment — The First Five**
-   - Proposed five-participant, eight-week youth boxing and mentorship pilot.
-   - Facility agreement, schedule, participants, safety process, insurance, and budget remain pending.
+3. **Bounded experiment — one interview to a content system**
+   - Record one approved conversation or gym visit and turn it into a full story, 3–7 Shorts, a profile, and a publishable content record.
+   - Guest permissions, guardian approvals where applicable, music/image rights, and final editorial approval remain required.
 
 ## Locked brand architecture
 
