@@ -1,6 +1,12 @@
 # Future Champs
 
-Future Champs is a youth boxing, mentorship, and community-development initiative based in Northwest Washington.
+Future Champs is a youth-and-beginning-fighter boxing media and community platform based in Northwest Washington.
+
+**Governing idea (draft):** Every fighter starts somewhere. Future Champs documents the work before the spotlight and gives young and beginning fighters someone in their corner.
+
+The physical gym remains a future vision. The immediate product is the story and content platform: The Corner, Ringside coverage, fighter profiles, and short-form video built from real boxing access.
+
+The canonical video source is locked in [VIDEO_SOURCE_OF_TRUTH.md](00_CONTEXT/VIDEO_SOURCE_OF_TRUTH.md).
 
 The immediate launch is deliberately small and verifiable:
 
@@ -10,34 +16,38 @@ The immediate launch is deliberately small and verifiable:
 
 ## Current project status
 
-**Mode:** Greenfield  
-**Classification:** SELL + USE  
-**Status:** Discovery and wireframing  
+**Mode:** Brownfield reframing
+**Classification:** SELL + USE
+**Status:** Governing-idea draft; identity production held for human approval
 **Primary domain:** `FutureChampsGym.org`  
 
 The permanent gym, museum, scholarship program, large grant campaign, and broad regional expansion remain long-term vision. They are not represented as existing operations.
 
 ## First measurable outcome
 
-Launch a working fundraiser page that:
+Launch a working, first-class boxing media home that:
 
-- explains the Future Champs mission clearly;
-- presents a limited, confirmed food offer;
-- accepts RSVP or preorder interest;
-- stores submissions securely;
+- explains the youth-and-beginning-fighter position clearly;
+- makes one approved interview or Short immediately watchable;
+- organizes full conversations, Shorts, people, gyms, and stories;
+- gives viewers one obvious next action;
 - works correctly on mobile;
-- gives the founder a usable administrative view or export;
-- generates the first verified customer or supporter response.
+- creates a repeatable content record for MACS Digital Media production and distribution;
+- generates the first verified viewer, guest, partner, or sponsor response.
 
 ## Brand architecture
 
 - **Master brand:** Future Champs
-- **Descriptor:** Youth Boxing & Mentorship
-- **Core line:** Building Champions In and Out of the Ring
-- **Pilot:** The First Five
-- **Fundraiser:** A Taste of Nawlins
+- **Descriptor:** Youth & Beginning-Fighter Boxing Stories
+- **Governing idea:** Every fighter starts somewhere.
+- **Working short form:** Start in the corner.
+- **Flagship show:** The Corner
+- **Editorial lane:** Ringside
+- **Production partner:** MACS Digital Media
+- **Future community initiative:** Future Champs Gives Back
+- **Long-term facility vision:** Future Champs Gym & Heritage Center
 - **Legacy initiative:** The TOJO Legacy Project
-- **Long-term facility:** Future Champs Gym & Heritage Center
+- **Separate/parked sub-brand:** A Taste of Nawlins fundraiser
 
 Future Champs and A Taste of Nawlins should have related but separate identities. Youth-facing materials must remain separate from cannabis imagery or messaging, even when a fundraiser location is near a licensed dispensary.
 
@@ -62,15 +72,16 @@ A Vercel/Next.js/Supabase starter can accelerate setup, but this repository shou
 
 ```text
 /
-/nawlins
-/first-five
+/watch
+/fighters
+/gyms-and-corners
+/stories
 /about
 /get-involved
-/updates
 /admin            # later, protected
 ```
 
-The first public release may be limited to `/` and `/nawlins` until the fundraiser details are confirmed.
+The first public release may be limited to `/` and `/watch` until the first approved interview and Shorts package are ready.
 
 ## Initial data scope
 
