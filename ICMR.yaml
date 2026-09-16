@@ -6,13 +6,18 @@ form:
   - knowledge_bundle
   - editorial_pipeline
   - content_record_library
+  - private_operations_backend
 source_of_truth:
   video: "https://drive.google.com/drive/folders/1G3MUd8wWztOefuJex32AFnMe46IyJpR_?usp=sharing"
   code: github
 roles:
   owner: Future_Champs
+  site_owner: Glenn
   strategy: Collins_protocol
   production: MACS_Digital_Media
+  orchestration: Hermes
+  supervision: Firstmate
+  intent_entry: Instinct_adapter
   approval: human_owner
 stages:
   - intake
@@ -45,4 +50,8 @@ rollback:
   - keep_current_homepage_until_release_approved
   - remove_failed_route_or_feature
   - restore_previous_static_homepage
+boundaries:
+  frontend: public_read_surface
+  backend: private_write_and_orchestration_surface
+  publish: human_approval_required
 status: human_review_required
