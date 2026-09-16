@@ -54,4 +54,8 @@ boundaries:
   frontend: public_read_surface
   backend: private_write_and_orchestration_surface
   publish: human_approval_required
+agent_entry:
+  instinct: backend/INSTINCT_ENTRY.md
+  manifest: backend/instinct.manifest.yaml
+  backend_context: backend/CONTEXT.md
 status: human_review_required
