@@ -42,4 +42,6 @@ The browser never receives Hermes credentials, Drive credentials, Riverside cred
 
 Run `scripts/install-hermes.sh` on the private backend host. It keeps the Hermes checkout and virtual environment outside the public frontend. Never run it from a public web root.
 
-See `config/firstmate.routes.yaml` and `plugins/instinct-hermes-firstmate/README.md`.
+See `CONTEXT.md`, `INSTINCT_ENTRY.md`, `instinct.manifest.yaml`, `config/firstmate.routes.yaml`, and `plugins/instinct-hermes-firstmate/README.md`.
+
+Point Instinct at `INSTINCT_ENTRY.md` first. The private webhook endpoint and secret are intentionally left as deployment-time configuration.
