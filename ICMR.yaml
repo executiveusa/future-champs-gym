@@ -1,0 +1,48 @@
+icmr_version: "1.0"
+project: future-champs-gym
+mode: brownfield_reframe
+outcome: "Launch a first-class media home with one approved boxing story, three Shorts, and one clear next action."
+form:
+  - knowledge_bundle
+  - editorial_pipeline
+  - content_record_library
+source_of_truth:
+  video: "https://drive.google.com/drive/folders/1G3MUd8wWztOefuJex32AFnMe46IyJpR_?usp=sharing"
+  code: github
+roles:
+  owner: Future_Champs
+  strategy: Collins_protocol
+  production: MACS_Digital_Media
+  approval: human_owner
+stages:
+  - intake
+  - strategy
+  - content_selection
+  - edit
+  - rights_review
+  - design
+  - build
+  - validate
+  - publish
+gates:
+  - governing_idea_human_approved
+  - identity_territory_human_selected
+  - subject_and_guardian_rights_verified
+  - captions_and_source_record_complete
+  - public_links_runtime_tested
+  - separate_release_approval
+records:
+  required: [source_file, subject, rights_status, guardian_status, transcript, captions, thumbnail, public_url, editorial_status]
+  public_states: [approved, scheduled, published]
+  private_states: [intake, selecting, edit, rights_review, hold, archived]
+proof:
+  - approved_anchor_package
+  - three_publishable_shorts
+  - mobile_watch_test
+  - link_and_cta_test
+  - source_to_public_trace
+rollback:
+  - keep_current_homepage_until_release_approved
+  - remove_failed_route_or_feature
+  - restore_previous_static_homepage
+status: human_review_required
