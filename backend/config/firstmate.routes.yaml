@@ -1,0 +1,30 @@
+version: "1"
+owner: Glenn
+default_mode: no-mistakes
+project_root: "${FUTURE_CHAMPS_PROJECT}"
+source_of_truth:
+  footage: "https://drive.google.com/drive/folders/1G3MUd8wWztOefuJex32AFnMe46IyJpR_?usp=sharing"
+  code: github
+  approvals: backend/state/approvals
+routes:
+  content_intake:
+    allowed: [scan_drive, catalog_video, prepare_story_brief]
+    requires_approval: false
+  content_production:
+    allowed: [prepare_riverside_project, request_transcript, prepare_short_package]
+    requires_approval: false
+  publishing:
+    allowed: [prepare_publish_packet]
+    requires_approval: true
+  company_operations:
+    allowed: [draft_update, draft_calendar, draft_partner_followup]
+    requires_approval: true
+  destructive:
+    allowed: []
+    requires_approval: true
+    policy: refuse
+handoff:
+  input: "backend/state/inbox/*.json"
+  output: "backend/state/reports/"
+  worktrees: isolated
+  merge: human_only
