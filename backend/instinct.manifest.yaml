@@ -1,0 +1,33 @@
+version: "1"
+name: future-champs-instinct-entry
+project: future-champs-gym
+icm: ../ICMR.yaml
+entry: INSTINCT_ENTRY.md
+owner: Glenn
+transport:
+  mode: signed_webhook
+  endpoint: supplied_on_private_host
+  signature: HMAC-SHA256
+supervisor:
+  name: Firstmate
+  routes: config/firstmate.routes.yaml
+executor:
+  name: Hermes
+  install: scripts/install-hermes.sh
+source_of_truth:
+  footage: "https://drive.google.com/drive/folders/1G3MUd8wWztOefuJex32AFnMe46IyJpR_?usp=sharing"
+  code: github
+state:
+  inbox: state/inbox/
+  reports: state/reports/
+  approvals: state/approvals/
+gates:
+  publish: glenn
+  youth_sensitive_content: glenn
+  external_communications: glenn
+forbidden:
+  - publish_without_approval
+  - delete_source_media
+  - merge_without_human_review
+  - expose_secrets_to_frontend
+  - collect_sensitive_youth_data
