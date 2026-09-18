@@ -58,3 +58,24 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Risks/blockers: Private host, webhook URL, secret, Riverside credentials, and provider access are still deployment-time inputs.
 - Rollback: Revert this commit; previous backend architecture remains intact.
 - Next action: Glenn points Instinct at `backend/INSTINCT_ENTRY.md`; after server selection, configure the private webhook and run the install script.
+
+
+### ENTRY — 2026-09-18T19:45:00Z — ChatGPT / GPT-5.6 Sol
+- Intent: Complete the Future Champs media-first public shell and align the autonomous agent loop with the owner-provided Loop Engineering standard.
+- Current stage: 05_EXPERIENCE → 06_BUILD → 07_VERIFY.
+- Mode: Brownfield reframing.
+- Outcome: Complete public IA, placeholders, navigation, accessibility hooks, media workflow, and governance without publishing approval-gated footage.
+- Target: Future Champs public site and private agent-control contract.
+- Constraints: Preserve canonical Drive masters, no invented people/claims, no sensitive youth intake, no self-approval, keep rollback.
+- Proof required: GitHub diff, route/link validation, independent external check, and runtime preview before production verification.
+- Commercial value: Establish the MACS Digital Media zero-to-launch case study and reusable media workflow.
+
+### EXIT — 2026-09-18T20:00:00Z — ChatGPT / GPT-5.6 Sol
+- Work performed: Expanded PR #11 into the full media shell; added Fighters, Gyms + Corners, About, Get Involved; unified navigation; added skip links/focus/reduced-motion support; made Watch filters functional; expanded sitemap; refreshed project state and agent constitution; integrated Loop Engineering release rules.
+- Files changed: public HTML routes, `assets/future-champs.css`, `sitemap.xml`, `AGENTS.md`, `00_CONTEXT/PROJECT_STATE.md`, backend loop configuration, Anchor 001 production record.
+- Decisions: The active public product is a boxing media property; older fundraiser/gym-first framing is parked. The Corner is editorial; Watch is video; beginning fighters are the primary lens.
+- Tests/evidence: Seven public HTML routes passed repository-level checks for doctype, language, viewport, title, description, main target, skip link, primary nav, and known internal-route validity; broken internal links found: 0. PR #11 remains mergeable and CodeRabbit status reports success.
+- Risks/blockers: No substantive reviewer comment was returned; no exact-revision browser/mobile runtime preview has been captured; production deployment target is not evidenced in the repo; Anchor 001 still needs transcript/captions, clean-master decision, identity/guardian status where applicable, and Glenn editorial approval.
+- Rollback: Close PR #11 or reset to main baseline `75fa80b325e583f0febd9f82217eabcb2b3b5ce3` before merge; after merge revert the merge commit if runtime verification fails.
+- Next action: Obtain a runtime preview of PR #11, perform browser/mobile gauntlet against Punch By Punch/COLLINS, repair decisive gaps, then merge the shell. After merge, finish Anchor 001 and replace placeholder 01 with approved media.
+- Beads updated: No — no Beads CLI/runtime shell available in this connector session.
