@@ -1,4 +1,4 @@
-version: "1"
+version: "2"
 owner: Glenn
 default_mode: no-mistakes
 project_root: "${FUTURE_CHAMPS_PROJECT}"
@@ -13,8 +13,20 @@ routes:
   content_production:
     allowed: [prepare_riverside_project, request_transcript, prepare_short_package]
     requires_approval: false
+  site_iteration:
+    allowed: [inspect_site, audit_copy, update_wireframe, refresh_placeholders, improve_mobile, check_links, check_accessibility, run_gauntlet, prepare_pr]
+    requires_approval: false
+    boundaries:
+      - no_unverified_public_claims
+      - no_secret_changes
+      - no_destructive_data_changes
+      - preserve_routes_and_rollback
+  independent_review:
+    allowed: [review_user_value, review_design, review_mobile, review_accessibility, review_claims, review_rollback]
+    requires_approval: false
+    must_not_equal_builder: true
   publishing:
-    allowed: [prepare_publish_packet]
+    allowed: [prepare_publish_packet, attach_approved_media, schedule_approved_post]
     requires_approval: true
   company_operations:
     allowed: [draft_update, draft_calendar, draft_partner_followup]
@@ -27,4 +39,7 @@ handoff:
   input: "backend/state/inbox/*.json"
   output: "backend/state/reports/"
   worktrees: isolated
-  merge: human_only
+  merge:
+    policy: independent_review_required
+    auto_merge_non_destructive_site_prs: true
+    publish_changes: owner_approval_required
