@@ -2,50 +2,57 @@
 
 ## Identity
 
-You are entering the Future Champs repository: a human-governed, AI-enabled system for building a youth boxing, mentorship, community fundraising, and mobile food initiative in Northwest Washington.
+Future Champs is a human-governed, AI-enabled boxing media property focused on **young and beginning fighters** and the people in their corner.
 
-Your role is not to generate volume. Your role is to increase clarity, dignity, safety, quality, revenue, learning, and verified community benefit.
+The active public product is the media system: Future Champs, The Corner, Watch, fighter profiles, gyms/corners, approved stories, and distribution.
+
+Older concepts such as the physical gym, food fundraiser, heritage center, large grant campaign, and broad youth-program operations are PARKED unless the owner explicitly reactivates them.
 
 ## Heartbeat
 
-**Build what helps people. Prove what works. Protect the people, the mission, and the owner.**
+**Document the beginning. Protect the person. Prove the work.**
 
-The project begins small:
+## Governing idea
 
-1. **A Taste of Nawlins** — a portable ghost-kitchen and pop-up food fundraiser.
-2. **The First Five** — a bounded youth boxing and mentorship pilot.
-3. **Future Champs digital headquarters** — the shared public and operational platform.
+> **Every fighter starts somewhere. Future Champs documents the work before the spotlight.**
 
-Everything else is future vision until verified.
+This governs strategy, copy, art direction, information architecture, content selection, and distribution.
 
-## Soul
+## Operating chain
 
-Future Champs exists to help young people experience discipline, belonging, confidence, mentorship, and a credible path forward. The system must present participants and families as capable human beings, never as props for fundraising.
+**Owner / Glenn → Instinct → FirstMate → Hermes.**
 
-We design with communities, not merely for them. We listen before claiming. We create clear choices. We preserve dignity. We do not manipulate emotion. We do not turn hardship into spectacle.
+- Instinct may direct work.
+- FirstMate controls context, permissions, approvals, and handoffs.
+- Hermes executes bounded implementation.
+- A builder cannot approve its own work.
+- Publication of approval-gated media remains owner-controlled.
 
 ## Non-negotiable laws
 
 - Human purpose governs AI execution.
-- Builders cannot approve themselves.
-- Evidence, inference, and aspiration must remain visibly separate.
-- No unconfirmed event, location, menu, price, permit, sponsor, fiscal-sponsor status, tax claim, historical claim, participant result, photo, or testimonial may be published.
-- No child medical, school, behavioral, emergency, or identifying data may be collected through public forms.
-- No secrets belong in source control, Beads, issues, logs, or documentation.
-- Client ownership of code, domains, hosting, database, credentials, brand assets, and data must be preserved.
-- Every release requires tests, evidence, rollback, and human approval.
-- Every new workstream must replace one of the three active workstreams.
+- Inspect before changing.
+- Reuse before adding.
+- Specify before building.
+- Build one verifiable slice at a time.
+- Evidence, inference, and aspiration remain separate.
+- No invented fighter, coach, gym, sponsor, biography, record, quote, result, partnership, or youth identity.
+- No public collection of sensitive youth data.
+- No secrets in source control, logs, issues, or generated reports.
+- Owner control of code, domain, hosting, database, credentials, media, and data is preserved.
+- Every release requires evidence, rollback, and independent review.
+- Approved media replaces placeholders; the shell does not get redesigned for every clip.
 
 ## Required entry protocol
 
 Before changing anything:
 
-1. Read `design/design-principles.json`.
+1. Read this file.
 2. Read `00_CONTEXT/PROJECT_STATE.md`.
-3. Read the relevant numbered ICM stage folder.
-4. Review `wiki/PROJECT_WIKI.md`.
-5. Review Beads state using `bd prime` and `bd ready --json` when the CLI is available.
-6. Append an entry note to `wiki/AGENT_LOG.md`.
+3. Read `ICMR.yaml`.
+4. Read the relevant ICM stage.
+5. Read `backend/config/site.loop.yaml` for site work.
+6. Read `wiki/AGENT_LOG.md`.
 7. State:
    - MODE
    - OUTCOME
@@ -54,109 +61,177 @@ Before changing anything:
    - PROOF
    - COMMERCIAL VALUE
 
+## Loop Engineering lifecycle
+
+`INTENT -> BAR -> LOCK -> EVIDENCE -> GRAPH -> SPEC -> SLICE -> BUILD -> VERIFY -> GAUNTLET -> RELEASE -> LEARN`
+
+Use only these release-state words:
+
+- NOT READY
+- READY FOR PREVIEW
+- PREVIEW VERIFIED
+- PRODUCTION VERIFIED
+
+Never call production complete from code presence, CI, or a deployment request alone.
+
+## Quality bar
+
+### Punch By Punch
+
+Use as the boxing-media bar for:
+- people-led content;
+- fast access to clips;
+- archive legibility;
+- interview discoverability;
+- repeatable media density.
+
+Future Champs must differentiate through the **beginning-fighter / youth / first-step** point of view.
+
+### COLLINS
+
+Use as the brand/design bar for:
+- one governing idea;
+- reduction;
+- typography;
+- strong composition;
+- recognizable point of view;
+- cultural specificity;
+- no template feel.
+
+### Future Champs gauntlet
+
+Every public slice must pass:
+- youth/beginning-fighter relevance;
+- anti-slop;
+- mobile;
+- accessibility;
+- proof/claim discipline;
+- commercial clarity;
+- sovereignty/rollback.
+
+Release floor: overall >= 8.5, no critical failures, no broken controls, no mobile overflow, no unverified claims.
+
+## ICM architecture
+
+```text
+00_CONTEXT/       Current truth, decisions, status, constraints
+01_DISCOVER/      Audience, interviews, field research
+02_FRAME/         Challenge, outcomes, risks, system map
+03_BRAND/         Positioning, identity, voice, visual system
+04_OFFER/         MACS/Future Champs commercial packaging
+05_EXPERIENCE/    IA, wireframes, copy, interactions
+06_BUILD/         Frontend, backend, integrations
+07_VERIFY/        Tests, accessibility, security, gauntlet
+08_RELEASE/       Preview, production, rollback, monitoring
+09_LEARN/         Analytics, editorial learning, iteration
+content-studio/   Media records and production packets
+backend/          Private agent/control plane
+wiki/             Durable project knowledge and handoffs
+```
+
+## Current public architecture
+
+- `/` — governing idea and main entry
+- `/watch/` — video desk and archive
+- `/fighters/` — beginning-fighter profiles
+- `/gyms-and-corners/` — coaches, mentors, gyms, programs
+- `/blog/` — The Corner editorial desk
+- `/about/` — project position and boundaries
+- `/get-involved/` — controlled intake explanation
+
+## Content doctrine
+
+Primary lanes:
+
+- **Start Here** — beginning fighters and first steps
+- **In Their Corner** — coaches, mentors, family, programs
+- **The Work** — training, learning, discipline, progress
+- **Ringside** — gyms, events, local boxing environment
+- **Gives Back** — only for real, approved community initiatives
+
+One approved conversation may become:
+- anchor cut;
+- 3–7 Shorts;
+- fighter/coach profile;
+- written story;
+- quote/social assets;
+- sponsor/community cut when appropriate.
+
+Do not force all outputs if the source does not support them.
+
+## Copy doctrine
+
+Public copy should be:
+- direct;
+- specific;
+- human;
+- restrained;
+- youth-respectful;
+- free of generic motivational language.
+
+Default formula:
+
+> Human truth + concrete context + verified status + clear next step
+
+## Design doctrine
+
+- Black, warm bone, red, white.
+- Editorial serif + neutral sans.
+- Documentary rather than fight-poster.
+- Strong spacing and reduction.
+- Real people over generic boxing imagery.
+- No gradients, neon SaaS styling, esports visual language, AI-generated athletes, fake metrics, empty card grids, or decorative complexity.
+
+## Media safety
+
+- Raw masters remain in the canonical Drive source.
+- Repository stores metadata, approvals, captions, edit decisions, and public references.
+- Do not expose signed/private download URLs.
+- Youth media publication requires applicable permission/guardian checks.
+- Do not remove source watermarks or attribution without authorization.
+- No sensitive youth medical, school, behavioral, or emergency information belongs in public workflows.
+
+## Autonomous loop
+
+The site loop may autonomously:
+- inspect and improve copy;
+- refine layout;
+- improve mobile behavior;
+- maintain placeholders;
+- fix links;
+- improve accessibility;
+- prepare content records;
+- run the gauntlet;
+- open/update PRs.
+
+It may not autonomously:
+- publish approval-gated youth footage;
+- create unverified public claims;
+- change credentials or destructive production state;
+- remove rollback;
+- declare production verified without runtime evidence.
+
 ## Required exit protocol
 
 Before leaving:
 
-1. Update Beads tasks, dependencies, and status.
-2. Append an exit note to `wiki/AGENT_LOG.md`.
-3. Update `00_CONTEXT/PROJECT_STATE.md` when reality changed.
-4. Record tests and evidence.
-5. Record unresolved risks.
-6. Record rollback.
-7. Name one next action.
-
-No agent may claim completion without observable proof.
-
-## ICM architecture
-
-This repository follows the Interpretable Context Methodology: numbered folders define sequential stages, markdown files provide stage-specific instructions and context, and scripts handle deterministic mechanical work. Load only what the current stage needs.
-
-```text
-00_CONTEXT/       Current truth, decisions, status, constraints
-01_DISCOVER/      Interviews, field observations, audience, research
-02_FRAME/         Design challenge, outcomes, system map, risks
-03_BRAND/         Positioning, identity, voice, visual system
-04_OFFER/         Fundraiser, menu, pricing, partnerships, revenue model
-05_EXPERIENCE/    Information architecture, wireframes, copy, forms
-06_BUILD/         Application code, data, integrations
-07_VERIFY/        Tests, accessibility, security, design review
-08_RELEASE/       Deployment, domain, monitoring, rollback
-09_LEARN/         Outcomes, feedback, impact, iteration
-wiki/             Durable project knowledge and agent handoffs
-research/         Verified external research and source notes
-strategy/         Campaign and operating strategies
-```
-
-The output of one stage becomes the input of the next. Human review is the natural breakpoint between stages.
-
-## Design doctrine
-
-Blend:
-
-- human-centered design;
-- systems thinking;
-- Steve Krug clarity and usability;
-- Collins-like brand simplification, cultural relevance, and bold coherence;
-- editorial luxury restraint;
-- Awwwards-level craft;
-- nonprofit trust, accessibility, and claim discipline.
-
-Interpret "premium" as hierarchy, restraint, typography, original composition, meaningful content, and production quality—not gradients, effects, or decorative complexity.
-
-## Copy doctrine
-
-Every public message should combine:
-
-> Human truth + specific action + verified status + clear next step
-
-Voice:
-
-- grounded;
-- dignified;
-- hopeful without hype;
-- local and specific;
-- direct;
-- never patronizing.
-
-Avoid savior language, pity, deficit framing, trauma extraction, generic empowerment language, fake urgency, fake scarcity, and unsupported promises.
-
-## Current geography
-
-Primary corridor:
-
-- Seattle
-- Shoreline
-- Lynnwood
-- Everett
-- Marysville
-- Arlington
-- Mount Vernon
-
-Do not claim service coverage in a city until operations or an event are confirmed there.
-
-## Current brand architecture
-
-- Master brand: **Future Champs**
-- Descriptor: **Youth Boxing & Mentorship**
-- Core line: **Building Champions In and Out of the Ring**
-- Pilot: **The First Five**
-- Fundraiser: **A Taste of Nawlins**
-- Legacy initiative: **The TOJO Legacy Project**
-- Future facility: **Future Champs Gym & Heritage Center**
-
-A Taste of Nawlins is a related but separate portable food identity. Youth-facing materials must remain separate from cannabis branding or language.
+1. Update `00_CONTEXT/PROJECT_STATE.md` if reality changed.
+2. Append to `wiki/AGENT_LOG.md`.
+3. Record tests/evidence.
+4. Record unresolved risks.
+5. Record rollback.
+6. Name one next action.
 
 ## Definition of done
 
-A task is done only when:
+A public release is done only when:
+- the intended user journey is tested on the exact revision;
+- mobile and accessibility pass;
+- broken controls = 0;
+- public claims are verified;
+- independent review passes;
+- ownership is preserved;
+- rollback is documented;
+- production deployment is verified after release.
 
-- the intended user outcome is tested;
-- evidence is recorded;
-- content claims are approved;
-- accessibility and mobile behavior pass;
-- security and privacy pass;
-- ownership is clear;
-- rollback exists;
-- an independent reviewer approves release;
-- Beads and the wiki are updated.
+Anything less is not PRODUCTION VERIFIED.
