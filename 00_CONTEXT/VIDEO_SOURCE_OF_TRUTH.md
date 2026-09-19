@@ -13,7 +13,7 @@ https://drive.google.com/drive/folders/1G3MUd8wWztOefuJex32AFnMe46IyJpR_?usp=sha
 
 **Drive folder ID:** `1G3MUd8wWztOefuJex32AFnMe46IyJpR_`
 
-The folder was verified through Google Drive and contains **17 MP4 files**. The current files are camera-generated and must be catalogued by content before publication.
+The folder was re-verified through Google Drive on 2026-09-18 and contains **19 MP4 files**. The current files are camera-generated and must be catalogued by content before publication.
 
 ## Source rule
 
@@ -45,8 +45,10 @@ Every selected file receives a record with:
 
 The first verified sample was a 1:46 vertical H.264/AAC MP4 at 864×1920. It shows a young boxer speaking directly to camera outside a gym and is suitable as a candidate for the beginning-fighter launch direction.
 
-It remains **candidate footage**, not approved public homepage media, until the guest identity, permission, and final editorial context are recorded.
+The 2026-09-16 intake records the archive as user-confirmed cleared for use. The asset still remains **candidate footage**, not approved public homepage media, until the subject identity, clean-master/watermark status, guardian status where applicable, captions/transcript, and Glenn's final editorial approval are recorded.
 
 ## Next production gate
 
-Select one anchor video from the folder, complete its catalog record, create one approved Short and one approved full-story destination, then build the homepage around that real source asset.
+Anchor 001 is `7e9334fa233135d3bcc115f01d3e93a5.mp4` / Drive ID `1FHJhrclLmViRw0FJNSXhBQWicEMig6LC`.
+
+Complete its production record, create one approved Short and one approved full-story destination, then build the homepage around that real source asset.

@@ -58,3 +58,41 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Risks/blockers: Private host, webhook URL, secret, Riverside credentials, and provider access are still deployment-time inputs.
 - Rollback: Revert this commit; previous backend architecture remains intact.
 - Next action: Glenn points Instinct at `backend/INSTINCT_ENTRY.md`; after server selection, configure the private webhook and run the install script.
+
+### ENTRY — 2026-09-18T19:45:00Z — ChatGPT / GPT-5.6 Sol
+- Intent: Complete the Future Champs media-first public shell and align the autonomous agent loop with the owner-provided Loop Engineering standard.
+- Current stage: 05_EXPERIENCE → 06_BUILD → 07_VERIFY.
+- Mode: Brownfield reframing.
+- Outcome: Complete public IA, placeholders, navigation, accessibility hooks, media workflow, and governance without publishing approval-gated footage.
+- Target: Future Champs public site and private agent-control contract.
+- Constraints: Preserve canonical Drive masters, no invented people/claims, no sensitive youth intake, no self-approval, keep rollback.
+- Proof required: GitHub diff, route/link validation, independent external check, and runtime preview before production verification.
+- Commercial value: Establish the MACS Digital Media zero-to-launch case study and reusable media workflow.
+
+### EXIT — 2026-09-18T20:00:00Z — ChatGPT / GPT-5.6 Sol
+- Work performed: Expanded PR #11 into the full media shell; added Fighters, Gyms + Corners, About, Get Involved; unified navigation; added skip links/focus/reduced-motion support; made Watch filters functional; expanded sitemap; refreshed project state and agent constitution; integrated Loop Engineering release rules.
+- Files changed: public HTML routes, `assets/future-champs.css`, `sitemap.xml`, `AGENTS.md`, `00_CONTEXT/PROJECT_STATE.md`, backend loop configuration, Anchor 001 production record.
+- Decisions: The active public product is a boxing media property; older fundraiser/gym-first framing is parked. The Corner is editorial; Watch is video; beginning fighters are the primary lens.
+- Tests/evidence: Seven public HTML routes passed repository-level checks for doctype, language, viewport, title, description, main target, skip link, primary nav, and known internal-route validity; broken internal links found: 0. PR #11 remains mergeable and CodeRabbit status reports success.
+- Risks/blockers: No substantive reviewer comment was returned; no exact-revision browser/mobile runtime preview has been captured; production deployment target is not evidenced in the repo; Anchor 001 still needs transcript/captions, clean-master decision, identity/guardian status where applicable, and Glenn editorial approval.
+- Rollback: Close PR #11 or reset to main baseline `75fa80b325e583f0febd9f82217eabcb2b3b5ce3` before merge; after merge revert the merge commit if runtime verification fails.
+- Next action: Obtain a runtime preview of PR #11, perform browser/mobile gauntlet against Punch By Punch/COLLINS, repair decisive gaps, then merge the shell. After merge, finish Anchor 001 and replace placeholder 01 with approved media.
+- Beads updated: No — no Beads CLI/runtime shell available in this connector session.
+
+### ENTRY — 2026-09-19T00:37:54-06:00 — ChatGPT / GPT-5.6 Sol
+- Intent: Continue exactly one bounded safe site-loop slice: remove horizontal mobile navigation scrolling while preserving the media-first shell and approval gates.
+- Current stage: 06_BUILD → 07_VERIFY.
+- Bead or task: PR #12 mobile navigation wrap.
+- Context read: `AGENTS.md`, `ICMR.yaml`, `backend/config/site.loop.yaml`, `backend/SITE_LOOP.md`, `00_CONTEXT/PROJECT_STATE.md`, active PR #11/#12 state, and independent Codex review.
+- Constraints: No youth media publication, no new claims, no Drive-source changes, no backend/credential changes, no production merge without independent review and evidence.
+- Proof required: isolated diff, no route/media changes, independent reviewer result, documented rollback and unresolved runtime limitations.
+
+### EXIT — 2026-09-19T00:42:00-06:00 — ChatGPT / GPT-5.6 Sol
+- Work performed: Kept the slice limited to shared mobile-navigation CSS: below 900px the primary links wrap instead of using horizontal overflow; below 560px spacing and type are tightened while links remain visible.
+- Files changed: `assets/future-champs.css`; this verification entry in `wiki/AGENT_LOG.md`.
+- Decisions: Preserve all navigation destinations and desktop behavior; do not touch the 19 media placeholders, canonical Drive source, claims, backend, or publication state.
+- Tests/evidence: Diff inspection confirms the implementation removes `overflow-x:auto`, adds `flex-wrap:wrap`, visible link gaps, and minimum 36px link-row height. Existing shared focus-visible and reduced-motion rules remain unchanged. Independent Codex review of commit `20315889d7` identified one P1 process defect: missing commit-specific verification/exit evidence; no additional code defect was reported in that review.
+- Risks/blockers: Exact browser rendering at representative mobile widths (320/375/390/430px) has not been observed in a runtime preview in this connector session, so PREVIEW VERIFIED cannot be claimed. A 36px minimum nav-link row is also evidence of visibility, not a claim of full touch-target compliance. PR #11 remains the parent build and production publication remains gated.
+- Rollback: Close PR #12 or revert commit `20315889d785993cda77d221eff427f315869b9f`; no production state has changed.
+- Next action: Re-run independent review on the updated PR #12 head. Merge into its parent branch only if review/checks pass; do not merge PR #11 to production until exact-revision runtime/mobile verification passes.
+- Beads updated: No — Beads CLI is unavailable in this connector session.

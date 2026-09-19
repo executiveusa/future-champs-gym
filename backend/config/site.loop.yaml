@@ -1,0 +1,57 @@
+version: "1"
+name: future-champs-site-loop
+owner: Glenn
+controller: FirstMate
+builder: Hermes
+external_director: Instinct
+mode: brownfield
+objective: "Continuously improve the Future Champs public site until the media-first shell, copy, mobile UX, accessibility, content placeholders, and approved-media integration are release-ready."
+inputs:
+  - AGENTS.md
+  - ICMR.yaml
+  - 00_CONTEXT/
+  - 05_EXPERIENCE/
+  - 30_VALIDATE/
+  - content-studio/
+  - backend/config/firstmate.routes.yaml
+benchmarks:
+  - Collins-level reduction and coherence
+  - Punch-by-Punch-style media legibility
+  - Future Champs youth and beginning-fighter focus
+  - anti-slop rules
+cycle:
+  - inspect_current_main
+  - read_latest_agent_log
+  - identify_highest_value_unfinished_site_gap
+  - make_one_bounded_non_destructive_slice
+  - run_copy_mobile_link_accessibility_checks
+  - run_future_champs_gauntlet
+  - request_independent_agent_review
+  - if_pass_commit_and_open_or_update_pr
+  - if_non_destructive_and_review_passes_merge
+  - if_publication_or_claim_change_hold_for_owner_approval
+  - update_context_and_agent_log
+stop_conditions:
+  - release_ready_shell
+  - no_safe_unapproved_work_remaining
+  - blocked_on_media_identity_rights_or_credentials
+  - rollback_missing
+release_gates:
+  mobile: required
+  accessibility: required
+  broken_links: zero
+  unverified_claims: zero
+  secrets_in_repo: zero
+  rollback: required
+  independent_review: required
+  approved_media_for_public_playback: required
+  owner_approval_for_publish: required
+priority_order:
+  - media_shell
+  - copy
+  - mobile_navigation
+  - video_placeholders
+  - editorial_archive
+  - approved_media_swap
+  - distribution
+  - analytics
