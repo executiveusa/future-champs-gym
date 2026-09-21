@@ -96,3 +96,39 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Rollback: Close PR #12 or revert commit `20315889d785993cda77d221eff427f315869b9f`; no production state has changed.
 - Next action: Re-run independent review on the updated PR #12 head. Merge into its parent branch only if review/checks pass; do not merge PR #11 to production until exact-revision runtime/mobile verification passes.
 - Beads updated: No — Beads CLI is unavailable in this connector session.
+
+### ENTRY — 2026-09-20T06:40:00-06:00 — ChatGPT / GPT-5.6 Sol
+- Intent: Close the evidence gap on exactly one bounded slice: The Corner article-reader alignment in PR #13.
+- Current stage: 07_VERIFY.
+- Bead or task: PR #13 Corner reader shell.
+- Context read: repository constitution, `ICMR.yaml`, active PR #13 state, current branch agent log, and independent Codex review threads.
+- Constraints: No youth media publication, no new public claims, no canonical Drive changes, no credentials/backend changes, no production release.
+- Proof required: exact-head independent review, durable exit evidence, rollback, and zero unresolved review findings before merge.
+
+### EXIT — 2026-09-20T06:44:00-06:00 — ChatGPT / GPT-5.6 Sol
+- Work performed: Added the required durable verification/handoff record for PR #13 after the article-reader accessibility correction.
+- Files changed: `wiki/AGENT_LOG.md` only in this evidence repair; the bounded site implementation remains `blog/post.html`.
+- Decisions: Keep the article reader aligned to the shared media shell; preserve the existing public Supabase read path; do not inject the legacy fundraiser-era callout into every story.
+- Tests/evidence: Independent Codex reviewed repaired commit `032a52c522` and identified one remaining P1 process issue only: the missing durable exit record. The earlier `aria-current` accessibility finding is resolved and outdated. PR #13 remains mergeable. No youth footage, identity, Drive source, backend, or approval-gated media is changed by the slice.
+- Risks/blockers: Exact browser/mobile rendering is still not runtime-verified in this connector session. A fresh independent review must cover this new evidence commit before merge because builders cannot approve themselves.
+- Rollback: Close PR #13 or revert the Corner-reader implementation commits plus this log-only evidence commit; production remains unchanged.
+- Next action: Re-run independent review on the new PR #13 head. Merge into the active build branch only if no unresolved findings remain; do not promote PR #11 to production without runtime verification and owner-gated media approvals.
+- Beads updated: No — Beads CLI is unavailable in this connector session.
+
+### ENTRY — 2026-09-20T12:40:00-06:00 — ChatGPT / GPT-5.6 Sol
+- Intent: Repair exactly one review-gate defect on PR #13 without expanding the public-site slice.
+- Current stage: 07_VERIFY.
+- Bead or task: Preserve append-only rollback evidence in `wiki/AGENT_LOG.md`.
+- Context read: `AGENTS.md`, `ICMR.yaml`, `backend/config/site.loop.yaml`, `backend/SITE_LOOP.md`, `00_CONTEXT/PROJECT_STATE.md`, PR #11/#13 state, base/head agent logs, and current independent Codex thread.
+- Constraints: Preserve canonical Drive source and ICM structure; no youth media, claims, credentials, backend, production, or article-reader code changes in this repair.
+- Proof required: restore prior PR #11/#12 evidence verbatim, retain PR #13 handoff as an append, then obtain a fresh independent review of the exact head.
+
+### EXIT — 2026-09-20T12:45:00-06:00 — ChatGPT / GPT-5.6 Sol
+- Work performed: Restored the historical PR #11 and PR #12 agent-log entries verbatim from base commit `ffe250decb265e2e45ea950278686cb5a4697579` and retained the PR #13 verification record strictly as an append.
+- Files changed: `wiki/AGENT_LOG.md` only.
+- Decisions: Treat the agent log as append-only audit evidence; never simplify prior rollback hashes or commit-specific verification while adding a later slice record.
+- Tests/evidence: Compared the PR #13 branch log against base `ffe250de...`; restored PR #11 baseline `75fa80b325e583f0febd9f82217eabcb2b3b5ce3` and PR #12 rollback commit `20315889d785993cda77d221eff427f315869b9f` exactly. No public HTML, media, source-of-truth, backend, or credentials changed in this repair.
+- Risks/blockers: A fresh independent review of this exact repaired head is still required before PR #13 may merge. Exact browser/mobile runtime verification remains required before the parent PR #11 can be promoted to production.
+- Rollback: Revert this log-only repair commit to return PR #13 to its prior head; production remains unchanged.
+- Next action: Independent reviewer re-checks the repaired head. Merge PR #13 into the active build branch only if no unresolved findings remain.
+- Beads updated: No — Beads CLI is unavailable in this connector session.
