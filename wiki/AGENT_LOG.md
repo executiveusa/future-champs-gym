@@ -47,8 +47,6 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 ### ENTRY — 2026-09-16T00:00:00Z — Codex
 - Intent: Make the Future Champs repository directly consumable by Glenn's Instinct Agent before server provisioning.
 - Current stage: 06_BUILD / backend handoff contract.
-- Bead or task: Portable ICM/Instinct handoff contract before server provisioning.
-- Context read: Existing backend architecture, ICMR entry points, FirstMate/Hermes control boundary, and current no-server deployment constraint.
 - Mode: Brownfield; backend remains private and separate from the public frontend.
 - Outcome: Add a portable ICM entry point, Instinct manifest, backend context, and fail-closed handoff rules.
 - Constraints: No server yet; no live Instinct webhook contract; no Hermes production install; no secrets in repo.
@@ -152,4 +150,22 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Risks/blockers: Firecrawl benchmark fetch was unavailable due connector credit limits; no visual/browser preview was performed in this slice.
 - Rollback: Close the anti-slop PR or revert its commits; base build remains unchanged until merge.
 - Next action: Independent review of the copy-only PR. Merge only if review finds no misleading claims or material regression.
+- Beads updated: No.
+
+### ENTRY — 2026-09-22T22:51:00Z — ChatGPT / GPT-5.6 Sol
+- Intent: Correct the PR #17 governance record without rewriting historical audit evidence.
+- Current stage: 07_VERIFY / governance repair.
+- Bead or task: Append correction metadata for the original 2026-09-16 Codex entry.
+- Context read: Original 2026-09-16 Codex entry at base `52438cab01aacbbe437c7cef5c5989fbf9e41293`, PR #17 CodeRabbit finding, and append-only agent-log contract.
+- Constraints: Documentation-only; preserve original historical entry verbatim; no public media, backend behavior, credentials, Drive source, or production publication changes.
+- Proof required: Original entry restored, correction appended, independent review of exact new head before merge.
+
+### EXIT — 2026-09-22T22:52:00Z — ChatGPT / GPT-5.6 Sol
+- Work performed: Restored the original 2026-09-16 Codex entry unchanged and appended the missing metadata as a correction rather than rewriting history.
+- Files changed: `wiki/AGENT_LOG.md` only.
+- Decisions: Correction to 2026-09-16 Codex ENTRY — Bead or task: Portable ICM/Instinct handoff contract before server provisioning. Context read: Existing backend architecture, ICMR entry points, FirstMate/Hermes control boundary, and current no-server deployment constraint.
+- Tests/evidence: Compared the historical entry against base `52438cab01aacbbe437c7cef5c5989fbf9e41293`; prior in-place additions were removed and correction metadata is append-only.
+- Risks/blockers: Independent reviewer must cover this exact head before merge. Youth/guardian media remains approval-gated.
+- Rollback: Revert this documentation-only commit; production remains unchanged.
+- Next action: Obtain independent review, then merge PR #17 only if the review gate passes.
 - Beads updated: No.
