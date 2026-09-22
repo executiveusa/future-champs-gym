@@ -64,8 +64,12 @@ The final cut should answer at least one of:
 
 - [ ] Confirm exact subject name and spelling.
 - [ ] Record age only if needed and approved.
-- [ ] Record guardian status if subject is a minor.
-- [x] Archive rights intake recorded as cleared for use.
+- [ ] Record guardian status and evidence reference if the subject is a minor; if not applicable, record N/A with reason.
+- [x] Archive-level rights intake exists: `00_CONTEXT/VIDEO_DRIVE_INTAKE_2026-09-16.md` and `00_CONTEXT/VIDEO_SOURCE_OF_TRUTH.md`.
+- [ ] Likeness/appearance permission evidence reference recorded for the subject.
+- [ ] Guardian permission evidence reference recorded when applicable.
+- [ ] Music/audio rights evidence reference recorded, or N/A with reason.
+- [ ] Third-party image/logo/mark rights evidence reference recorded, or N/A with reason.
 - [ ] Determine whether the visible TikTok watermark/handle is acceptable.
 - [ ] Locate a clean source/export if available.
 - [ ] Produce transcript.
@@ -98,4 +102,4 @@ The final cut should answer at least one of:
 
 ## Approval gate
 
-Nothing in this record authorizes publication by itself. The package moves from **HOLD** to **APPROVED** only when the remaining release blockers are recorded and Glenn approves the editorial cut.
+Nothing in this record authorizes publication by itself. The package remains **HOLD** until every applicable likeness, guardian, music/audio, image/logo/mark, identity, caption, watermark, playback, and editorial-approval item above has an auditable evidence reference or an explicit N/A reason. Only then, and after Glenn approves the editorial cut, may the record move to **APPROVED**.
