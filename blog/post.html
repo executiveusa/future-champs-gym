@@ -36,15 +36,13 @@ function sanitizeArticleHTML(value){
     clean(node);
     continue;
    }
+   const rawHref=child.tagName==='A'?child.getAttribute('href'):null;
    for(const attr of [...child.attributes]) child.removeAttribute(attr.name);
-   if(child.tagName==='A'){
-    const raw=child.getAttribute('href');
-    if(raw){
-     try{
-      const url=new URL(raw,location.origin);
-      if(['http:','https:'].includes(url.protocol)) child.setAttribute('href',raw);
-     }catch(_){}
-    }
+   if(rawHref){
+    try{
+     const url=new URL(rawHref,location.origin);
+     if(['http:','https:'].includes(url.protocol)) child.setAttribute('href',rawHref);
+    }catch(_){}
    }
    clean(child);
   }
