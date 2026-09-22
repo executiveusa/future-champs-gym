@@ -30,6 +30,10 @@ function sanitizeArticleHTML(value){
    if(child.nodeType===Node.COMMENT_NODE){child.remove();continue;}
    if(child.nodeType!==Node.ELEMENT_NODE) continue;
    if(!ARTICLE_TAGS.has(child.tagName)){
+    if(['SCRIPT','STYLE'].includes(child.tagName)){
+     child.remove();
+     continue;
+    }
     const fragment=document.createDocumentFragment();
     while(child.firstChild) fragment.appendChild(child.firstChild);
     child.replaceWith(fragment);
