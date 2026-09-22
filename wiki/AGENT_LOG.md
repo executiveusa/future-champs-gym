@@ -132,3 +132,22 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Rollback: Revert this log-only repair commit to return PR #13 to its prior head; production remains unchanged.
 - Next action: Independent reviewer re-checks the repaired head. Merge PR #13 into the active build branch only if no unresolved findings remain.
 - Beads updated: No — Beads CLI is unavailable in this connector session.
+
+
+### ENTRY — 2026-09-22T10:30:00Z — ChatGPT / GPT-5.6 Sol
+- Intent: Run one copy-only anti-slop subtraction pass across the public Future Champs media shell.
+- Current stage: 05_EXPERIENCE / copy reduction.
+- Bead or task: Remove internal system/build language from public-facing pages while preserving boxing-specific positioning and publication boundaries.
+- Context read: Active PR #11 public shell, current media-first project state, prior anti-slop direction, and public copy across seven primary routes.
+- Constraints: Copy only; no youth footage, identities, claims, credentials, Drive source changes, backend changes, or approval-gated media.
+- Proof required: Banned-jargon scan across all seven primary public routes, isolated PR, independent review before merge.
+
+### EXIT — 2026-09-22T10:45:00Z — ChatGPT / GPT-5.6 Sol
+- Work performed: Reduced public copy across Home, Watch, Fighters, Gyms + Corners, The Corner, About, and Get Involved. Removed internal build language, agency/process jargon, and repetitive placeholder prose; kept the beginning-fighter editorial idea intact.
+- Files changed: `index.html`, `watch/index.html`, `fighters/index.html`, `gyms-and-corners/index.html`, `blog/index.html`, `about/index.html`, `get-involved/index.html`, `wiki/AGENT_LOG.md`.
+- Decisions: Public copy should sound like a boxing publication, not an internal product spec. Placeholder copy now states only what a visitor needs to know.
+- Tests/evidence: Scan across seven public routes found zero occurrences of targeted internal phrases including information architecture, media record, operating system, repeatable media system, canonical archive, automated later, approved media replacement language, and content sludge.
+- Risks/blockers: Firecrawl benchmark fetch was unavailable due connector credit limits; no visual/browser preview was performed in this slice.
+- Rollback: Close the anti-slop PR or revert its commits; base build remains unchanged until merge.
+- Next action: Independent review of the copy-only PR. Merge only if review finds no misleading claims or material regression.
+- Beads updated: No.
