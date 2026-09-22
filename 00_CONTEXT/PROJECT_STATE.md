@@ -3,7 +3,8 @@
 **As of:** 2026-09-18  
 **Mode:** Brownfield reframing  
 **Classification:** SELL + USE  
-**Release state:** READY FOR PREVIEW candidate; production publication not verified  
+**Release state:** READY FOR PREVIEW  
+**Production publication:** not verified  
 **Primary domain:** FutureChampsGym.org
 
 ## Current objective
