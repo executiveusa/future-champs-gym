@@ -47,6 +47,8 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 ### ENTRY — 2026-09-16T00:00:00Z — Codex
 - Intent: Make the Future Champs repository directly consumable by Glenn's Instinct Agent before server provisioning.
 - Current stage: 06_BUILD / backend handoff contract.
+- Bead or task: Portable ICM/Instinct handoff contract before server provisioning.
+- Context read: Existing backend architecture, ICMR entry points, FirstMate/Hermes control boundary, and current no-server deployment constraint.
 - Mode: Brownfield; backend remains private and separate from the public frontend.
 - Outcome: Add a portable ICM entry point, Instinct manifest, backend context, and fail-closed handoff rules.
 - Constraints: No server yet; no live Instinct webhook contract; no Hermes production install; no secrets in repo.
