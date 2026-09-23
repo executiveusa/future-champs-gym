@@ -3,7 +3,8 @@
 **As of:** 2026-09-18  
 **Mode:** Brownfield reframing  
 **Classification:** SELL + USE  
-**Release state:** READY FOR PREVIEW candidate; production publication not verified  
+**Release state:** READY FOR PREVIEW  
+**Production publication:** not verified  
 **Primary domain:** FutureChampsGym.org
 
 ## Current objective
@@ -43,7 +44,7 @@ Release floor follows Loop Engineering: overall >= 8.5; no broken controls, mobi
 ## Public information architecture
 
 - `/` — point of view and primary entry
-- `/watch/` — 19-slot video archive and filtering
+- `/watch/` — public video desk; held until approved media is ready
 - `/fighters/` — fighter profiles
 - `/gyms-and-corners/` — coaches, mentors, gyms, programs
 - `/blog/` — The Corner editorial desk
@@ -73,7 +74,7 @@ Raw private video is not stored in the repository.
 - Anchor 001 selected and production record created.
 - Shared editorial CSS and mobile navigation created.
 - Public routes added for Fighters, Gyms + Corners, About, and Get Involved.
-- Watch archive placeholders and lane filtering implemented.
+- The 19-source working archive remains private; the public Watch page shows a held state until approved media is ready.
 - Sitemap expanded for full media architecture.
 - Instinct → FirstMate → Hermes autonomous site loop defined with independent-review and publication gates.
 - PR #11 is the active build line and is ahead of `main`.
