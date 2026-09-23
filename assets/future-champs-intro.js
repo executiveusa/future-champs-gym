@@ -21,13 +21,14 @@
 
   const bell = intro.querySelector('[data-audio="bell"]');
   const bag = intro.querySelector('[data-audio="bag"]');
-  const start = intro.querySelector('[data-start]');
+  const soundToggle = intro.querySelector('[data-sound-toggle]');
   const skip = intro.querySelector('[data-skip]');
   const enter = intro.querySelector('[data-enter]');
   const forceIntro = new URLSearchParams(location.search).get('intro') === '1';
 
   let timers = [];
   let started = false;
+  let soundEnabled = false;
 
   const later = (fn, ms) => {
     const id = window.setTimeout(fn, ms);
@@ -62,12 +63,12 @@
     });
   };
 
-  const playVideo = async (video, muted = false) => {
+  const playVideo = async video => {
     if (!video) return;
     video.pause();
     video.currentTime = 0;
     video.loop = false;
-    video.muted = muted;
+    video.muted = !soundEnabled;
     try {
       await video.play();
     } catch {
@@ -77,10 +78,32 @@
   };
 
   const playAudio = async audio => {
-    if (!audio) return;
+    if (!audio || !soundEnabled) return;
     audio.pause();
     audio.currentTime = 0;
     try { await audio.play(); } catch {}
+  };
+
+  const updateSoundUI = () => {
+    if (!soundToggle) return;
+    soundToggle.textContent = soundEnabled ? 'SOUND OFF' : 'SOUND ON';
+    soundToggle.setAttribute('aria-pressed', soundEnabled ? 'true' : 'false');
+  };
+
+  const toggleSound = () => {
+    soundEnabled = !soundEnabled;
+    Object.values(videos).forEach(video => {
+      if (video) video.muted = !soundEnabled;
+    });
+    if (!soundEnabled) {
+      [bell, bag].forEach(audio => {
+        if (audio) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+    }
+    updateSoundUI();
   };
 
   const revealSite = () => {
@@ -103,11 +126,12 @@
     started = true;
     clearTimers();
     stopMedia();
-    start.hidden = true;
     skip.hidden = false;
+    soundToggle.hidden = false;
+    updateSoundUI();
 
     showScene('seattle');
-    await playVideo(videos.seattle, false);
+    await playVideo(videos.seattle);
 
     later(() => {
       videos.seattle?.pause();
@@ -118,13 +142,13 @@
 
     later(() => {
       showScene('round');
-      playVideo(videos.round, false);
+      playVideo(videos.round);
     }, 6600);
 
     later(() => {
       videos.round?.pause();
       showScene('pickup');
-      playVideo(videos.pickup, false);
+      playVideo(videos.pickup);
     }, 12150);
 
     later(() => {
@@ -148,7 +172,7 @@
     }, 26000);
   };
 
-  start?.addEventListener('click', runIntro);
+  soundToggle?.addEventListener('click', toggleSound);
   skip?.addEventListener('click', revealSite);
   enter?.addEventListener('click', revealSite);
 
@@ -163,12 +187,6 @@
   root.classList.add('fc-intro-lock');
   document.body.style.overflow = 'hidden';
 
-  showScene('seattle');
-  if (videos.seattle) {
-    videos.seattle.muted = true;
-    videos.seattle.loop = true;
-    videos.seattle.play().catch(() => {});
-  }
-  start.hidden = false;
-  skip.hidden = false;
+  // Autoplay the entire cinematic silently. Sound is strictly opt-in.
+  runIntro();
 })();
