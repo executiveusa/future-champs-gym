@@ -6,8 +6,56 @@
   <title>Future Champs Project | The Corner</title>
   <meta name="description" content="Future Champs documents the people, places, and work behind young and beginning fighters. Watch the stories, meet the people in their corner, and follow the work before the spotlight.">
   <link rel="stylesheet" href="/assets/future-champs.css">
+  <script src="/assets/future-champs-intro.js" defer></script>
 </head>
 <body>
+<section class="fc-intro" data-fc-intro aria-label="Future Champs opening film">
+  <button class="fc-intro-skip" type="button" data-skip>Skip intro</button>
+
+  <div class="fc-intro-scene fc-intro-video is-active" data-scene="seattle" aria-hidden="false">
+    <video playsinline preload="auto" aria-label="Foggy Seattle establishing shot">
+      <source src="https://v3b.fal.media/files/b/0aab9132/7b9IYhl7zHXSIVUOSJ1dI_7_vfwvenDQeoCpJb-jJPA_video.mp4" type="video/mp4">
+    </video>
+    <div class="fc-location">
+      <strong>SEATTLE, WASHINGTON</strong>
+      <span>2026</span>
+    </div>
+  </div>
+
+  <div class="fc-intro-scene fc-intro-video" data-scene="round" aria-hidden="true">
+    <video playsinline preload="auto" aria-label="Two fighters sparring in a boxing ring">
+      <source src="https://v3b.fal.media/files/b/0aab9133/39YWzJm2aF3LyDVvjgKeV_8jImfQjJ7KpL6WUe1GjJB_video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="fc-intro-scene fc-intro-video" data-scene="pickup" aria-hidden="true">
+    <video playsinline preload="auto" aria-label="A fighter is knocked down and helped back to his feet">
+      <source src="https://v3b.fal.media/files/b/0aab9133/C9oUo6BV_YdctUGSMVKhp_e11EUi1YYohNzptPq_FVm_minimax-h3.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="fc-intro-scene fc-quote-scene" data-scene="quote" aria-hidden="true">
+    <blockquote>
+      <p>“Service to others is the rent you pay<br>for your room here on earth.”</p>
+      <cite>— Muhammad Ali</cite>
+    </blockquote>
+  </div>
+
+  <div class="fc-intro-scene fc-title-scene" data-scene="title" aria-hidden="true">
+    <img src="/assets/future-champs-round8.svg" alt="Future Champs">
+  </div>
+
+  <div class="fc-intro-scene fc-enter-scene" data-scene="enter" aria-hidden="true">
+    <button type="button" class="fc-enter" data-enter>ENTER</button>
+  </div>
+
+  <button class="fc-intro-start" type="button" data-start>START WITH SOUND</button>
+
+  <audio data-audio="bag" preload="auto" src="https://v3b.fal.media/files/b/0aab9133/sx5vi1cpe4a7Ek2vBT6bx_uxoyE1zu2QAy6r-PuRU7G_sound_effect.mp3"></audio>
+  <audio data-audio="bell" preload="auto" src="https://v3b.fal.media/files/b/0aab9133/Q4Y0GwcJGo2lcx8IDkBdz_C06XTNQyDteK1mMBijxtC_sound_effect.mp3"></audio>
+</section>
+
+<div class="site-shell" data-fc-site>
 <a class="skip" href="#main">Skip to content</a><header class="nav"><div class="wrap navin"><a class="brand" href="/">FUTURE CHAMPS</a><nav class="links" aria-label="Primary"><a href="/watch/">Watch</a><a href="/fighters/">Fighters</a><a href="/gyms-and-corners/">Gyms + Corners</a><a href="/blog/">The Corner</a><a href="/about/">About</a></nav><a class="btn dark" href="/get-involved/">Get involved</a></div></header>
 
 <main id="main">
@@ -60,5 +108,6 @@
 </main>
 
 <footer class="footer"><div class="wrap foot"><div><b>FUTURE CHAMPS</b><div>The Corner · Watch · Ringside</div></div><div>Every fighter starts somewhere.</div><div><a href="/watch/">Watch</a> · <a href="/blog/">The Corner</a></div></div></footer>
+</div>
 </body>
 </html>
