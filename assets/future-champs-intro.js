@@ -25,6 +25,12 @@
   const skip = intro.querySelector('[data-skip]');
   const enter = intro.querySelector('[data-enter]');
   const forceIntro = new URLSearchParams(location.search).get('intro') === '1';
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const constrainedConnection = Boolean(
+    connection?.saveData ||
+    /(^|-)2g$/.test(connection?.effectiveType || '') ||
+    connection?.effectiveType === 'slow-2g'
+  );
 
   let timers = [];
   let started = false;
@@ -50,6 +56,13 @@
     });
   };
 
+  const warmVideo = video => {
+    if (!video || video.dataset.warmed === '1') return;
+    video.dataset.warmed = '1';
+    video.preload = constrainedConnection ? 'metadata' : 'auto';
+    video.load();
+  };
+
   const stopMedia = () => {
     Object.values(videos).forEach(video => {
       if (!video) return;
@@ -65,6 +78,7 @@
 
   const playVideo = async video => {
     if (!video) return;
+    warmVideo(video);
     video.pause();
     video.currentTime = 0;
     video.loop = false;
@@ -97,10 +111,9 @@
     });
     if (!soundEnabled) {
       [bell, bag].forEach(audio => {
-        if (audio) {
-          audio.pause();
-          audio.currentTime = 0;
-        }
+        if (!audio) return;
+        audio.pause();
+        audio.currentTime = 0;
       });
     }
     updateSoundUI();
@@ -118,7 +131,7 @@
       root.classList.remove('fc-intro-lock');
       document.body.style.overflow = '';
       site.querySelector('a,button,[tabindex]:not([tabindex="-1"])')?.focus({preventScroll:true});
-    }, 700);
+    }, 500);
   };
 
   const runIntro = async () => {
@@ -130,8 +143,10 @@
     soundToggle.hidden = false;
     updateSoundUI();
 
+    // Seattle is the only eager video. The next shot starts warming while this plays.
     showScene('seattle');
     await playVideo(videos.seattle);
+    later(() => warmVideo(videos.round), constrainedConnection ? 2200 : 700);
 
     later(() => {
       videos.seattle?.pause();
@@ -143,6 +158,7 @@
     later(() => {
       showScene('round');
       playVideo(videos.round);
+      later(() => warmVideo(videos.pickup), constrainedConnection ? 2800 : 900);
     }, 6600);
 
     later(() => {
@@ -187,6 +203,13 @@
   root.classList.add('fc-intro-lock');
   document.body.style.overflow = 'hidden';
 
-  // Autoplay the entire cinematic silently. Sound is strictly opt-in.
+  Object.values(videos).forEach(video => {
+    if (!video) return;
+    video.muted = true;
+    video.playsInline = true;
+  });
+
+  // Autoplay silently; sound remains user-controlled.
+  warmVideo(videos.seattle);
   runIntro();
 })();
