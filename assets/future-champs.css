@@ -10,7 +10,7 @@
 .fc-intro-scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .42s ease,visibility .42s ease;background:#000}
 .fc-intro-scene.is-active{opacity:1;visibility:visible}
 .fc-intro-video video{width:100%;height:100%;object-fit:cover;background:#000}
-.fc-location{position:absolute;left:clamp(20px,5vw,76px);bottom:clamp(28px,7vh,74px);z-index:4;display:grid;gap:3px;text-shadow:0 2px 22px rgba(0,0,0,.65)}
+.fc-location{position:absolute;left:50%;bottom:clamp(34px,8vh,86px);transform:translateX(-50%);z-index:4;display:grid;gap:4px;width:max-content;max-width:92vw;text-align:center;text-shadow:0 2px 22px rgba(0,0,0,.65)}
 .fc-location strong{font-size:clamp(.72rem,1.05vw,.95rem);letter-spacing:.2em;font-weight:800}
 .fc-location span{font-size:clamp(.7rem,.9vw,.86rem);letter-spacing:.22em;color:rgba(255,255,255,.78)}
 .fc-quote-scene{padding:24px}
@@ -37,7 +37,7 @@ html.fc-intro-lock{background:#000}
 @keyframes fcEnterPulse{0%{opacity:.72;transform:scale(.82)}70%,100%{opacity:0;transform:scale(1.4)}}
 @media(max-width:700px){
   .fc-intro-video video{object-position:center center}
-  .fc-location{left:20px;bottom:26px}
+  .fc-location{left:50%;bottom:28px;transform:translateX(-50%)}
   .fc-quote-scene p{font-size:clamp(1.7rem,8vw,3rem)}
   .fc-title-scene{padding:22px}
   .fc-title-scene img{width:96vw}
