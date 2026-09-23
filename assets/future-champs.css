@@ -47,3 +47,18 @@ html.fc-intro-lock{background:#000}
   .fc-intro-scene,.site-shell.is-visible{transition:none}
   .fc-title-scene img,.fc-enter:before,.fc-enter:after,.fc-intro.is-leaving{animation:none}
 }
+
+/* Public media placeholders */
+.media-slot:before{opacity:.32}
+.media-slot:after{opacity:.22}
+.media-spec{margin-top:18px;padding:12px 0;border-top:1px solid var(--line);font-size:.7rem;font-weight:800;letter-spacing:.14em;color:var(--muted)}
+.gallery-placeholder{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(180px,24vw);gap:8px}
+.gallery-cell{position:relative;background:#111;color:#fff;display:flex;align-items:flex-end;padding:14px;overflow:hidden}
+.gallery-cell:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.24)}
+.gallery-cell span{position:relative;z-index:1;font-size:.64rem;font-weight:800;letter-spacing:.14em}
+.gallery-cell.wide{grid-column:span 2}
+.gallery-cell.tall{grid-row:span 2}
+.archive-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(220px,20vw)}
+@media(max-width:800px){
+  .gallery-placeholder,.archive-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(170px,42vw)}
+}
