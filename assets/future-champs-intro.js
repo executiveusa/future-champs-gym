@@ -21,7 +21,6 @@
 
   let timers = [];
   let started = false;
-  let soundAllowed = false;
 
   const later = (fn, ms) => {
     const id = window.setTimeout(fn, ms);
@@ -51,25 +50,25 @@
   const showScene = name => {
     Object.entries(scenes).forEach(([key, el]) => {
       if (!el) return;
-      el.classList.toggle('is-active', key === name);
-      el.setAttribute('aria-hidden', key === name ? 'false' : 'true');
+      const active = key === name;
+      el.classList.toggle('is-active', active);
+      el.setAttribute('aria-hidden', active ? 'false' : 'true');
     });
   };
 
-  const playVideo = async (video, withSound = true) => {
+  const playVideo = async video => {
     if (!video) return;
     video.currentTime = 0;
-    video.muted = !withSound || !soundAllowed;
-    try {
-      await video.play();
-    } catch {
+    video.muted = false;
+    try { await video.play(); }
+    catch {
       video.muted = true;
       try { await video.play(); } catch {}
     }
   };
 
   const playAudio = async audio => {
-    if (!audio || !soundAllowed) return;
+    if (!audio) return;
     audio.currentTime = 0;
     try { await audio.play(); } catch {}
   };
@@ -94,30 +93,26 @@
     started = true;
     start.hidden = true;
     skip.hidden = false;
-    root.classList.add('fc-intro-lock');
-    document.body.style.overflow = 'hidden';
 
     showScene('seattle');
-    playVideo(scenes.seattle, true);
+    playVideo(scenes.seattle);
 
     later(() => {
       scenes.seattle?.pause();
       showScene('');
     }, 4080);
 
-    later(() => {
-      playAudio(bell);
-    }, 4250);
+    later(() => playAudio(bell), 4250);
 
     later(() => {
       showScene('round');
-      playVideo(scenes.round, true);
+      playVideo(scenes.round);
     }, 6600);
 
     later(() => {
       scenes.round?.pause();
       showScene('pickup');
-      playVideo(scenes.pickup, true);
+      playVideo(scenes.pickup);
     }, 12150);
 
     later(() => {
@@ -125,22 +120,16 @@
       showScene('quote');
     }, 18650);
 
-    later(() => {
-      showScene('');
-    }, 22400);
+    later(() => showScene(''), 22400);
 
-    later(() => {
-      playAudio(bag);
-    }, 22600);
+    later(() => playAudio(bag), 22600);
 
     later(() => {
       showScene('title');
       playAudio(bell);
     }, 22950);
 
-    later(() => {
-      showScene('');
-    }, 25550);
+    later(() => showScene(''), 25550);
 
     later(() => {
       showScene('enter');
@@ -148,12 +137,7 @@
     }, 26000);
   };
 
-  const requestStart = async () => {
-    soundAllowed = true;
-    runIntro();
-  };
-
-  start?.addEventListener('click', requestStart);
+  start?.addEventListener('click', runIntro);
   skip?.addEventListener('click', revealSite);
   enter?.addEventListener('click', revealSite);
 
@@ -168,14 +152,9 @@
   root.classList.add('fc-intro-lock');
   document.body.style.overflow = 'hidden';
 
-  // Attempt an immediate cinematic start. If the browser blocks audio,
-  // the black start control remains available and starts the full sound mix.
-  soundAllowed = false;
-  runIntro();
-  later(() => {
-    if (!soundAllowed && start) {
-      start.hidden = false;
-      start.classList.add('is-ready');
-    }
-  }, 350);
+  // Hold on Seattle as the opening frame until the user grants sound playback.
+  showScene('seattle');
+  scenes.seattle?.load();
+  start.hidden = false;
+  skip.hidden = false;
 })();
