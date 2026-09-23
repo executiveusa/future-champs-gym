@@ -13,11 +13,18 @@
     enter: intro.querySelector('[data-scene="enter"]')
   };
 
+  const videos = {
+    seattle: scenes.seattle?.querySelector('video'),
+    round: scenes.round?.querySelector('video'),
+    pickup: scenes.pickup?.querySelector('video')
+  };
+
   const bell = intro.querySelector('[data-audio="bell"]');
   const bag = intro.querySelector('[data-audio="bag"]');
   const start = intro.querySelector('[data-start]');
   const skip = intro.querySelector('[data-skip]');
   const enter = intro.querySelector('[data-enter]');
+  const forceIntro = new URLSearchParams(location.search).get('intro') === '1';
 
   let timers = [];
   let started = false;
@@ -33,20 +40,6 @@
     timers = [];
   };
 
-  const stopMedia = () => {
-    Object.values(scenes).forEach(el => {
-      if (el && el.tagName === 'VIDEO') {
-        el.pause();
-        el.currentTime = 0;
-      }
-    });
-    [bell, bag].forEach(a => {
-      if (!a) return;
-      a.pause();
-      a.currentTime = 0;
-    });
-  };
-
   const showScene = name => {
     Object.entries(scenes).forEach(([key, el]) => {
       if (!el) return;
@@ -56,12 +49,28 @@
     });
   };
 
-  const playVideo = async video => {
+  const stopMedia = () => {
+    Object.values(videos).forEach(video => {
+      if (!video) return;
+      video.pause();
+      video.currentTime = 0;
+    });
+    [bell, bag].forEach(audio => {
+      if (!audio) return;
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  };
+
+  const playVideo = async (video, muted = false) => {
     if (!video) return;
+    video.pause();
     video.currentTime = 0;
-    video.muted = false;
-    try { await video.play(); }
-    catch {
+    video.loop = false;
+    video.muted = muted;
+    try {
+      await video.play();
+    } catch {
       video.muted = true;
       try { await video.play(); } catch {}
     }
@@ -69,6 +78,7 @@
 
   const playAudio = async audio => {
     if (!audio) return;
+    audio.pause();
     audio.currentTime = 0;
     try { await audio.play(); } catch {}
   };
@@ -88,17 +98,19 @@
     }, 700);
   };
 
-  const runIntro = () => {
+  const runIntro = async () => {
     if (started) return;
     started = true;
+    clearTimers();
+    stopMedia();
     start.hidden = true;
     skip.hidden = false;
 
     showScene('seattle');
-    playVideo(scenes.seattle);
+    await playVideo(videos.seattle, false);
 
     later(() => {
-      scenes.seattle?.pause();
+      videos.seattle?.pause();
       showScene('');
     }, 4080);
 
@@ -106,22 +118,21 @@
 
     later(() => {
       showScene('round');
-      playVideo(scenes.round);
+      playVideo(videos.round, false);
     }, 6600);
 
     later(() => {
-      scenes.round?.pause();
+      videos.round?.pause();
       showScene('pickup');
-      playVideo(scenes.pickup);
+      playVideo(videos.pickup, false);
     }, 12150);
 
     later(() => {
-      scenes.pickup?.pause();
+      videos.pickup?.pause();
       showScene('quote');
     }, 18650);
 
     later(() => showScene(''), 22400);
-
     later(() => playAudio(bag), 22600);
 
     later(() => {
@@ -141,7 +152,7 @@
   skip?.addEventListener('click', revealSite);
   enter?.addEventListener('click', revealSite);
 
-  if (sessionStorage.getItem('fcIntroPlayed') === '1') {
+  if (!forceIntro && sessionStorage.getItem('fcIntroPlayed') === '1') {
     intro.hidden = true;
     site.removeAttribute('aria-hidden');
     site.classList.add('is-visible');
@@ -152,9 +163,12 @@
   root.classList.add('fc-intro-lock');
   document.body.style.overflow = 'hidden';
 
-  // Hold on Seattle as the opening frame until the user grants sound playback.
   showScene('seattle');
-  scenes.seattle?.load();
+  if (videos.seattle) {
+    videos.seattle.muted = true;
+    videos.seattle.loop = true;
+    videos.seattle.play().catch(() => {});
+  }
   start.hidden = false;
   skip.hidden = false;
 })();
