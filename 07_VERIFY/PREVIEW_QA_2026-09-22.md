@@ -2,6 +2,8 @@
 
 ## Scope
 
+Vercel project ID: `prj_64aqc4YySJFafloSfK0MSJUWDo1R`
+
 Preview branch: `preview/media-first-visual-qa-2026-09-22`
 
 This checklist verifies the media-first Future Champs shell before any production cutover.
@@ -39,7 +41,7 @@ Preview verification does not authorize publication of youth media. Production c
 
 ## Private path checks
 
-These must return 404 in the Netlify preview:
+These must return 404 in the Vercel preview:
 
 - `/00_CONTEXT/PROJECT_STATE.md`
 - `/00_CONTEXT/VIDEO_CATALOG.md`
@@ -47,4 +49,4 @@ These must return 404 in the Netlify preview:
 - `/content-studio/anchor-001/PRODUCTION_RECORD.md`
 - `/wiki/AGENT_LOG.md`
 
-The Netlify publish directory must contain public site files only.
+The Vercel output directory must contain public site files only.
