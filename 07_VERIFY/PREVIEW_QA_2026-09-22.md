@@ -36,3 +36,15 @@ This checklist verifies the media-first Future Champs shell before any productio
 ## Release rule
 
 Preview verification does not authorize publication of youth media. Production cutover remains separate and must preserve rollback to the current live Hostinger site.
+
+## Private path checks
+
+These must return 404 in the Netlify preview:
+
+- `/00_CONTEXT/PROJECT_STATE.md`
+- `/00_CONTEXT/VIDEO_CATALOG.md`
+- `/00_CONTEXT/VIDEO_DRIVE_INTAKE_2026-09-16.md`
+- `/content-studio/anchor-001/PRODUCTION_RECORD.md`
+- `/wiki/AGENT_LOG.md`
+
+The Netlify publish directory must contain public site files only.
