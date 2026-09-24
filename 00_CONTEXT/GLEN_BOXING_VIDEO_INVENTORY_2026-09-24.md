@@ -1,8 +1,9 @@
 # Glen Boxing Video Inventory — 2026-09-24
 
-Source folder: **BOXING VIDEOS GLEN**  
+Primary source folder: **BOXING VIDEOS GLEN**  
 Google Drive folder ID: `1G3MUd8wWztOefuJex32AFnMe46IyJpR_`  
-Total files reviewed: **19 MP4s**
+Additional source: **WeTransfer emails received 2026-09-24 from g3713990@gmail.com**  
+Total files reviewed: **23 MP4s** — 19 in Drive + 4 additional unique WeTransfer files
 
 ## Review method
 This is a production inventory, not a publication clearance.
@@ -27,11 +28,14 @@ No file in this inventory is automatically approved for public publication.
 3. **FB_VID_4213978428419504448.mp4** — boxing ring and event atmosphere.
 4. **cad195eb4a2d82e3e13035d4977ed7b5.mp4** — gym/interior/training atmosphere.
 5. **VID_20260912_155147366.mp4** — adult male direct-to-camera / event interview-style material.
-6. **7e9334fa233135d3bcc115f01d3e93a5.mp4** — young boxer direct-to-camera outside event/gym area; currently HOLD.
+6. **FB_VID_7490791055781737743.mp4** — vertical live bout footage with active boxing in the ring; strong Ringside candidate.
+7. **watermark-2026-08-11-055920203.mp4** — vertical boxing montage with multiple fighters/young participants in gym/ring settings; potentially useful fighter/training material, rights review required.
+8. **5a1ba7a2f222d9f727e0a70225aa3ca4.mp4** — vertical edited/promotional Future Champs-style clip with boxing imagery and a branded interview graphic; useful for social/promo review.
+9. **7e9334fa233135d3bcc115f01d3e93a5.mp4** — young boxer direct-to-camera outside event/gym area; currently HOLD.
 
 ### Strongest legacy / archive material
-7. **VID_20260913_052218_615.mp4** — poster + family/boxing archive montage.
-8. **watermark-2026-09-13-051702948.mp4** — apparent alternate/watermarked version of the same archive montage.
+10. **VID_20260913_052218_615.mp4** — poster + family/boxing archive montage.
+11. **watermark-2026-09-13-051702948.mp4** — apparent alternate/watermarked version of the same archive montage.
 
 ### Supporting event / community material
 The food/attendee clips appear tied to the boxing event/fundraiser and are best treated as community-event texture rather than main boxing stories.
@@ -61,6 +65,10 @@ The food/attendee clips appear tied to the boxing event/fundraiser and are best 
 | 17 | `VID_20260912_1241142992.mp4` | 0:03.3 | 1920×864 landscape, H.264/AAC | Very short attendee/food detail | Micro cutaway only | **SUPPORTING B-ROLL** |
 | 18 | `VID_20260912_1213031802.mp4` | 0:02.6 | 1920×864 landscape, H.264/AAC | Very short attendee/food detail | Micro cutaway only | **SUPPORTING B-ROLL** |
 | 19 | `FB_VID_4213978428419504448.mp4` | 1:26.1 | 432×768 vertical, H.264/AAC | Live boxing ring / ringside event environment | Ringside, event recap, vertical social cut | **USE CANDIDATE** |
+| 20 | `watermark-2026-08-11-055920203.mp4` | 0:42.8 | 720×1280 vertical, H.264/AAC | Edited boxing/gym montage with multiple people and fighters in red/blue gear across representative frames | Fighter/training montage, social short, Watch supporting footage | **USE CANDIDATE — WATERMARK/RIGHTS CHECK** |
+| 21 | `5a1ba7a2f222d9f727e0a70225aa3ca4.mp4` | 0:34.5 | 1080×1920 vertical, H.264/AAC | Edited vertical boxing/promo piece; representative frames include gym/fighter imagery and a Future Champs interview-style promotional graphic | Social promo, The Corner promo, campaign reference | **USE CANDIDATE — VERIFY SOURCE/GRAPHIC RIGHTS** |
+| 22 | `FB_VID_1723165979273370761.mp4` | 1:43.2 | 432×768 vertical, H.264/AAC | Ringside/event footage around a boxing ring; same venue family as existing event material but different duration/coverage | Ringside, event recap, venue atmosphere | **USE CANDIDATE — DISTINCT EVENT CLIP** |
+| 23 | `FB_VID_7490791055781737743.mp4` | 0:31.7 | 432×768 vertical, H.264/AAC | Active boxing match in ring from audience/ringside position | Ringside action, fight-night short, Watch | **HIGH-PRIORITY USE CANDIDATE** |
 
 ---
 
@@ -71,16 +79,16 @@ Use only approved material.
 
 - **Featured film slot:** build from #10 + #3 + #19 + #4/#6 only after subject and rights verification.
 - **The Corner interview cards:** #12 is the strongest current adult direct-to-camera candidate.
-- **Ringside gallery/video:** #3, #19, #10.
+- **Ringside gallery/video:** #3, #19, #10, #22, #23.
 - **Gym atmosphere:** #14.
 - **Legacy/archive:** #5, pending archive-photo ownership and poster/image rights.
 
 ### WATCH
 Suggested shelves:
-- **Ringside:** #3, #19, #10.
-- **Gym / training:** #14, #6.
+- **Ringside:** #3, #19, #10, #22, #23.
+- **Gym / training:** #14, #6, #20.
 - **Community / event:** #4, #7, #8, #9, #11, #13, #16, #17, #18.
-- **Interview:** #12.
+- **Interview / promo:** #12, #21.
 - **Hold / youth intake:** #1 / #2.
 
 ### FIGHTERS
@@ -117,6 +125,23 @@ These appear to cover the same outside/event sequence and have almost identical 
 
 Same duration and matching archive/poster imagery. Prefer the cleanest non-watermarked master after verification.
 
+### WeTransfer comparison — 2026-09-24
+Five unique filenames arrived by WeTransfer today. One, `7e9334fa233135d3bcc115f01d3e93a5.mp4`, was already present in Drive and was **not counted as new**.
+
+The other four were downloaded and checked against the existing 19-file inventory by filename, duration, technical metadata, and representative-frame content. None matched an existing file as an exact duplicate:
+- `watermark-2026-08-11-055920203.mp4` — new
+- `5a1ba7a2f222d9f727e0a70225aa3ca4.mp4` — new
+- `FB_VID_1723165979273370761.mp4` — new; same event/venue family as existing ringside footage, but distinct duration and coverage
+- `FB_VID_7490791055781737743.mp4` — new; distinct active-fight clip
+
+SHA-256 checksums of the downloaded WeTransfer files:
+- `watermark-2026-08-11-055920203.mp4` — `bb682247e34a6993c15d10498b871f691904de67198a36b040b706ca6571b308`
+- `5a1ba7a2f222d9f727e0a70225aa3ca4.mp4` — `0be9ed8b28bbde5dcff49923bfd528e6af042ebfb61c9ce39a68c0458bd96122`
+- `FB_VID_1723165979273370761.mp4` — `9dbb4b15ea366a6eeabb236574c6b587a2b212e74d371cfc2feccaeae32eaf8c`
+- `FB_VID_7490791055781737743.mp4` — `3b66e5ac3071fc3439fe07215696d921fe3f6023d7ddd72d695b2a44cf73a19e`
+
+These four are catalogued here but are **not automatically cleared for publication**.
+
 ---
 
 ## Rights / publication gate
@@ -141,14 +166,23 @@ Before any clip moves from inventory to public:
 2. **#12 — VID_20260912_155147366.mp4**  
    Transcribe and identify speaker. Potential first adult Corner interview.
 
-3. **#3 + #19 — Ringside pair**  
-   Pull 5–10 second selects for event atmosphere.
+3. **#23 — FB_VID_7490791055781737743.mp4**  
+   Review full bout clip and pull the strongest 5–10 second live-action select after rights clearance.
 
-4. **#14 — Gym atmosphere**  
+4. **#3 + #19 + #22 — Ringside group**  
+   Compare angles and pull non-duplicative event atmosphere selects.
+
+5. **#20 — watermark-2026-08-11-055920203.mp4**  
+   Review watermark/source status and identify fighters before use.
+
+6. **#21 — 5a1ba7a2f222d9f727e0a70225aa3ca4.mp4**  
+   Review the embedded Future Champs interview graphic and determine whether this is a finished promo, source edit, or social asset.
+
+7. **#14 — Gym atmosphere**  
    Pull training/interior selects.
 
-5. **#5 — Legacy montage**  
+8. **#5 — Legacy montage**  
    Trace every included photo/poster before use.
 
-6. **#1/#2 — Anchor 001 pair**  
+9. **#1/#2 — Anchor 001 pair**  
    Keep private until youth/identity/watermark clearance is complete.
