@@ -50,3 +50,31 @@ These must return 404 in the Vercel preview:
 - `/wiki/AGENT_LOG.md`
 
 The Vercel output directory must contain public site files only.
+
+
+## Final cinematic hero — 2026-09-23
+
+Exact hero branch: `feature/final-hero-round8-2026-09-23`
+
+Locked sequence:
+1. Seattle, Washington — 2026 establishing shot
+2. black + three-strike boxing bell
+3. controlled sparring
+4. hard knockdown
+5. charged look
+6. realistic glove/forearm-assisted pickup
+7. fade to black
+8. Muhammad Ali quote
+9. isolated heavy-bag impact
+10. FUTURE CHAMPS Round 8 title on bell
+11. fade to black
+12. pulsing ENTER
+13. ENTER reveals interactive site
+
+Boundaries:
+- no production cutover
+- no youth archive footage
+- no music or narration
+- generated boxing remains atmospheric, not documentary evidence
+- skip intro retained
+- reduced-motion behavior retained

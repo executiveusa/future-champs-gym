@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Corner | Future Champs</title>
-<meta name="description" content="A story from The Corner, the Future Champs editorial desk.">
+<meta name="description" content="A story from The Corner.">
 <meta name="robots" content="index,follow">
 <link rel="stylesheet" href="/assets/future-champs.css">
 <style>
@@ -15,7 +15,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav"><div class="wrap navin"><a class="brand" href="/">FUTURE CHAMPS</a><nav class="links" aria-label="Primary"><a href="/watch/">Watch</a><a href="/fighters/">Fighters</a><a href="/gyms-and-corners/">Gyms + Corners</a><a href="/blog/">The Corner</a><a href="/about/">About</a></nav><a class="btn dark" href="/get-involved/">Get involved</a></div></header>
 <main id="main"><section class="story-hero"><div class="reader"><div class="eyebrow">The Corner</div><h1 class="serif">Loading story…</h1></div></section></main>
-<footer class="footer"><div class="wrap foot"><div><b>THE CORNER</b><div>A Future Champs publication</div></div><div>People before hype.</div><div><a href="/blog/">All stories</a> · <a href="/watch/">Watch</a></div></div></footer>
+<footer class="footer"><div class="wrap foot"><div><b>THE CORNER</b></div><div>Future Champs</div><div><a href="/blog/">All stories</a> · <a href="/watch/">Watch</a></div></div></footer>
 <script>
 const SUPABASE_URL='https://cyxdevcjycmffhmwxojh.supabase.co';
 const SUPABASE_KEY='sb_publishable_PoqI-3PsCqewtJWJ0Z73Ag_5hIE0oKI';
@@ -68,7 +68,7 @@ async function loadArticle(){
   const category=String(post.category||'Story').replaceAll('-',' ');
   const safeBody=sanitizeArticleHTML(post.body_html);
   root.innerHTML=`<section class="story-hero"><div class="reader"><div class="eyebrow">${esc(category)}</div><h1 class="serif">${esc(post.title)}</h1><p class="dek">${esc(post.dek)}</p><div class="meta">${esc(post.author_name||'Future Champs')} · ${date(post.published_at)} · ${esc(reading)}</div></div></section><article class="article"><div class="reader">${safeBody}<a class="back" href="/blog/">← Return to The Corner</a></div></article>`;
- }catch(_){root.innerHTML='<div class="reader error"><h1 class="serif">Story unavailable.</h1><p>This article may have moved or may still be under review.</p><a class="back" href="/blog/">← Return to The Corner</a></div>';}
+ }catch(_){root.innerHTML='<div class="reader error"><h1 class="serif">Story unavailable.</h1><p>ARTICLE PLACEHOLDER / NOT PUBLISHED</p><a class="back" href="/blog/">← Return to The Corner</a></div>';}
 }
 loadArticle();
 </script>
