@@ -1,87 +1,104 @@
 # Future Champs Project State
 
-**As of:** 2026-09-15
-**Mode:** Brownfield reframing
-**Classification:** SELL + USE
-**Status:** Governing-idea draft; full identity and site rebuild held behind approval
-**Primary domain:** FutureChampsGym.org  
+**As of:** 2026-09-18  
+**Mode:** Brownfield reframing  
+**Classification:** SELL + USE  
+**Release state:** READY FOR PREVIEW  
+**Production publication:** not verified  
+**Primary domain:** FutureChampsGym.org
 
 ## Current objective
 
-Reframe the existing gym/fundraiser prototype into a first-class youth-and-beginning-fighter boxing media platform. Use The Corner as the flagship content system, start with one approved interview and Shorts package, and use the Collins/Punch by Punch benchmarks through an independent gauntlet.
+Build Future Champs into a first-class boxing media property focused on **young and beginning fighters** and the people in their corner.
 
-The proposed governing idea is: **Every fighter starts somewhere. Future Champs documents the work before the spotlight and gives young and beginning fighters someone in their corner.** This is a draft and requires Glenn's approval before identity production.
+Governing idea:
+
+> **Every fighter starts somewhere. Future Champs documents the work before the spotlight.**
+
+The public site is media-first. The physical gym, broad nonprofit programming, food fundraiser, heritage center, and other legacy concepts are not the active public product unless separately re-approved.
+
+## Quality bar
+
+- **Content/boxing media bar:** Punch By Punch — media legibility, clip density, people-led storytelling.
+- **Brand/design bar:** COLLINS — governing idea, reduction, typography, composition, distinctive point of view.
+- **Owner gauntlet:** Future Champs youth/beginning-fighter focus + anti-slop + mobile + accessibility + proof discipline.
+
+Release floor follows Loop Engineering: overall >= 8.5; no broken controls, mobile overflow, unverified claims, or missing rollback.
 
 ## Three active workstreams
 
-1. **Revenue offer — MACS Digital Media × Future Champs content launch**
-   - A real client run for positioning, brand kit, site, content packaging, and distribution operations.
-   - The paid offer and ownership split must be documented before external selling.
+1. **Revenue offer — MACS Digital Media × Future Champs zero-to-launch case study**
+   - Positioning, brand system, website, media packaging, Shorts, distribution, and operating workflow.
+   - Demonstrates the sellable MACS Digital Media transformation workflow.
 
 2. **Shared platform — Future Champs media headquarters**
-   - Public site, Watch/Shorts archive, people and gym profiles, stories, interest forms, approvals, and later admin operations.
-   - Existing static prototype is preserved as rollback baseline.
-   - GitHub repository is the source of truth for specifications and future sovereign code.
+   - Home, Watch, Fighters, Gyms + Corners, The Corner, About, Get Involved.
+   - Static public shell now supports approved media replacement without redesign.
+   - GitHub remains source of truth.
 
-3. **Bounded experiment — one interview to a content system**
-   - Record one approved conversation or gym visit and turn it into a full story, 3–7 Shorts, a profile, and a publishable content record.
-   - Guest permissions, guardian approvals where applicable, music/image rights, and final editorial approval remain required.
+3. **Bounded experiment — Anchor 001**
+   - First beginning-fighter source selected from the canonical 19-video Drive archive.
+   - Produce transcript, captions, clean-master decision, cover frame, anchor cut, and three Shorts.
+   - Publication remains owner/editorial approval-gated.
 
-## Locked brand architecture
+## Public information architecture
 
-- Future Champs
-- Youth Boxing & Mentorship
-- Building Champions In and Out of the Ring
-- The First Five
-- A Taste of Nawlins
-- The TOJO Legacy Project
-- Future Champs Gym & Heritage Center — future vision only
+- `/` — point of view and primary entry
+- `/watch/` — public video desk; held until approved media is ready
+- `/fighters/` — fighter profiles
+- `/gyms-and-corners/` — coaches, mentors, gyms, programs
+- `/blog/` — The Corner editorial desk
+- `/about/` — positioning and operating boundaries
+- `/get-involved/` — controlled intake explanation; no public youth-data form yet
 
-## Public-site V1 requirements
+## Content lanes
 
-- Founding-stage status visible.
-- Menu section with confirmed/pending states.
-- Ghost-kitchen model explained as portable and schedule-based.
-- Email and event-interest collection with consent.
-- Parent, volunteer, coach, sponsor, partner, and media interest pathways.
-- Support pathways: food purchase, future donation flow, equipment wish list, sponsor inquiry, volunteer interest.
-- No public collection of sensitive youth data.
-- No claims of DoorDash, Uber Eats, Amazon, fiscal sponsorship, permits, tax deductibility, or partnerships until approved and linked.
+- Start Here
+- In Their Corner
+- The Work
+- Ringside
+- Gives Back only when a real approved community initiative exists
 
-## Current unknowns requiring Glenn
+## Source of truth
 
-- Exact founder-approved biography.
-- Official email and phone.
-- First menu and recipe capacity.
-- Food business ownership and licensing.
-- Kitchen access and commissary requirements.
-- First operating date, address, and service window.
-- Payment and refund model.
-- Delivery radius.
-- Facility relationship with Bret Summers.
-- Pilot participant ages and eligibility.
-- Fiscal-sponsorship submission status.
-- Approved use of legacy stories and imagery.
+- Video masters: canonical Google Drive folder recorded in `ICMR.yaml`
+- Code/specifications: GitHub
+- Public article data: existing Supabase read path
+- Approvals: owner-controlled approval state
 
-## Current design direction
+Raw private video is not stored in the repository.
 
-- Red, white, black, warm bone.
-- Editorial serif + neutral sans + restrained condensed utility face.
-- Documentary, disciplined, local, premium, nonviolent.
-- No raster-in-SVG logo shortcuts.
-- No generic sports-template, esports, fight-night, cannabis, or AI-slop aesthetic.
+## Current build evidence
 
-## Evidence required before public launch
+- Drive inventory re-verified at **19 MP4 files**.
+- Anchor 001 selected and production record created.
+- Shared editorial CSS and mobile navigation created.
+- Public routes added for Fighters, Gyms + Corners, About, and Get Involved.
+- The 19-source working archive remains private; the public Watch page shows a held state until approved media is ready.
+- Sitemap expanded for full media architecture.
+- Instinct → FirstMate → Hermes autonomous site loop defined with independent-review and publication gates.
+- PR #11 is the active build line and is ahead of `main`.
 
-- Verified legal business/operator identity.
-- Kitchen/location permission.
-- Permit and insurance status.
-- Confirmed menu, prices, allergens, date, pickup/delivery terms, order cap, and refund terms.
-- Real form submissions stored securely.
-- Mobile, accessibility, privacy, and security review.
-- Human approval of copy and public claims.
-- Rollback path.
+## Remaining blockers before production publication
+
+- independent substantive review of the current PR;
+- runtime/mobile/browser verification of the exact revision;
+- verified deployment target and rollback path;
+- Anchor 001 transcript/captions;
+- clean-master/watermark decision;
+- subject identity and guardian status where applicable;
+- Glenn editorial approval;
+- stable approved public video destination.
+
+## Non-negotiable public rules
+
+- No stock or AI-generated fighters presented as real Future Champs participants.
+- No invented fighter names, biographies, records, affiliations, quotes, sponsors, or outcomes.
+- No sensitive youth intake through public forms.
+- No publication of youth footage without required approval.
+- No new framework or dashboard until the manual editorial path is proven.
+- Builders do not approve themselves.
 
 ## Single next action
 
-Conduct a structured founder-lock meeting with Glenn and capture the missing operational facts before converting the draft site into a public sales funnel.
+Complete independent review and runtime preview verification of PR #11, repair any decisive gaps, then merge the media shell. After the shell is merged, finish Anchor 001 and replace the first placeholder with approved media.
