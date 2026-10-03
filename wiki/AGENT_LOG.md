@@ -169,3 +169,22 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Rollback: Revert this documentation-only commit; production remains unchanged.
 - Next action: Obtain independent review, then merge PR #17 only if the review gate passes.
 - Beads updated: No.
+
+
+### ENTRY — 2026-10-01T08:25:00Z — ChatGPT / GPT-5.6 Sol
+- Intent: Repair the three independently verified PR #23 findings without expanding scope.
+- Current stage: 07_VERIFY / review repair.
+- Bead or task: The Corner held-state accessibility, verified-status copy, and durable verification record.
+- Context read: `AGENTS.md`, `ICMR.yaml`, `backend/config/site.loop.yaml`, `backend/SITE_LOOP.md`, current context, PR #23, Codex review, and CodeRabbit review.
+- Constraints: Preserve canonical Drive source and ICM structure; no youth footage, identities, unverified claims, credentials, backend behavior, or approval-gated media.
+- Proof required: Exact diff contains only the verified repairs and this append-only record; independent reviewer must review the repaired head before merge.
+
+### EXIT — 2026-10-01T08:27:00Z — ChatGPT / GPT-5.6 Sol
+- Work performed: Replaced unsupported preparation copy with approval-gated neutral copy; added `role="group"` to the labeled gallery placeholder; appended this verification record.
+- Files changed: `blog/index.html`, `wiki/AGENT_LOG.md`.
+- Decisions: Keep The Corner honest when no approved stories exist and expose the reserved gallery label correctly to assistive technology.
+- Tests/evidence: Verified the two exact CodeRabbit findings against current branch content before repair. No media source, Supabase read path, identity, route, backend, or publication gate was changed.
+- Risks/blockers: This builder cannot approve its own repair. Fresh independent review of the exact repaired head is required before merge.
+- Rollback: Revert commits `0de040e573ad485c3d4b0e38d47a1c3bf27d0e4f` and this log commit, or close PR #23. Production remains unchanged until merge.
+- Next action: Request independent Codex/CodeRabbit review of the repaired PR #23 head; merge only if no actionable findings remain.
+- Beads updated: No.
