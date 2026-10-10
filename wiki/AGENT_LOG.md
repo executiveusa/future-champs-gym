@@ -169,3 +169,22 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Rollback: Revert this documentation-only commit; production remains unchanged.
 - Next action: Obtain independent review, then merge PR #17 only if the review gate passes.
 - Beads updated: No.
+
+
+### ENTRY — 2026-10-10T17:33:00Z — ChatGPT / GPT-6
+- Intent: Add two Taste Skill frontend skills as isolated, subordinate design guidance.
+- Current stage: 03_BRAND / 07_VERIFY.
+- Bead or task: Govern external anti-slop frontend skill integration.
+- Context read: AGENTS.md, ICMR.yaml, current PR #24 state, upstream Taste Skill README and source skill files.
+- Constraints: Documentation/skill files only; no public media, production page, canonical Drive, or backend changes.
+- Proof required: Inspect upstream files and changed-path diff; independent review before merge.
+
+### EXIT — 2026-10-10T17:33:00Z — ChatGPT / GPT-6
+- Work performed: Vendored Taste v2 and redesign skill; documented Future Champs precedence and prohibitions.
+- Files changed: .agents/skills/design-taste-frontend/SKILL.md; .agents/skills/redesign-existing-projects/SKILL.md; 03_BRAND/DESIGN_SKILLS.md; wiki/AGENT_LOG.md.
+- Decisions: Treat upstream suggestions as contextual; existing media rights, brand, static stack, accessibility, and ICM take precedence.
+- Tests/evidence: Fetched both upstream skills and inspected their content. No public HTML, CSS, media or backend paths changed. Independent review pending.
+- Risks/blockers: Upstream version is unpinned and may change; dependency on agent skill discovery varies by runtime. This is not proof the skills automatically execute in every agent.
+- Rollback: Close this PR; if merged, revert only its four added/updated files.
+- Next action: Obtain independent review on exact PR head; merge only if clean.
+- Beads updated: No.
