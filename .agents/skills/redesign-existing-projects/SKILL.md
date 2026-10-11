@@ -40,7 +40,7 @@ Check for these problems and fix them:
 - **Perfectly even gradients.** Break the uniformity with radial gradients, noise overlays, or mesh gradients instead of standard linear 45-degree fades.
 - **Inconsistent lighting direction.** Audit all shadows to ensure they suggest a single, consistent light source.
 - **Random dark sections in a light mode page (or vice versa).** A single dark-background section breaking an otherwise light page looks like a copy-paste accident. Either commit to a full dark mode or keep a consistent background tone throughout. If contrast is needed, use a slightly darker shade of the same palette — not a sudden jump to `#111` in the middle of a cream page.
-- **Empty, flat sections with no visual depth.** Sections that are just text on a plain background feel unfinished. Add high-quality background imagery (blurred, overlaid, or masked), subtle patterns, or ambient gradients. Use reliable placeholder sources like `https://picsum.photos/seed/{name}/1920/1080` when real assets are not available. Experiment with background images behind hero sections, feature blocks, or CTAs — even a subtle full-width photo at low opacity adds presence.
+- **Empty, flat sections with no visual depth.** Sections that are just text on a plain background feel unfinished. Add high-quality background imagery (blurred, overlaid, or masked), subtle patterns, or ambient gradients. Use only project-approved, locally stored imagery for production. Remote placeholder images may appear only in clearly labeled internal mockups and must be removed before release. Experiment with background images behind hero sections, feature blocks, or CTAs — even a subtle full-width photo at low opacity adds presence.
 
 ### Layout
 
@@ -76,14 +76,14 @@ Check for these problems and fix them:
 
 ### Content
 
-- **Generic names like "John Doe" or "Jane Smith".** Use diverse, realistic-sounding names.
-- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use organic, messy data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.
-- **Placeholder company names like "Acme Corp", "Nexus", "SmartFlow".** Invent contextual, believable brand names.
+- **Generic names like "John Doe" or "Jane Smith".** Use approved, verified names only; synthetic identities may appear only in visibly labeled non-production mockups.
+- **Fake round numbers like `99.99%`, `50%`, `$100.00`.** Use verified measurements, prices and contact details. Never fabricate realistic-looking facts; label any non-production sample visibly.
+- **Placeholder company names like "Acme Corp", "Nexus", "SmartFlow".** Use verified, approved organization names; label synthetic mockup examples clearly.
 - **AI copywriting cliches.** Never use "Elevate", "Seamless", "Unleash", "Next-Gen", "Game-changer", "Delve", "Tapestry", or "In the world of...". Write plain, specific language.
 - **Exclamation marks in success messages.** Remove them. Be confident, not loud.
 - **"Oops!" error messages.** Be direct: "Connection failed. Please try again."
 - **Passive voice.** Use active voice: "We couldn't save your changes" instead of "Mistakes were made."
-- **All blog post dates identical.** Randomize dates to appear real.
+- **All blog post dates identical.** Use actual verified publication dates; never invent chronology.
 - **Same avatar image for multiple users.** Use unique assets for every distinct person.
 - **Lorem Ipsum.** Never use placeholder latin text. Write real draft copy.
 - **Title Case On Every Header.** Use sentence case instead.
