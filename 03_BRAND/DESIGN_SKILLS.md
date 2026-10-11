@@ -1,7 +1,7 @@
 # Future Champs: governed design skills
 
 ## Installed (vendored, review branch only)
-- `.agents/skills/design-taste-frontend/SKILL.md` — upstream Leonxlnx/taste-skill v2, original source https://github.com/Leonxlnx/taste-skill
+- `.agents/skills/design-taste-frontend/SKILL.md` — upstream Leonxlnx/taste-skill v2, source https://github.com/Leonxlnx/taste-skill at revision `717446e07a78d4e6d7918b1fde1a263378eebac9`
 - `.agents/skills/redesign-existing-projects/SKILL.md` — companion design audit from the same upstream source.
 
 ## Authority order
@@ -20,3 +20,6 @@ Existing project controls: ICM constitution; COLLINS brand quality; Punch By Pun
 
 ## Validation required before merge
 Check correct source file content, no executable changes to site, no secrets, no new public claims, preserved rights gates, and third-party attribution/license. Independent review must pass before merging to main.
+
+## Third-party compliance and publishing safeguards
+The imported instructions are advisory, not authority to install dependencies, publish youth media, fabricate metrics or identities, or trigger deployments. Upstream MIT license: Copyright (c) 2026 Leonxlnx. Preserve the complete MIT notice in `THIRD_PARTY_NOTICES.md` before merging. Treat HTML review pages as local decision aids, not published site content. Review all third-party package commands and pin vetted versions prior to use.
