@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Future Champs — Homepage V2 Review Room (internal)</title>
+<style>
+:root{color-scheme:light;--paper:#f1ece4;--ink:#0c0c0c;--red:#a51b26;--muted:#595650;--line:#b9b0a5}*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Arial,Helvetica,sans-serif}main{max-width:1180px;margin:auto;padding:clamp(20px,4vw,60px)}
+h1,h2{font-family:Georgia,serif;line-height:1.07;letter-spacing:-.035em}h1{font-size:clamp(2.8rem,7vw,5.8rem);margin:.3em 0}h2{font-size:clamp(1.8rem,3vw,2.7rem);margin:0 0 14px}
+.eyebrow{text-transform:uppercase;font-size:.78rem;letter-spacing:.13em;font-weight:800;color:var(--red)}.lede{max-width:740px;font-size:1.15rem}
+.flag{border-left:5px solid var(--red);padding:12px 18px;background:#fff6f2;margin:24px 0}.meta{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;color:var(--muted);font-size:.88rem}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0}nav a{display:inline-block;border:1px solid var(--line);padding:8px 12px;color:inherit;text-decoration:none}nav a:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+article{border-top:2px solid var(--ink);padding:28px 0;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:clamp(16px,4vw,56px)}
+p{margin:.5em 0 1.2em}.summary{color:var(--muted);font-size:.94rem}.evidence{background:#e7e0d6;border:1px solid #d2c7b8;padding:18px;margin:18px 0}
+.mock{border:1px solid var(--line);background:#161616;color:#f7eee4;min-height:180px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.mock strong{font:clamp(1.5rem,3vw,2.6rem)/1.1 Georgia,serif;max-width:360px}.mock span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#d6b8b8}
+.mock .block{border:1px dashed #b5a99e;min-height:78px;display:grid;place-items:center;color:#d1c6b9;text-align:center;font-size:.78rem}
+label{display:block;font-size:.85rem;font-weight:700;margin:12px 0 5px}select,textarea{width:100%;background:#fff;border:1px solid #8d837a;color:#111;padding:10px;font:inherit}textarea{min-height:85px;resize:vertical}
+button{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:12px 18px;font:700 15px Arial;cursor:pointer}button.secondary{background:transparent;color:var(--ink)}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}#counts{font-size:.95rem;font-weight:700}.note{font-size:.8rem;color:var(--muted)}
+@media(max-width:760px){article{grid-template-columns:1fr}.mock{min-height:145px}main{padding:18px}nav{margin:18px 0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="eyebrow">Future Champs / private design QA / not for publication</div>
+<h1>Homepage review room.</h1>
+<p class="lede">A decision aid for Homepage Wireframe V2. Inspect the current structure, choose Keep / Revise / Remove, and export a handoff. This is <strong>not</strong> a browser-rendered screenshot or proof of mobile behavior.</p>
+<div class="meta"><span>Source: <code>index.html</code> on PR #25 branch</span><span>Standards: AGENTS.md + ICM</span><span>Review state: unapproved</span></div>
+<div class="flag"><strong>Rights and accuracy gate:</strong> no fighter identities, episode facts or footage are invented here. Labeled diagram blocks are review-only abstractions, not approved public media. Production publication requires owner approval.</div>
+</header>
+<nav aria-label="Jump to review sections">
+<a href="#intro">Intro</a><a href="#hero">Orientation</a><a href="#corner">The Corner</a><a href="#people">People</a><a href="#gym">From the gym</a><a href="#ringside">Ringside</a><a href="#lineage">Lineage</a><a href="#participate">Participate</a><a href="#export">Export</a>
+</nav>
+<div id="counts" role="status" aria-live="polite">No decisions selected.</div>
+<div id="sections"></div>
+<section id="export" aria-label="Export review decisions">
+<h2>Export the review.</h2>
+<p>Copy a structured ICM-ready JSON review. Decisions remain in this browser page until copied; nothing is sent to a server or published.</p>
+<div class="controls"><button id="copy" type="button">Copy review JSON</button><button id="download" type="button" class="secondary">Download JSON</button><button id="reset" type="button" class="secondary">Clear decisions</button></div>
+<label for="output">Review packet</label><textarea id="output" readonly rows="10" aria-label="Generated review JSON"></textarea>
+<p class="note" id="feedback" role="status" aria-live="polite">Review is local and must be independently verified before any implementation or release.</p>
+</section>
+</main>
+<script>
+'use strict';
+const source={repo:'executiveusa/future-champs-gym',branch:'chore/taste-skill-governed-2026-10-10',document:'07_VERIFY/reviews/homepage-v2-review.html',sourcePage:'index.html',status:'human_review_required',deployment:'none'};
+const sections=[
+{id:'intro',name:'Opening film',eyebrow:'Before the homepage',head:'Seattle → sparring → recovery → quote → logo → enter',media:'Video sequence and sound control',observed:'Full-screen opening has Skip intro, a sound toggle, video scenes and an Enter control.',risks:'Review motion preference, first-load performance, keyboard exit, permissions and accuracy of the fall/knockdown shot. The weak jab scene was explicitly deferred.',prompt:'Should this intro remain a required first encounter, become optional, or be shortened?'},
+{id:'hero',name:'Orientation / hero',eyebrow:'The opening promise',head:'Every fighter starts somewhere.',media:'16:9 approved episode image needed',observed:'Seattle identifier, social-purpose podcast descriptor, The Corner explanation, Watch the latest and The Corner links, plus a labeled media slot.',risks:'The media is a placeholder and Watch the latest may imply a published episode before approval. Confirm actual route state before promising current content.',prompt:'Does the first screen explain the project immediately, even without the intro?'},
+{id:'corner',name:'The Corner',eyebrow:'01 / flagship format',head:'One conversation at a time.',media:'Featured episode slot, no approved guest shown',observed:'Latest episode, Guest name, Role · gym · Seattle area, generic episode summary and Watch episode link currently appear in the HTML.',risks:'Visible placeholder names and “Latest episode” claim must become honest unlaunched editorial states until verified media and guest permission exist.',prompt:'What should a visitor see before the first approved episode exists?'},
+{id:'people',name:'People in the corner',eyebrow:'02 / human protagonists',head:'The fighter is not the whole story.',media:'Fighter and coach portrait slots',observed:'Two portrait blocks labeled Fighter and Coach / mentor with Name, gym and neighborhood placeholders.',risks:'Placeholder identities must not look like real sourced people; cards should not imply biographies already exist.',prompt:'Does the paired layout give mentors equal prominence without implying undocumented profiles?'},
+{id:'gym',name:'From the gym',eyebrow:'03 / documentary texture',head:'The room matters.',media:'Training · corner work · gym detail · Seattle exterior',observed:'Four placeholder frames with a Seattle-location caption.',risks:'Permission and provenance of every future shot must be recorded. Avoid presenting generic scenes as verified Seattle footage.',prompt:'Does this scene establish physical place without drifting into generic sports imagery?'},
+{id:'ringside',name:'Ringside / field notes',eyebrow:'04 / coverage',head:'What happened around the fight.',media:'Event footage, photos and portraits',observed:'Five media slots, mixed aspect ratios, linking to Watch.',risks:'Verify there is a real public Ringside destination; otherwise the CTA risks overpromising existing coverage.',prompt:'Should this section remain on the homepage before documented field coverage exists?'},
+{id:'lineage',name:'Lineage',eyebrow:'05 / historical evidence',head:'The history behind the room.',media:'Family photo, fight poster, newspaper, archive photo',observed:'Four archive-style media slots with an Explore the archive link to About.',risks:'Copyright, attribution and family permissions must be tracked. About is not necessarily a browsable archive.',prompt:'Does the lineage story belong on launch or after the first verifiable archive material?'},
+{id:'participate',name:'Participate',eyebrow:'06 / community action',head:'Know someone we should talk to?',media:'Text-first action block',observed:'Suggest a story and Partner with Future Champs both link to Get Involved.',risks:'Verify the destination gives separate clear next steps and does not collect sensitive youth data.',prompt:'Can visitors distinguish story suggestions from partnership inquiries?'}
+];
+const box=document.getElementById('sections');
+sections.forEach(s=>{
+const a=document.createElement('article');a.id=s.id;
+const left=document.createElement('div');
+const kicker=document.createElement('div');kicker.className='eyebrow';kicker.textContent=s.eyebrow;
+const title=document.createElement('h2');title.textContent=s.name;
+const mock=document.createElement('div');mock.className='mock';
+const strong=document.createElement('strong');strong.textContent=s.head;
+const media=document.createElement('div');media.className='block';media.textContent=s.media+' — structural sketch, no source imagery';
+const caption=document.createElement('span');caption.textContent='Structure preview only · not the rendered website';
+mock.append(strong,media,caption);left.append(kicker,title,mock);
+const right=document.createElement('div');
+const observed=document.createElement('p');observed.textContent=s.observed;
+const evidence=document.createElement('div');evidence.className='evidence';
+const et=document.createElement('strong');et.textContent='Review concern';const ep=document.createElement('p');ep.textContent=s.risks;
+evidence.append(et,ep);
+const question=document.createElement('p');question.textContent=s.prompt;
+const label=document.createElement('label');label.htmlFor='decision-'+s.id;label.textContent='Decision';
+const select=document.createElement('select');select.id='decision-'+s.id;select.dataset.decision=s.id;
+[['','Choose…'],['keep','Keep'],['revise','Revise'],['remove','Remove'],['hold','Hold for proof']].forEach(([value,t])=>{const o=document.createElement('option');o.value=value;o.textContent=t;select.append(o)});
+const noteLabel=document.createElement('label');noteLabel.htmlFor='note-'+s.id;noteLabel.textContent='Reason / instruction to the builder';
+const note=document.createElement('textarea');note.id='note-'+s.id;note.dataset.note=s.id;note.placeholder='Specific change, evidence needed, or reason for approval';
+right.append(observed,evidence,question,label,select,noteLabel,note);
+a.append(left,right);box.append(a);
+});
+function packet(){return {...source,reviewDate:new Date().toISOString(),approvals:{owner:false,independentReviewer:false,mediaRights:false},decisions:sections.map(s=>({section:s.id,title:s.name,decision:document.querySelector('[data-decision="'+s.id+'"]').value||'unreviewed',note:document.querySelector('[data-note="'+s.id+'"]').value.trim(),verifiedInBrowser:false}))};}
+function update(){const p=packet(),d=p.decisions;document.getElementById('output').value=JSON.stringify(p,null,2);document.getElementById('counts').textContent=d.filter(x=>x.decision!=='unreviewed').length+' / '+d.length+' sections reviewed';}
+document.querySelectorAll('select,textarea[data-note]').forEach(el=>el.addEventListener('input',update));
+document.getElementById('copy').addEventListener('click',async()=>{update();try{await navigator.clipboard.writeText(document.getElementById('output').value);document.getElementById('feedback').textContent='Review JSON copied.'}catch{document.getElementById('output').select();document.getElementById('feedback').textContent='Clipboard unavailable. Select and copy the JSON manually.'}});
+document.getElementById('download').addEventListener('click',()=>{update();const blob=new Blob([document.getElementById('output').value],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='future-champs-homepage-review.json';a.click();URL.revokeObjectURL(url)});
+document.getElementById('reset').addEventListener('click',()=>{document.querySelectorAll('select[data-decision]').forEach(e=>e.value='');document.querySelectorAll('textarea[data-note]').forEach(e=>e.value='');update()});
+update();
+</script>
+</body>
+</html>
