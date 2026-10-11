@@ -93,7 +93,7 @@ Once you have the design read (Section 0) and dials (Section 1), pick the right 
 | Atlassian / Jira-style product | `@atlaskit/*` + `@atlaskit/tokens` | Official Atlassian DS |
 | GitHub-style devtool / community page | `@primer/css` or `@primer/react-brand` | Official Primer; Brand variant for marketing |
 | Public-sector UK service | `govuk-frontend` | Legally / regulatorily expected |
-| US public-sector / trust-first | `uswds` | Same |
+| US public-sector / trust-first | `uswds` (optional) | Federal website standards may apply to covered agencies; USWDS is one optional implementation toolkit, not itself mandatory. |
 | Fast local-business / agency MVP | Bootstrap 5.3 | Boring, fast, works |
 | Modern accessible React foundation | `@radix-ui/themes` | Primitives + polished theme |
 | Modern SaaS where you own the components | shadcn/ui (`npx shadcn@latest add ...`) | You own the code, easy to customise; never ship default state |
@@ -326,7 +326,7 @@ Landing pages live on the **first impression**, not the full read. Cut ruthlessl
   Rewrite every flagged string. If unsure whether a string makes sense, replace it with a plain functional sentence. AI-generated cute copy is worse than boring copy.
 * **Fake-precise numbers are flagged.** Numbers like `92%`, `4.1×`, `48k`, `5.8 mm`, `13.4 lb` either:
   - Come from real data (brief, brand guidelines, public metrics) - fine
-  - Are explicitly labeled as mock (`<!-- mock -->`, "example", "sample data") - fine
+  - Are visibly labeled "Example" or "Sample data" in a non-production mockup only - fine; hidden HTML comments do not count as disclosure
   - Are AI-invented spec aesthetics - banned. Don't fake engineering precision the brand doesn't claim.
 * **One copy register per page.** Don't mix technical mono ("47 tasks · 0.6 ctx-switches/day"), editorial prose, and marketing punch in the same composition unless the brand voice explicitly calls for it.
 
@@ -443,14 +443,14 @@ export function HorizontalPan({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (reduce || !wrap.current || !track.current) return;
     const ctx = gsap.context(() => {
-      const distance = track.current!.scrollWidth - window.innerWidth;
+      const getDistance = () => Math.max(0, track.current!.scrollWidth - wrap.current!.clientWidth);
       gsap.to(track.current, {
-        x: -distance,
+        x: () => -getDistance(),
         ease: "none",
         scrollTrigger: {
           trigger: wrap.current,
           start: "top top",                              // pin starts when section top hits viewport top
-          end: () => `+=${distance}`,                    // scroll distance = track width minus viewport
+          end: () => `+=${getDistance()}`,                    // scroll distance = track width minus viewport
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,
@@ -981,6 +981,8 @@ If a single checkbox cannot be honestly ticked, the page is not done. Fix it bef
 ---
 
 # APPENDICES - Real Source-Backed Reference Material
+
+Vendored from Leonxlnx/taste-skill revision `717446e07a78d4e6d7918b1fde1a263378eebac9`. MIT License, Copyright (c) 2026 Leonxlnx. Full notice in repository `THIRD_PARTY_NOTICES.md`. Install commands below are reference examples and require dependency vetting and human approval before execution.
 
 The sections below are vendored reference content. They give the agent real install commands, real canonical doc links, and real working starter snippets for each design system named in Section 2. Use them to ground decisions in production reality, not training-data fiction.
 
