@@ -123,10 +123,11 @@
     clearTimers();
     stopMedia();
     intro.classList.add('is-leaving');
-    sessionStorage.setItem('fcIntroPlayed', '1');
+    try { sessionStorage.setItem('fcIntroPlayed', '1'); } catch (_) {}
     later(() => {
       intro.hidden = true;
       site.removeAttribute('aria-hidden');
+      site.inert = false;
       site.classList.add('is-visible');
       root.classList.remove('fc-intro-lock');
       document.body.style.overflow = '';
@@ -192,14 +193,19 @@
   skip?.addEventListener('click', revealSite);
   enter?.addEventListener('click', revealSite);
 
-  if (!forceIntro && sessionStorage.getItem('fcIntroPlayed') === '1') {
+  let introPlayed = false;
+  try { introPlayed = sessionStorage.getItem('fcIntroPlayed') === '1'; } catch (_) {}
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion || constrainedConnection || (!forceIntro && introPlayed)) {
     intro.hidden = true;
     site.removeAttribute('aria-hidden');
+    site.inert = false;
     site.classList.add('is-visible');
     return;
   }
 
   site.setAttribute('aria-hidden', 'true');
+  site.inert = true;
   root.classList.add('fc-intro-lock');
   document.body.style.overflow = 'hidden';
 
