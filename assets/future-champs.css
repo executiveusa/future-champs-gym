@@ -124,7 +124,7 @@ html.fc-intro-lock{background:#000}
 @media(max-width:700px){
   .wf2-orientation{padding:34px 0 46px}
   .wf2-orientation-grid{grid-template-columns:1fr;gap:24px}
-  .wf2-orientation-copy h1{font-size:clamp(3.6rem,17vw,5.8rem)}
+  .wf2-orientation-copy h1{font-size:clamp(2.65rem,12vw,5rem);overflow-wrap:break-word}
   .wf2-media-landscape{aspect-ratio:4/3}
   .wf2-section{padding:52px 0}
   .wf2-section-title h2{font-size:clamp(3rem,13vw,4.8rem)}
@@ -135,4 +135,12 @@ html.fc-intro-lock{background:#000}
   .wf2-ringside-grid{grid-auto-rows:minmax(150px,48vw)}
   .wf2-archive-grid{grid-template-columns:1fr 1fr}
   .wf2-participate-grid{gap:24px}
+}
+
+/* Small-screen content safety: preserve readable typography without clipping long headings. */
+@media(max-width:360px){
+  .wf2-section-title h2{font-size:clamp(2.45rem,11vw,3.25rem);overflow-wrap:break-word}
+  .wf2-story-meta h3{font-size:clamp(2rem,10vw,3rem);overflow-wrap:break-word}
+  .wf2-participate h2{font-size:clamp(2.5rem,11vw,4rem);overflow-wrap:break-word}
+  .wf2-slot-label,.wf2-slot-note{overflow-wrap:anywhere}
 }
