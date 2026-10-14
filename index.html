@@ -7,10 +7,14 @@
   <meta name="description" content="Future Champs is a Seattle-based social-purpose boxing podcast and documentary project following fighters at the beginning and the people in their corner.">
   <link rel="preconnect" href="https://v3b.fal.media" crossorigin>
   <link rel="dns-prefetch" href="//v3b.fal.media">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/future-champs.css">
+  <link rel="stylesheet" href="/assets/future-champs-home-direction02.css">
   <script src="/assets/future-champs-intro.js" defer></script>
 </head>
-<body>
+<body class="fc-home">
 <section class="fc-intro" data-fc-intro aria-label="Future Champs opening film">
   <button class="fc-intro-skip" type="button" data-skip>Skip intro</button>
 
@@ -61,7 +65,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav wf-nav">
   <div class="wrap navin">
-    <a class="brand" href="/">FUTURE CHAMPS</a>
+    <a class="brand" href="/" aria-label="Future Champs home"><img src="/assets/future-champs-round8.svg" alt="Future Champs" width="440" height="120"></a>
     <nav class="links" aria-label="Primary">
       <a href="/watch/">Watch</a>
       <a href="/blog/">The Corner</a>
@@ -75,23 +79,26 @@
 
 <main id="main" class="wf2">
 
-<section class="wf2-orientation">
-  <div class="wrap wf2-orientation-grid">
-    <div class="wf2-kicker">Seattle, Washington</div>
-    <div class="wf2-orientation-copy">
-      <div class="eyebrow">Future Champs</div>
-      <h1 class="serif">Every fighter starts somewhere.</h1>
-      <p class="wf2-category">A social-purpose boxing podcast and documentary project from Seattle.</p>
-      <p class="wf2-dek">The Corner follows fighters at the beginning — and the coaches, mentors, families, gyms, and communities in their corner.</p>
-      <div class="actions">
-        <a class="btn dark" href="/watch/">Visit the video desk</a>
-        <a class="btn" href="/blog/">The Corner</a>
+<section class="wf2-orientation fc-home-hero" aria-labelledby="home-title">
+  <div class="wrap fc-home-grid">
+    <div class="fc-home-copy">
+      <p class="fc-home-kicker">A boxing documentary project · Northwest Washington</p>
+      <h1 id="home-title">Every fighter<br>starts somewhere.</h1>
+      <p class="fc-home-dek">Behind the gyms. Beside the fighters.</p>
+      <p class="fc-home-summary">Future Champs meets the coaches, gym owners, and beginning fighters keeping boxing alive. We tell their stories and send people directly to the gyms.</p>
+      <div class="fc-home-actions">
+        <a class="fc-home-primary" href="/gyms-and-corners/">Meet the gyms <span aria-hidden="true">↗</span></a>
+        <a class="fc-home-secondary" href="/blog/">The Corner: interviews and stories <span aria-hidden="true">→</span></a>
       </div>
     </div>
-    <div class="wf2-media-slot wf2-media-landscape" aria-label="Future Champs documentary media pending editorial approval">
-      <span class="wf2-slot-label">DOCUMENTARY IMAGE PENDING APPROVAL</span>
-      <span class="wf2-slot-note">16:9 · approved media only</span>
-    </div>
+    <aside class="fc-home-proof" aria-label="The people behind boxing">
+      <div class="fc-home-proof-top">Who we follow</div>
+      <div class="fc-home-proof-word">OWNERS<br>COACHES<br>FIGHTERS</div>
+      <div class="fc-home-proof-bottom">
+        <p>Meet the people who open the doors, run the rounds, and teach the next generation.</p>
+        <span>Original interviews / in preparation</span>
+      </div>
+    </aside>
   </div>
 </section>
 
