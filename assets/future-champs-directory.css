@@ -1,0 +1,73 @@
+/* Future Champs — Gyms and Corners: editorial direction 02.
+   Scoped entirely to .fc-directory. No stock imagery, no legacy cream styling. */
+:root{--fc-dir-ink:#111419;--fc-dir-paper:#f0f2f1;--fc-dir-line:#c5cbce;--fc-dir-muted:#52606a;--fc-dir-red:#be303d}
+.fc-directory{background:var(--fc-dir-paper);color:var(--fc-dir-ink);font:400 16px/1.55 "IBM Plex Sans",Arial,sans-serif;min-height:100vh}
+.fc-directory *{box-sizing:border-box}
+.fc-directory a{color:inherit}
+.fc-directory a:focus-visible{outline:3px solid var(--fc-dir-red);outline-offset:5px}
+.fc-directory .fd-wrap{width:min(1240px,calc(100% - 72px));margin-inline:auto}
+.fc-directory .fd-kicker,.fc-directory .fd-label{font-size:.73rem;font-weight:600;letter-spacing:.115em;text-transform:uppercase}
+.fc-directory .fd-kicker{color:var(--fc-dir-red)}
+.fc-directory .fd-header{background:var(--fc-dir-ink);color:var(--fc-dir-paper);border-bottom:1px solid #36404a}
+.fc-directory .fd-nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.fc-directory .fd-brand{width:min(260px,36vw);display:block;flex-shrink:0}
+.fc-directory .fd-brand img{width:100%;height:auto}
+.fc-directory .fd-links{display:flex;align-items:center;gap:clamp(16px,2.4vw,35px);flex-wrap:wrap;font-size:.85rem}
+.fc-directory .fd-links a{text-decoration:none;border-bottom:1px solid transparent;padding-block:8px}
+.fc-directory .fd-links a:hover,.fc-directory .fd-links a[aria-current]{border-bottom-color:var(--fc-dir-paper)}
+.fc-directory .fd-hero{background:var(--fc-dir-ink);color:var(--fc-dir-paper);padding:clamp(52px,8vw,108px) 0 clamp(60px,10vw,135px)}
+.fc-directory .fd-hero-inner{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.65fr);gap:clamp(35px,7vw,100px);align-items:end}
+.fc-directory .fd-title{font:700 clamp(4.2rem,10.5vw,10.6rem)/.83 "Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.045em;text-transform:uppercase;margin:22px 0 0;max-width:9ch}
+.fc-directory .fd-hero-side{border-top:2px solid #a1abb2;padding-top:20px}
+.fc-directory .fd-hero-side p{font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.45;margin:0 0 22px}
+.fc-directory .fd-hero-side .fd-sub{font-size:.86rem;color:#acb6bd;max-width:36ch}
+.fc-directory .fd-strip{background:var(--fc-dir-red);color:#fff;padding:17px 0}
+.fc-directory .fd-strip .fd-wrap{display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:.8rem;font-weight:600;letter-spacing:.055em;text-transform:uppercase}
+.fc-directory .fd-index{padding:74px 0 24px}
+.fc-directory .fd-index-top{display:flex;align-items:baseline;gap:28px;justify-content:space-between;border-bottom:1px solid var(--fc-dir-line);padding-bottom:24px}
+.fc-directory .fd-section-title{font:700 clamp(2.6rem,5vw,5rem)/.92 "Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.022em;text-transform:uppercase;margin:0}
+.fc-directory .fd-intro{max-width:46ch;font-size:1rem;color:var(--fc-dir-muted);margin:0}
+.fc-directory .fd-gym{border-bottom:1px solid #a6afb5;padding:66px 0 72px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(35px,6vw,105px)}
+.fc-directory .fd-gym h3{font:700 clamp(3.6rem,7vw,7.6rem)/.9 "Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.03em;text-transform:uppercase;margin:15px 0 20px;max-width:10ch}
+.fc-directory .fd-gym .fd-description{max-width:54ch;font-size:1.13rem;line-height:1.58;margin:0 0 28px}
+.fc-directory .fd-gym .fd-owner{font-weight:600;color:var(--fc-dir-ink);font-size:.94rem;margin:0 0 22px}
+.fc-directory .fd-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.fc-directory .fd-link-primary{display:inline-flex;align-items:center;gap:18px;min-height:48px;padding:12px 16px;background:var(--fc-dir-ink);color:#fff;text-decoration:none;font-weight:600;font-size:.9rem}
+.fc-directory .fd-link-primary:hover{background:#353f4b}
+.fc-directory .fd-link-secondary{font-weight:600;font-size:.88rem;text-decoration:underline;text-underline-offset:4px}
+.fc-directory .fd-aside{border-top:4px solid var(--fc-dir-ink);padding-top:21px;align-self:start}
+.fc-directory .fd-aside h4{font:700 clamp(2.15rem,3vw,3.15rem)/.96 "Archivo Narrow","Arial Narrow",Arial,sans-serif;text-transform:uppercase;margin:18px 0}
+.fc-directory .fd-aside p{margin:0 0 18px;color:var(--fc-dir-muted);max-width:43ch}
+.fc-directory .fd-facts{margin:25px 0 0}
+.fc-directory .fd-facts div{display:grid;grid-template-columns:95px minmax(0,1fr);gap:15px;border-top:1px solid var(--fc-dir-line);padding:12px 0}
+.fc-directory .fd-facts dt{font-size:.71rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--fc-dir-muted)}
+.fc-directory .fd-facts dd{margin:0;font-size:.91rem;overflow-wrap:anywhere}
+.fc-directory .fd-note{margin-top:22px;font-size:.8rem!important;color:var(--fc-dir-muted)}
+.fc-directory .fd-bottom{padding:66px 0 90px;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.fc-directory .fd-bottom p{max-width:57ch}
+.fc-directory .fd-bottom h2{font:700 clamp(2.5rem,4.8vw,5.2rem)/.9 "Archivo Narrow","Arial Narrow",Arial,sans-serif;text-transform:uppercase;margin:10px 0 22px}
+.fc-directory .fd-footer{padding:32px 0;background:var(--fc-dir-ink);color:var(--fc-dir-paper)}
+.fc-directory .fd-footer .fd-wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.82rem}
+@media(max-width:950px){
+ .fc-directory .fd-hero-inner,.fc-directory .fd-gym{grid-template-columns:1fr}
+ .fc-directory .fd-hero-side{max-width:610px}
+ .fc-directory .fd-gym{gap:36px}
+ .fc-directory .fd-nav{flex-wrap:wrap;padding:22px 0}
+ .fc-directory .fd-links{width:100%}
+}
+@media(max-width:600px){
+ .fc-directory .fd-wrap{width:calc(100% - 36px)}
+ .fc-directory .fd-title{font-size:clamp(3.9rem,17vw,6rem)}
+ .fc-directory .fd-gym h3{font-size:clamp(3.3rem,14vw,5.6rem)}
+ .fc-directory .fd-gym{padding:44px 0 54px}
+ .fc-directory .fd-index{padding-top:48px}
+ .fc-directory .fd-index-top{display:block}
+ .fc-directory .fd-intro{margin-top:18px}
+ .fc-directory .fd-bottom{grid-template-columns:1fr;gap:20px}
+ .fc-directory .fd-strip .fd-wrap{display:block}
+ .fc-directory .fd-strip span{display:block}
+ .fc-directory .fd-links{gap:10px 20px}
+ .fc-directory .fd-brand{width:200px;max-width:72vw}
+ .fc-directory .fd-facts div{grid-template-columns:83px minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){.fc-directory *{scroll-behavior:auto!important;transition:none!important}}
