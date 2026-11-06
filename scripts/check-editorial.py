@@ -14,6 +14,8 @@ ROUTES = [
     "gyms-and-corners/summers-boxing-club/index.html",
     "gyms-and-corners/barrons-boxing/index.html",
     "gyms-and-corners/nomad-boxing-club/index.html",
+    "watch/index.html", "fighters/index.html",
+    "blog/index.html", "get-involved/index.html",
 ]
 ASSETS = [
     "assets/future-champs-round8.svg",
@@ -98,6 +100,15 @@ for path in ROUTES:
             target = target / "index.html"
         if not target.is_file():
             errors.append(f"{path}: broken internal destination: {href}")
+sitemap_path = ROOT / "sitemap.xml"
+if sitemap_path.is_file():
+    sitemap = sitemap_path.read_text(encoding="utf-8")
+    for path in ROUTES:
+        url = "https://futurechampsgym.org/" + ("" if path == "index.html" else path.removesuffix("index.html"))
+        if f"<loc>{url}</loc>" not in sitemap:
+            errors.append(f"sitemap.xml: missing page entry: {url}")
+else:
+    errors.append("missing sitemap.xml")
 if errors:
     print("EDITORIAL CHECK FAIL:", *errors, sep="\n - ")
     sys.exit(1)
