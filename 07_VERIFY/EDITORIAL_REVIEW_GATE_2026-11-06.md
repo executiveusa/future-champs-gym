@@ -68,3 +68,15 @@ Source listing contains **19 MP4 files**, but filenames and file metadata do not
 
 ## Gate decision
 **READY FOR CONTINUED DRAFT REVIEW; NOT READY TO MERGE.** No production changes or deployment were performed under this gate. The owner must review actual mobile/desktop renders and approve story/subject rights. Revert PR branch changes to roll back; do not revert main.
+
+
+## Follow-up release check — 2026-11-06 07:xx Mexico City
+- **Read-only review of current draft branch**: PR #26 still draft, unmerged, nonmergeable. No push to `main` was made.
+- **13/13 route source audits pass**: checked `<main>`, `<nav>`, skip-to-content, one H1, page title and image alt attributes for Home, About, Coaches, Founder, Our Story, Gym Directory, three gym profiles, Watch, Fighters, Blog, Get Involved.
+- **Sitemap**: fixed six missing entries for Coaches, Founder, Our Story and all three gym profiles. Readback confirms all 13 audited routes now present; sitemap includes one separate blog article URL (14 entries total).
+- **Internal links**: regex-level audit parsed 170 anchors on the 13 page files: 135 internal, 35 external / other; no empty href; 2 blog hrefs contain intentional JavaScript interpolation for post slug and are not static dead links.
+- **Review automation**: enlarged `scripts/check-editorial.py` to audit all 13 page routes + sitemap; preserved no-placeholder checks on new editorial pages (legacy Watch/Fighters/Blog intentionally retain media placeholders pending permissions). Workflow is a no-deploy source/build check. GitHub connector had not reported a CI run for the latest draft commits; **CI cannot be counted as passing**.
+- **Exact visual verification**: blocked. Connected browser requires an originating connected browser context; the local container cannot resolve github.com to clone the private branch. Do not substitute a mockup for exact-render screenshots.
+- **External live links / sources**: not counted as audited by static regex checks. Validate in a real browser before release.
+- **Rights & founder gate**: unchanged, BLOCKED pending clearances. None of 19 archived MP4s assigned without viewing and source proof.
+- **Production**: no merge, no deployment, no preview service created.
