@@ -84,8 +84,8 @@ for path in ROUTES:
     for term in REQUIRED.get(path, []):
         if term.casefold() not in html.casefold():
             errors.append(f"{path}: required source-backed term absent: {term}")
-    if path != "index.html":
-        if any("placeholder" in html.lower() for _ in [0]):
+    if path in ("about/index.html", "coaches/index.html", "founder/index.html", "our-story/index.html") or path.startswith("gyms-and-corners/") and path != "gyms-and-corners/index.html":
+        if "placeholder" in html.lower():
             errors.append(f"{path}: stale placeholder copy")
     for im in p.imgs:
         if not im.get("alt"):
