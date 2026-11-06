@@ -68,6 +68,7 @@
  .fc-home .fc-cover-layout{padding-top:44px;padding-bottom:34px}
  .fc-home .fc-cover-label{margin-bottom:24px}
  .fc-home .fc-cover h1{font-size:clamp(3rem,12.4vw,4.43rem);line-height:.9;margin-bottom:32px}
+ .fc-home .fc-cover h1>span{white-space:normal}
  .fc-home .fc-cover-intro{grid-template-columns:1fr;gap:15px;padding-top:18px}
  .fc-home .fc-cover-promise{font-size:1.68rem}
  .fc-home .fc-cover-dek{font-size:1rem;line-height:1.6}
