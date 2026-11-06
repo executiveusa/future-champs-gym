@@ -1,0 +1,25 @@
+name: Future Champs editorial checks
+on:
+  pull_request:
+  push:
+    branches:
+      - design/gyms-editorial-partner-first-2026-10-13
+permissions:
+  contents: read
+jobs:
+  static-editorial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Editorial source checks (no install / no deploy)
+        run: python3 scripts/check-editorial.py
+      - name: Preview build (no deploy)
+        run: bash scripts/build-preview.sh
+      - name: Confirm preview bundle routes
+        run: |
+          test -f dist-preview/gyms-and-corners/nomad-boxing-club/index.html
+          test -f dist-preview/gyms-and-corners/summers-boxing-club/index.html
+          test -f dist-preview/gyms-and-corners/barrons-boxing/index.html
+          test -f dist-preview/coaches/index.html
+          test -f dist-preview/founder/index.html
+          test -f dist-preview/our-story/index.html
