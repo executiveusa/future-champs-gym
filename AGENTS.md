@@ -50,10 +50,11 @@ Before changing anything:
 1. Read this file.
 2. Read `00_CONTEXT/PROJECT_STATE.md`.
 3. Read `ICMR.yaml`.
-4. Read the relevant ICM stage.
-5. Read `backend/config/site.loop.yaml` for site work.
-6. Read `wiki/AGENT_LOG.md`.
-7. State:
+4. Read `designrules.md` when editing the full publication frontend.
+5. Read the relevant ICM stage.
+6. Read `backend/config/site.loop.yaml` for site work.
+7. Read `wiki/AGENT_LOG.md`.
+8. State:
    - MODE
    - OUTCOME
    - TARGET
@@ -175,8 +176,9 @@ Default formula:
 
 ## Design doctrine
 
-- Black, warm bone, red, white.
-- Editorial serif + neutral sans.
+- Read root `designrules.md` for the approved-in-review full-site visual and editorial rubric. Owner approval and this constitution take precedence.
+- Direction 02: charcoal `#111419`, cool white `#F0F2F1`, restrained signal red `#BE303D`, slate accents. Never default to warm cream.
+- Round 8 vector wordmark; Archivo Narrow display plus IBM Plex Sans body/UI. Do not default to Georgia or generic luxury typography.
 - Documentary rather than fight-poster.
 - Strong spacing and reduction.
 - Real people over generic boxing imagery.
