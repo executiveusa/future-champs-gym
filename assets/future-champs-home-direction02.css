@@ -1,45 +1,93 @@
-/* Direction 02 / Homepage opening only. Remaining sections are staged for their own redesign. */
-.fc-home{background:#f0f2f1;color:#111419;font-family:"IBM Plex Sans",Arial,sans-serif}
-.fc-home .nav{background:#111419;color:#f0f2f1;border-bottom:1px solid #47515a;backdrop-filter:none}
-.fc-home .nav .brand{display:block;width:min(230px,34vw);flex:none;letter-spacing:normal}
+/* Future Champs / Publication cover — designrules.md v1
+   Scoped to .fc-home; existing film, content and routes stay intact. */
+.fc-home{--fc-ink:#111419;--fc-paper:#f0f2f1;--fc-red:#be303d;--fc-slate:#52606a;--fc-rule:#c5cbce;background:var(--fc-paper);color:var(--fc-ink);font-family:"IBM Plex Sans",Arial,sans-serif}
+.fc-home .nav{background:var(--fc-ink);color:var(--fc-paper);border-bottom:1px solid #424b53;backdrop-filter:none}
+.fc-home .navin{min-height:82px;gap:clamp(13px,2vw,32px)}
+.fc-home .nav .brand{display:block;flex:0 0 auto;width:clamp(172px,18vw,252px);padding:0;letter-spacing:normal}
 .fc-home .nav .brand img{display:block;width:100%;height:auto}
-.fc-home .nav .navin{min-height:86px}
-.fc-home .nav .links{font:500 .84rem/1.4 "IBM Plex Sans",Arial,sans-serif}
-.fc-home .nav .links a:hover,.fc-home .nav .links a:focus-visible{text-decoration:underline;text-underline-offset:5px}
-.fc-home .nav .btn.dark{background:#be303d;border-color:#be303d;color:#fff;font:600 .84rem/1.2 "IBM Plex Sans",Arial,sans-serif}
-.fc-home .wf2{background:#f0f2f1;color:#111419}
+.fc-home .nav .links{display:flex;align-items:center;gap:clamp(12px,1.9vw,26px);font:500 .83rem/1.3 "IBM Plex Sans",Arial,sans-serif}
+.fc-home .nav .links a{display:inline-flex;min-height:44px;align-items:center;border-bottom:1px solid transparent}
+.fc-home .nav .links a:hover,.fc-home .nav .links a:focus-visible{border-bottom-color:#f0f2f1}
+.fc-home .nav .btn.dark{background:transparent;border:1px solid #89939b;color:#f0f2f1;font:600 .79rem/1.2 "IBM Plex Sans",Arial,sans-serif;min-height:44px;white-space:nowrap}
+.fc-home .nav .btn.dark:hover{background:#f0f2f1;color:#111419}
+.fc-home .nav a:focus-visible,.fc-home .fc-cover a:focus-visible{outline:3px solid var(--fc-red);outline-offset:4px}
+.fc-home .wf2{background:var(--fc-paper);color:var(--fc-ink)}
 .fc-home .wf2 .serif{font-family:"Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.025em}
-.fc-home .fc-home-hero{background:#111419;color:#f0f2f1;border-bottom:0;padding:clamp(56px,7vw,112px) 0 clamp(72px,9vw,128px)}
-.fc-home .fc-home-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:clamp(42px,7vw,112px);align-items:end}
-.fc-home .fc-home-copy{min-width:0}
-.fc-home .fc-home-kicker{font:600 .72rem/1.4 "IBM Plex Sans",Arial,sans-serif;letter-spacing:.115em;text-transform:uppercase;color:#e46874;margin:0 0 32px}
-.fc-home .fc-home-copy h1{font:700 clamp(4.15rem,8.2vw,9rem)/.89 "Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.034em;text-transform:uppercase;max-width:11.5ch;margin:0}
-.fc-home .fc-home-dek{font:600 clamp(1.42rem,2.35vw,2.25rem)/1.18 "Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:.002em;margin:33px 0 15px}
-.fc-home .fc-home-summary{font:400 clamp(1rem,1.3vw,1.12rem)/1.6 "IBM Plex Sans",Arial,sans-serif;color:#c3cbd0;max-width:52ch;margin:0}
-.fc-home .fc-home-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
-.fc-home .fc-home-primary{display:inline-flex;gap:24px;align-items:center;min-height:48px;padding:12px 17px;background:#be303d;color:#fff;text-decoration:none;font-weight:600;font-size:.92rem}
-.fc-home .fc-home-primary:hover{background:#d34a55}
-.fc-home .fc-home-secondary{color:#f0f2f1;text-decoration:underline;text-underline-offset:5px;font-weight:500;font-size:.9rem}
-.fc-home .fc-home-proof{align-self:stretch;min-height:340px;border-top:4px solid #be303d;border-bottom:1px solid #69737b;padding:23px 0 16px;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
-.fc-home .fc-home-proof-top,.fc-home .fc-home-proof-bottom span{text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;font-weight:600}
-.fc-home .fc-home-proof-top{color:#d8dfe3}
-.fc-home .fc-home-proof-word{font:700 clamp(2.8rem,4.5vw,5rem)/.89 "Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.02em;color:#f0f2f1}
-.fc-home .fc-home-proof-bottom p{max-width:31ch;font-size:.94rem;line-height:1.55;margin:0 0 12px;color:#d8dfe3}
-.fc-home .fc-home-proof-bottom span{color:#aab6bf}
-.fc-home .fc-home-hero a:focus-visible,.fc-home .nav a:focus-visible{outline:3px solid #fff;outline-offset:4px}
-@media(max-width:960px){.fc-home .fc-home-grid{grid-template-columns:1fr}.fc-home .fc-home-proof{min-height:0;gap:24px}.fc-home .fc-home-proof-word{font-size:clamp(3rem,7vw,5rem)}}
-@media(max-width:700px){
-.fc-home .nav .brand{width:185px;max-width:70vw}
-.fc-home .nav .navin{padding:14px 0;gap:12px;min-height:0}
-.fc-home .nav .links{border-top-color:#52606a}
-.fc-home .nav .links a{min-height:44px;font-size:.85rem}
-.fc-home .nav .btn.dark{min-height:44px}
-.fc-home .fc-home-hero{padding:48px 0 65px}
-.fc-home .fc-home-kicker{margin-bottom:25px}
-.fc-home .fc-home-copy h1{font-size:clamp(3.28rem,12vw,5.7rem);line-height:.92;overflow-wrap:normal}
-.fc-home .fc-home-dek{margin-top:26px}
-.fc-home .fc-home-actions{align-items:stretch;gap:19px}
-.fc-home .fc-home-primary{justify-content:space-between}
-.fc-home .fc-home-proof-word{font-size:clamp(3.1rem,11vw,5rem)}
+.fc-home .wf2-section:not(.wf2-participate){background:var(--fc-paper)}
+.fc-home .fc-cover{background:var(--fc-paper);color:var(--fc-ink);border-bottom:1px solid var(--fc-ink);position:relative;overflow:clip}
+.fc-home .fc-cover .wrap{width:min(1360px,calc(100% - clamp(36px,7vw,144px)))}
+.fc-home .fc-cover-edition{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0 17px;border-bottom:1px solid #808e96;font:600 .69rem/1.45 "IBM Plex Sans",Arial,sans-serif;letter-spacing:.085em;text-transform:uppercase;color:#48535d}
+.fc-home .fc-cover-layout{display:grid;grid-template-columns:minmax(0,1.62fr) minmax(315px,.83fr);gap:clamp(32px,5vw,80px);align-items:stretch;padding-top:clamp(45px,6vw,90px);padding-bottom:clamp(40px,5vw,72px)}
+.fc-home .fc-cover-lead{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.fc-home .fc-cover-label{display:flex;align-items:center;gap:12px;margin:0 0 clamp(27px,4.2vw,57px);font:600 .75rem/1.3 "IBM Plex Sans",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.fc-home .fc-cover-square{display:block;background:var(--fc-red);width:9px;height:9px;flex:0 0 9px}
+.fc-home .fc-cover h1{font:700 clamp(5rem,7.8vw,8.5rem)/.865 "Archivo Narrow","Arial Narrow",Impact,sans-serif;letter-spacing:-.042em;text-transform:uppercase;margin:0 0 clamp(34px,4.5vw,65px);width:100%;word-break:normal;overflow-wrap:normal}
+.fc-home .fc-cover h1>span{display:block;white-space:nowrap}
+.fc-home .fc-cover h1 .fc-cover-last{letter-spacing:-.055em}
+.fc-home .fc-cover-stop{color:var(--fc-red)}
+.fc-home .fc-cover-intro{border-top:2px solid var(--fc-ink);padding-top:23px;display:grid;grid-template-columns:minmax(160px,.8fr) minmax(0,1fr);gap:20px;align-items:start;width:100%}
+.fc-home .fc-cover-promise{font:600 clamp(1.45rem,2.1vw,2.05rem)/1.08 "Archivo Narrow","Arial Narrow",Arial,sans-serif;max-width:16ch;margin:0}
+.fc-home .fc-cover-dek{font:400 clamp(1rem,1.13vw,1.12rem)/1.58 "IBM Plex Sans",Arial,sans-serif;max-width:42ch;color:#414c55;margin:0}
+.fc-home .fc-cover-directory{margin-top:clamp(26px,3vw,46px);display:inline-flex;align-items:center;gap:clamp(30px,5vw,92px);border-bottom:2px solid var(--fc-red);padding:0 0 12px;color:var(--fc-ink);font:600 .92rem/1.3 "IBM Plex Sans",Arial,sans-serif;text-decoration:none;min-height:46px}
+.fc-home .fc-cover-directory:hover{color:#a32834}
+.fc-home .fc-cover-roster{background:var(--fc-ink);color:var(--fc-paper);padding:clamp(26px,2.75vw,44px);display:flex;flex-direction:column;align-self:stretch;min-width:0}
+.fc-home .fc-roster-header{display:flex;justify-content:space-between;gap:15px;padding-bottom:19px;border-bottom:2px solid #7b858e;font:600 .7rem/1.4 "IBM Plex Sans",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#f0f2f1}
+.fc-home .fc-roster-story{padding:clamp(23px,3vw,40px) 0 clamp(22px,2.5vw,32px);border-bottom:1px solid #53606b}
+.fc-home .fc-roster-location{font:600 .68rem/1.5 "IBM Plex Sans",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#d87f89;margin:0 0 13px}
+.fc-home .fc-roster-story h2{font:700 clamp(2.35rem,3.2vw,3.45rem)/.95 "Archivo Narrow","Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:-.027em;margin:0 0 11px}
+.fc-home .fc-roster-owner{font:400 .9rem/1.5 "IBM Plex Sans",Arial,sans-serif;margin:0 0 17px;color:#d4dce1}
+.fc-home .fc-roster-story a{display:inline-flex;align-items:center;gap:20px;min-height:44px;border-bottom:1px solid #aab4bb;color:#fff;text-decoration:none;font:600 .84rem/1.35 "IBM Plex Sans",Arial,sans-serif}
+.fc-home .fc-roster-story a:hover{border-color:#f0f2f1}
+.fc-home .fc-roster-status{margin:auto 0 0;padding-top:26px;font:400 .77rem/1.55 "IBM Plex Sans",Arial,sans-serif;color:#b6c0c8}
+.fc-home .fc-cover-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px 0 23px;border-top:1px solid #8d989f;color:#4d5961;font:600 .68rem/1.4 "IBM Plex Sans",Arial,sans-serif;text-transform:uppercase;letter-spacing:.115em}
+@media(max-width:1150px){
+ .fc-home .fc-cover-layout{grid-template-columns:minmax(0,1.25fr) minmax(295px,.85fr);gap:32px}
+ .fc-home .fc-cover h1{font-size:clamp(4.2rem,7.4vw,6.4rem)}
+ .fc-home .fc-cover-intro{grid-template-columns:1fr}
+ .fc-home .fc-cover-promise{max-width:none}
 }
-@media(max-width:360px){.fc-home .fc-home-copy h1{font-size:clamp(2.8rem,11vw,3.5rem)}.fc-home .fc-home-primary{width:100%}}
+@media(max-width:940px){
+ .fc-home .fc-cover-layout{display:block;padding-top:48px}
+ .fc-home .fc-cover-lead{padding-bottom:52px}
+ .fc-home .fc-cover h1{font-size:clamp(4.3rem,10vw,7rem);margin-bottom:38px}
+ .fc-home .fc-cover-intro{grid-template-columns:minmax(180px,.65fr) 1fr}
+ .fc-home .fc-cover-roster{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:16px;padding:28px}
+ .fc-home .fc-roster-header,.fc-home .fc-roster-status{grid-column:1/-1}
+ .fc-home .fc-roster-story{padding:14px 0 22px}
+ .fc-home .fc-roster-story h2{font-size:clamp(2.4rem,5vw,3.2rem)}
+ .fc-home .fc-roster-status{padding-top:0}
+ .fc-home .fc-cover-edition span:last-child{display:none}
+ .fc-home .nav .links{border-top-color:#3f4851}
+}
+@media(max-width:699px){
+ .fc-home .navin{gap:9px 12px;padding-top:13px;padding-bottom:9px}
+ .fc-home .nav .brand{width:178px}
+ .fc-home .nav .links{width:100%;order:3;gap:4px 19px;padding-top:7px}
+ .fc-home .nav .links a{min-height:44px;font-size:.8rem}
+ .fc-home .nav .btn.dark{min-height:40px}
+ .fc-home .fc-cover .wrap{width:calc(100% - 38px)}
+ .fc-home .fc-cover-edition{padding:13px 0;display:block;font-size:.62rem}
+ .fc-home .fc-cover-edition span:nth-child(2){display:none}
+ .fc-home .fc-cover-layout{padding-top:44px;padding-bottom:34px}
+ .fc-home .fc-cover-label{margin-bottom:24px}
+ .fc-home .fc-cover h1{font-size:clamp(3rem,12.4vw,4.43rem);line-height:.9;margin-bottom:32px}
+ .fc-home .fc-cover-intro{grid-template-columns:1fr;gap:15px;padding-top:18px}
+ .fc-home .fc-cover-promise{font-size:1.68rem}
+ .fc-home .fc-cover-dek{font-size:1rem;line-height:1.6}
+ .fc-home .fc-cover-directory{margin-top:25px}
+ .fc-home .fc-cover-lead{padding-bottom:45px}
+ .fc-home .fc-cover-roster{display:block;padding:24px}
+ .fc-home .fc-roster-story{padding:22px 0 23px}
+ .fc-home .fc-roster-story h2{font-size:2.8rem}
+ .fc-home .fc-roster-status{padding-top:21px}
+ .fc-home .fc-cover-foot{display:block;line-height:1.7}
+ .fc-home .fc-cover-foot span{display:block}
+}
+@media(max-width:360px){
+ .fc-home .fc-cover .wrap{width:calc(100% - 30px)}
+ .fc-home .fc-cover h1{font-size:clamp(2.58rem,11.8vw,3.06rem)}
+ .fc-home .fc-cover-label{font-size:.69rem}
+ .fc-home .fc-cover-roster{padding:21px}
+ .fc-home .nav .brand{width:155px}
+}
+@media(prefers-reduced-motion:reduce){.fc-home .fc-cover *{animation:none!important;transition:none!important}}
