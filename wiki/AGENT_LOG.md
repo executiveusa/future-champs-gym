@@ -188,3 +188,15 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Rollback: Close this PR; if merged, revert only its four added/updated files.
 - Next action: Obtain independent review on exact PR head; merge only if clean.
 - Beads updated: No.
+
+
+### ENTRY / EXIT — 2026-11-06 — ChatGPT / GPT-6
+- Mode: Brownfield; PR #26, full-site publication redesign only.
+- Intent: Consolidate anti-slop design sources and build one real-owner-first editorial cover after intro.
+- Evidence inspected: AGENTS, ICMR, project state, existing brand docs, Taste/Extractor-related skills, 15 supplied design references, current HTML/CSS, gym source register.
+- Changes: root `designrules.md`, AGENTS entry point, home hero HTML, scoped home CSS, visual review file.
+- Checks: 16/16 GitHub source assertions passed; local simplified cover rendered with no document overflow at 320/390/768/1440 using fallback fonts.
+- Remaining gates: exact branch browser visual/keyboard QA, real font loading, independent critique, gym-owner spellings/rights, owner approval.
+- Release: **READY FOR PREVIEW**; no merge, no deploy; current Coming Soon page on main unchanged.
+- Rollback: revert review-branch hero/CSS/doc edits; no production rollback needed.
+- Next action: review cover composition, then redesign The Corner section one bounded slice at a time.
