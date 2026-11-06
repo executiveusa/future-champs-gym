@@ -21,6 +21,12 @@ copy_route blog
 cp blog/post.html dist-preview/blog/post.html
 copy_route about
 copy_route get-involved
+copy_route coaches
+copy_route our-story
+copy_route founder
+copy_route gyms-and-corners/summers-boxing-club
+copy_route gyms-and-corners/barrons-boxing
+copy_route gyms-and-corners/nomad-boxing-club
 
 echo "Preview bundle contains only public site files:"
 find dist-preview -maxdepth 3 -type f | sort
