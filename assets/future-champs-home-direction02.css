@@ -8,8 +8,6 @@
 .fc-home .nav .links{display:flex;align-items:center;gap:clamp(12px,1.9vw,26px);font:500 .83rem/1.3 "IBM Plex Sans",Arial,sans-serif}
 .fc-home .nav .links a{display:inline-flex;min-height:44px;align-items:center;border-bottom:1px solid transparent}
 .fc-home .nav .links a:hover,.fc-home .nav .links a:focus-visible{border-bottom-color:#f0f2f1}
-.fc-home .nav .btn.dark{background:transparent;border:1px solid #89939b;color:#f0f2f1;font:600 .79rem/1.2 "IBM Plex Sans",Arial,sans-serif;min-height:44px;white-space:nowrap}
-.fc-home .nav .btn.dark:hover{background:#f0f2f1;color:#111419}
 .fc-home .nav a:focus-visible,.fc-home .fc-cover a:focus-visible{outline:3px solid var(--fc-red);outline-offset:4px}
 .fc-home .wf2{background:var(--fc-paper);color:var(--fc-ink)}
 .fc-home .wf2 .serif{font-family:"Archivo Narrow","Arial Narrow",Arial,sans-serif;letter-spacing:-.025em}
@@ -64,7 +62,6 @@
  .fc-home .nav .brand{width:178px}
  .fc-home .nav .links{width:100%;order:3;gap:4px 19px;padding-top:7px}
  .fc-home .nav .links a{min-height:44px;font-size:.8rem}
- .fc-home .nav .btn.dark{min-height:40px}
  .fc-home .fc-cover .wrap{width:calc(100% - 38px)}
  .fc-home .fc-cover-edition{padding:13px 0;display:block;font-size:.62rem}
  .fc-home .fc-cover-edition span:nth-child(2){display:none}
