@@ -1,0 +1,70 @@
+# Future Champs — review gate and footage intake
+Date: 2026-11-06
+Branch: `design/gyms-editorial-partner-first-2026-10-13`
+PR: https://github.com/executiveusa/future-champs-gym/pull/26
+Mode: DRAFT / NO MERGE / NO DEPLOY
+
+## Deliverables and correction
+- Added three gym-specific routes; a coaches index; separate Our Story and Founder pages.
+- Added shared editorial styling, Round 8 mark, and changed the About route from an anonymous placeholder to an editorial gateway.
+- Updated directory, opening cover and preview build to include the three gyms.
+- Aligned Nomad's homepage link with other gyms: direct official outbound website link, not only an internal profile.
+- Added a dependency-free `scripts/check-editorial.py` and a read-only GitHub Actions workflow `.github/workflows/editorial-checks.yml`. Both are **unverified until CI completes**. The workflow builds local preview output but does not upload or deploy it.
+
+## Factual source evidence checked 2026-11-06
+| Page/person | Supporting source | Caution |
+| --- | --- | --- |
+| Bret Summers | https://snocosports.org/project/bret-summers/ and https://summersboxingclub.com/about-boxing-coach-brett-summers | Coach's public given-name spelling alternates Bret/Brett; do not infer medical outcomes from Parkinson's fitness claims |
+| Sylvester “Doc” Barron / Michelle Damrill | https://www.barronsboxingllc.com/ and https://www.barronsboxingllc.com/about-1 | These are public owner claims, not proof of documentary release or partnership |
+| Manny Dunham | https://nomadboxingclub.com/about/ | Nomad reports establishment in 2019, 27 years boxing; verify individual coach permissions |
+| Nomad coaching team | https://nomadboxingclub.com/about/ | Gato, Isaiah, Matt have published bios; Billie, David, George have names/photos but no full bios |
+| Glenn Singleton and Muhammad Ali | https://www.heraldguide.com/wp-content/uploads/2026/01/HeraldGuide_20260108.pdf | Published archival claims support the Ali relationship, not independently a family relationship to Glen Jr. The external spelling is **Glenn**; user refers to **Glen**. Founder needs to approve naming, family links, memorial tone and assets |
+
+## The Extractor R0–R4
+- **R0 inspect:** original About page had generic `Name`, `Short biography placeholder`, and arbitrary empty imagery; directory contained only two gyms.
+- **R1 remove:** generic About placeholders and unearned identity/film claims.
+- **R2 human specificity:** named coaches, owner credits, cities, primary gym websites and source disclosures.
+- **R3 compose:** one consistent documentary page family (ink + cool paper + signal red; Archivo Narrow / IBM Plex Sans; structured H1 / body / outbound links).
+- **R4 stop:** retained source references, contact/rights route, independent business status and permissions messaging rather than removing legally salient truth.
+
+## Source-level gates
+1. **Route integrity:** nine targeted routes in `scripts/check-editorial.py`; read-back confirms new files exist; actual CI pass **PENDING**.
+2. **Build:** `scripts/build-preview.sh` updated to include new routes; execution in a checkout **PENDING**.
+3. **Real browser renders:** 320, 390, 768, 1440 widths **PENDING**. Do not claim screenshots from branch. Browser connector was unavailable outside its originating browser context; no preview deploy authorized.
+4. **Keyboard / screen reader / contrast:** **PENDING** independent review. Static structure contains landmarks/skip links on new pages, not a replacement for testing.
+5. **External link integrity:** public source pages reviewed, but automated crawl and click-through in exact rendered build **PENDING**.
+6. **Visual taste and typography:** Direction 02 implemented; craft score **UNRATED** without exact rendering and independent reviewer.
+7. **Rights:** **BLOCKED** pending footage triage and subject/location/guardian permissions.
+8. **Founder approval:** **BLOCKED** pending Glen Jr.'s confirmation; no invented firsthand quote.
+9. **Production / merge:** **NOT AUTHORIZED**. Main and Coming Soon remain untouched. Current PR metadata `mergeable=false` (also requires reconciling diverged main holding page).
+
+## Original media inventory
+Read-only Google Drive folder: https://drive.google.com/drive/folders/1G3MUd8wWztOefuJex32AFnMe46IyJpR_
+Source listing contains **19 MP4 files**, but filenames and file metadata do not establish which gym, coach, location or minor is depicted. All **UNASSIGNED; NOT APPROVED FOR PUBLICATION**.
+
+| File | Gym/subject | Rights / editorial status |
+| --- | --- | --- |
+| `7e9334fa233135d3bcc115f01d3e93a5.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260913_052146_481.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_153741642.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_124302410.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260913_052218_615.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_101459339.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `FB_VID_447384573257519331.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_123038488.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260913_021749_700.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_155315753.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_124211984.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_155147366.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_123201506.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `cad195eb4a2d82e3e13035d4977ed7b5.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `watermark-2026-09-13-051702948.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_1424150842.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_1241142992.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `VID_20260912_1213031802.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+| `FB_VID_4213978428419504448.mp4` | UNIDENTIFIED | HOLD — visual review, owner/guardian approval |
+
+**Clip-by-clip acceptance checklist:** visual thumbnail/still, exact source file ID, film date, location, identities of everyone identifiable, original recording author, license/release, guardian consent if a minor is present, allowed context/crop, captions and alt text, editorial sign-off. Keep any uncertain clip offline.
+
+## Gate decision
+**READY FOR CONTINUED DRAFT REVIEW; NOT READY TO MERGE.** No production changes or deployment were performed under this gate. The owner must review actual mobile/desktop renders and approve story/subject rights. Revert PR branch changes to roll back; do not revert main.
