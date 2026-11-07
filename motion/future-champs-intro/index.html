@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FUTURE CHAMPS / Future Champs — HyperFrames identity sting</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#08090b}
+#future-champs-intro{position:relative;width:1920px;height:1080px;overflow:hidden;background:#08090b;color:#edf0ef;font-family:Arial,sans-serif}
+.plate{position:absolute;inset:0;background:radial-gradient(ellipse at 53% 51%,#191d22 0%,#090b0e 55%,#050607 100%)}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.17;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2' seed='8' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E")}
+.rule{position:absolute;left:108px;right:108px;height:2px;background:#636a71;transform-origin:left center}
+#upper{top:240px}#lower{bottom:238px}
+.strike{position:absolute;left:0;top:0;bottom:0;width:16px;background:#c32d3d;box-shadow:0 0 70px #b81e33aa}
+.wordmark{position:absolute;left:180px;right:180px;top:350px;height:400px;display:flex;align-items:center;justify-content:center}
+.wordmark img{width:100%;height:auto;max-height:425px;object-fit:contain;filter:drop-shadow(0 12px 32px #000);display:block}
+.small{position:absolute;left:145px;right:145px;display:flex;justify-content:space-between;align-items:center;font:700 25px/1.2 Arial,sans-serif;letter-spacing:.4em;color:#b9c0c5}
+#overline{top:143px}#underline{bottom:138px;font-size:21px;letter-spacing:.23em}
+#mark{display:block;transform-origin:50% 50%}
+#flash{position:absolute;inset:0;background:#be303d;opacity:0}
+</style></head>
+<body>
+<div id="future-champs-intro" data-composition-id="future-champs-intro" data-start="0" data-width="1920" data-height="1080">
+ <div id="plate" class="plate clip" data-start="0" data-duration="4" data-track-index="0"></div>
+ <div id="grain" class="grain clip" data-start="0" data-duration="4" data-track-index="1"></div>
+ <div id="upper" class="rule clip" data-start="0" data-duration="4" data-track-index="2"></div>
+ <div id="lower" class="rule clip" data-start="0" data-duration="4" data-track-index="3"></div>
+ <div id="overline" class="small clip" data-start="0" data-duration="4" data-track-index="4"><span>FUTURE CHAMPS</span><span>ORIGINAL FILMS</span></div>
+ <div id="mark" class="wordmark clip" data-start="0" data-duration="4" data-track-index="5">
+   <img src="assets/future-champs-wordmark.svg" alt="Future Champs custom Future Champs wordmark">
+ </div>
+ <div id="underline" class="small clip" data-start="0" data-duration="4" data-track-index="6"><span>THE FIGHT BEGINS BEFORE THE BELL.</span><span>EST. PACIFIC NORTHWEST</span></div>
+ <div id="strike" class="strike clip" data-start="0" data-duration="4" data-track-index="7"></div>
+ <div id="flash" class="clip" data-start="0" data-duration="4" data-track-index="8"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script>
+(function(){
+ gsap.set("#upper,#lower",{scaleX:0,opacity:.4});
+ gsap.set("#mark",{opacity:0,clipPath:"inset(0 100% 0 0)",scale:1.09});
+ gsap.set("#overline,#underline",{opacity:0,y:12});
+ gsap.set("#strike",{x:-50,opacity:0});
+ gsap.set("#flash",{opacity:0});
+ const tl = gsap.timeline({paused:true});
+ tl.to("#upper,#lower",{scaleX:1,duration:.48,ease:"power3.out"},.10)
+   .to("#strike",{opacity:1,x:115,duration:.1,ease:"none"},.3)
+   .to("#strike",{x:1700,duration:.57,ease:"power3.inOut"},.42)
+   .to("#strike",{opacity:0,duration:.18,ease:"power2.out"},1.12)
+   .to("#mark",{opacity:1,clipPath:"inset(0 0% 0 0)",scale:1,duration:.84,ease:"power3.out"},.47)
+   .to("#overline",{opacity:1,y:0,duration:.35,ease:"power2.out"},1.15)
+   .to("#underline",{opacity:1,y:0,duration:.4,ease:"power2.out"},1.32)
+   .to("#mark",{scale:1.025,duration:1.1,ease:"none"},2.05)
+   .to("#flash",{opacity:.82,duration:.085,ease:"none"},3.48)
+   .to("#flash",{opacity:0,duration:.12,ease:"none"},3.565)
+   .to("#future-champs-intro",{opacity:0,duration:.31,ease:"power3.in"},3.69);
+ window.__timelines=window.__timelines||{};
+ window.__timelines["future-champs-intro"]=tl;
+})();
+</script>
+</body></html>
