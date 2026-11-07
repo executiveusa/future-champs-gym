@@ -4,7 +4,7 @@
 
 - Source: `motion/round8-intro/index.html`
 - Exact mark: `assets/future-champs-round8.svg` (custom outlined vector typography; do not substitute a generic font)
-- Format: 1920×1080, 16:9, 4.0 seconds, silent
+- Canonical composition: 1920×1080, 16:9, 4.0 seconds, **silent source render**. The distributed video identity adds an original synthesized sonic logo from the review package.
 - Action: restraint → rope-rule tension → red sweeping strike → exact wordmark reveals → restrained final hard flash → edit point
 - Palette: ink `#08090b`, chalk white `#edf0ef`, signal red `#be303d`
 - Technical contract: HyperFrames `data-composition-id`, timed `class="clip"` nodes and paused GSAP timeline registered under the composition key. See https://hyperframes.app/docs/1-startup/2-quickstart
@@ -24,3 +24,6 @@ The film needs its own cut. Recommended direction: immediate boxing action for 1
 
 ## Gate
 An editor must reject/fix pacing, continuity, subject credit, aspect ratio, audio mix and readability. No public upload, merge or deploy until approved. Rollback: revert the motion files; legacy cut remains unreferenced by the production site.
+
+## Brand package v1
+Reusable widescreen/short/vertical export contract and Nomad cut approval gate are documented in [BRAND_STANDARD_V1.md](BRAND_STANDARD_V1.md). For reconstructing the image-only variants from the canonical HyperFrames master see [`export-variants.sh`](export-variants.sh); original synchronized sound and full editorial-cut Python/FFmpeg recipe are in the internal reviewer package. Do not commit source video or output binaries to the repository.
