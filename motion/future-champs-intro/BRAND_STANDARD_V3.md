@@ -1,0 +1,36 @@
+# FUTURE CHAMPS / Film Identity v3
+
+**Status: implemented review masters, owner creative approval pending.**
+Date: 2026-11-07. This document replaces the previous intro naming and sound direction. **Public-facing naming must be 'Future Champs' only.**
+
+## Canonical identity
+- Exact outlined wordmark source: `assets/future-champs-wordmark.svg`. Never substitute a font or display the former identity label.
+- 16:9 film opening: 3.4 seconds, 1280×720, H.264/AAC.
+- 16:9 social opening: 1.6 seconds, 1280×720, H.264/AAC.
+- 9:16 vertical opening: 2.5 seconds, 720×1280, H.264/AAC.
+- Original synthesized **single boxing bell** sound, replacing prior low impacts, swishes and melodic taps. This is a sound-design approximation, not a field recording of a physical bell. Original cue is reusable and royalty-free for our own production.
+- Intro is deliberately short and can be used as a 3.4-second film chapter divider or condensed social intro. It must never interrupt recognizable speech.
+
+## Five active review masters (Drive owner-controlled)
+| Name | Source ID | Duration | Sound |
+| --- | --- | --- | --- |
+| Future Champs / Main Film Intro | `1l78oqjdnk183ryefeiMdZM_7Ri6wItJ4` | 3.40s | Boxing bell |
+| Future Champs / Social Intro | `1PUexWaFtP2KlDjnKp4z7wRvjSMcshbtP` | 1.60s | Boxing bell |
+| Future Champs / Vertical Intro | `1qptl3rYPbopDOG7h6UqrEpsmSB-mU4lq` | 2.50s | Boxing bell |
+| Nomad / Documentary Audio Restored | `1nGz36LzPtbMayth_Ahf4PFWJgF72izJB` | 27.97s | Camera audio + bell, no extra score |
+| Nomad / Vertical Audio Restored | `1U27zVbPH414D8vGvIkT0ll7rxx_DjxuQ` | 19.70s | Camera audio + bell, no extra score |
+
+Folder: https://drive.google.com/drive/folders/1JwYnNXRZg0u1oVpjINoqzVBpgpwyeFqf
+
+## Source, QA and provenance
+The build uses original owner-supplied videos from the same previously registered Nomad archive. Native camera audio is reconstructed directly from those sources, not from the previous edited masters. Editing recipe (Python, FFmpeg and CairoSVG): https://drive.google.com/file/d/1sTQNuVAlqKRef6sOOeCLGuRVri9NY5eN/view ; exact wordmark SVG export: https://drive.google.com/file/d/12VhcNOryJfrQjzBC5HUGn_nOeziQ1Iig/view ; machine-readable technical QC and SHAs: https://drive.google.com/file/d/1AxaHOmBjFJLBj5wVvzy86an3xzbdcxyy/view.
+
+Technical checks completed locally: all five MP4s fully decoded, video H.264, audio AAC, 30 fps, faststart; no decoder errors; output loudness ceilings below -2 dBFS on both Nomad master exports; three bell intros peak below -9 dBFS. Final human listening review and real-device playback still required; don't claim they are artistically approved.
+
+## Demo and release
+`review/catalog.json` is the single versioned review index for the 5 live demo slots. `review/index.html` must have no old brand label. Previous Drive MP4s are retained but hidden from the index as rollback snapshots.
+
+No production merge, domain changes, Cloudflare public-video upload or public release from this correction.
+
+## Rollback
+Revert `review/catalog.json` and `review/index.html` to the prior commit and redeploy a preview. Earlier Drive MP4s are preserved unmodified.
