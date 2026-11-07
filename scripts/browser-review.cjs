@@ -74,6 +74,19 @@ const screenshots = new Set([
           const iframeSrc = await page.locator("#screen iframe").getAttribute("src");
           if (!iframeSrc?.startsWith("https://drive.google.com/file/d/"))
             failures.push(route + " @" + viewport.width + ": missing real Drive playback embed");
+          const chapterCount = await page.locator("#chapter-list .chapter").count();
+          if (chapterCount !== 4)
+            failures.push(route + " @" + viewport.width + ": expected 4 original-source chapters, got " + chapterCount);
+          const originalSourceLinks = await page.locator("#chapter-list .chapter a").count();
+          if (originalSourceLinks !== 3)
+            failures.push(route + " @" + viewport.width + ": expected three untrimmed source links");
+          await page.locator("#note-copy").click();
+          if (!(await page.locator("#feedback").textContent()).includes("valid timecode"))
+            failures.push(route + " @" + viewport.width + ": missing invalid timecode guard");
+          await page.locator("#items .item").nth(7).click();
+          if (await page.locator("#chapter-list .chapter").count())
+            failures.push(route + " @" + viewport.width + ": source clip incorrectly shows compilation chapters");
+          await page.locator("#items .item").nth(1).click();
           await page.locator("#reset").click();
           if (await page.locator("#screen iframe").count())
             failures.push(route + " @" + viewport.width + ": stop left player active");
