@@ -59,17 +59,17 @@ const screenshots = new Set([
         if (stats.h1 !== 1 || !stats.main || !stats.title)
           failures.push(route + " @" + viewport.width + ": invalid page semantics " + JSON.stringify(stats));
         if (route === "/review/") {
-          await page.waitForSelector("#items .item:nth-child(5)", {timeout: 5000});
+          await page.waitForSelector("#items .item:nth-child(16)", {timeout: 5000});
           const catalog = await page.evaluate(() => ({
             count: document.querySelectorAll("#items .item").length,
             source: document.querySelector("#source")?.getAttribute("href") || "",
             selection: document.querySelector("#title")?.textContent || ""
           }));
-          if (catalog.count !== 5 || !catalog.source.startsWith("https://drive.google.com/file/d/"))
+          if (catalog.count !== 16 || !catalog.source.startsWith("https://drive.google.com/file/d/"))
             failures.push(route + " @" + viewport.width + ": review catalog mismatch " + JSON.stringify(catalog));
           await page.locator("#items .item").nth(1).click();
           const selected = await page.locator("#title").textContent();
-          if (!selected.includes("Mobile Story"))
+          if (!selected.includes("FULL PLAY"))
             failures.push(route + " @" + viewport.width + ": selecting second cut failed");
           const iframeSrc = await page.locator("#screen iframe").getAttribute("src");
           if (!iframeSrc?.startsWith("https://drive.google.com/file/d/"))
