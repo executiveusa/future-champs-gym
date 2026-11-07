@@ -7,7 +7,7 @@ Applies to: the full documentary/publication site on PR #26. Does NOT replace th
 - **Outcome:** A first-time visitor identifies Future Champs as an independent boxing publication within five seconds and reaches a gym's own website within two actions.
 - **Audience:** Beginning fighters and families; gym owners and coaches; local boxing audiences and prospective members.
 - **Owner of the story:** The gym and the person being documented. Future Champs receives editorial recognition, not their customers' payments or leads.
-- **Evidence:** Existing source, verified public gym site, original Round 8 wordmark, approved first-party interview media only.
+- **Evidence:** Existing source, verified public gym site, original Future Champs wordmark, approved first-party interview media only.
 - **Constraints:** No invented interviews, partnerships, fighters, quotes, attendance, approvals, footage attribution, or owner biographies. Never collect sensitive youth data in public UI.
 - **Commercial return:** Refer visitors to partner/featured gyms; establish an ethical repeatable media/property showcase that can attract additional independent gyms.
 - **Release gate:** This file and its first-screen implementation stay on review PR #26. No merge, no deploy, no assumption that drafted interviews are published.
@@ -21,11 +21,11 @@ Applies to: the full documentary/publication site on PR #26. Does NOT replace th
 
 **Collins / taste test:** One organizing idea; typography and composition that can be recognized after branding is removed; local specificity; extreme reduction; an unmistakable authorial point of view. This is a quality bar, not permission to copy another brand's layout.
 
-**Protection list:** Round 8 SVG; site is a boxing *media* publication; gyms keep their names/URLs/intake; Glenn controls editorial approval; minors and sensitive details remain rights-gated; the Coming Soon page is production's current holding mode.
+**Protection list:** Future Champs SVG; site is a boxing *media* publication; gyms keep their names/URLs/intake; Glenn controls editorial approval; minors and sensitive details remain rights-gated; the Coming Soon page is production's current holding mode.
 
 ## 2. Precedence when sources conflict
 1. User/Glenn approvals, `AGENTS.md`, `ICMR.yaml`, editorial rights, truthful claims.
-2. This project's locked direction, actual Round 8 logo, typography tokens below, accessibility, performance, real gym destinations.
+2. This project's locked direction, actual Future Champs wordmark, typography tokens below, accessibility, performance, real gym destinations.
 3. The Extractor reduction pass; `pauli-Uncodixfy` negative patterns; verified media ownership.
 4. Context-specific recommendations from Taste Skill, Impeccable, Emil, cognitive clarity and layout systems.
 5. Visual examples and motion libraries are **references only**. No automatic dependency, typeface, color, stock image, CSS framework, or ready-made animation adoption.
@@ -33,7 +33,7 @@ Applies to: the full documentary/publication site on PR #26. Does NOT replace th
 When two sources disagree, prefer the minimum change that improves the reader's real task, then document the tradeoff. Do not take React/Tailwind, spring effects, floating nav, bento, cream, serif, gradients, or infinite scroll as requirements because a skill uses them in an example.
 
 ## 3. Visual identity — locked for first-screen design review
-- **Wordmark:** `assets/future-champs-round8.svg`. Never redraw it with a font, distort its aspect, or compete with it using a second invented logo.
+- **Wordmark:** `assets/future-champs-wordmark.svg`. Never redraw it with a font, distort its aspect, or compete with it using a second invented logo.
 - **Display:** Archivo Narrow 700, athletic/editorial rather than sports-logo imitation. Use at headlines, gym titles, editorial cover lines.
 - **Text/UI:** IBM Plex Sans 400/500/600. Use for captions, credits, navigation, descriptive copy and links.
 - **No fallback to Georgia as an intentional style.** Plain system sans only when web fonts are unavailable; no reliance on proprietary font files.
@@ -47,7 +47,7 @@ When two sources disagree, prefer the minimum change that improves the reader's 
 | --- | --- | --- | --- |
 | Max editorial width | 1360px | fluid | fluid |
 | Gutter | 48–72px | 28–36px | 18–22px |
-| Primary masthead | Round 8 logo 225–265px | 200px | 158–190px |
+| Primary masthead | Future Champs wordmark 225–265px | 200px | 158–190px |
 | Cover H1 | clamp(74px, 8.1vw, 132px), 700, line-height .86–.91 | clamp(58px, 9vw, 84px) | clamp(49px, 12.4vw, 71px) |
 | Feature title | clamp(28px, 3.1vw, 44px), line-height .95–1.05 | 31–38px | 28–34px |
 | Cover dek | 17–19px, line-height 1.52 | 17px | 16px |
@@ -58,7 +58,7 @@ When two sources disagree, prefer the minimum change that improves the reader's 
 **Grid:** 12 conceptual columns. Lead statement occupies ~7–8; editorial gym index ~4–5. On mobile collapse to a single intentional reading order: logo > context > headline > explanation > gym names/owner credit > official links. Let headline break naturally at 320 CSS px; no clipped words or horizontal scrolling.
 
 ## 4. First screen / editorial contract
-1. **Header:** original Round 8 wordmark plus restrained, discoverable primary navigation. Skip-link, focus and touch behavior intact.
+1. **Header:** original Future Champs wordmark plus restrained, discoverable primary navigation. Skip-link, focus and touch behavior intact.
 2. **Section identification:** `THE CORNER / INDEPENDENT BOXING` as a kicker, not an invented issue number, season, award or headline byline.
 3. **One H1:** “Every fighter starts somewhere.” This is the editorial premise.
 4. **One specific dek:** actual gym owners and beginning fighters in Northwest Washington; clear that recorded interviews are *in preparation*, not published.
@@ -127,7 +127,7 @@ The linked works are evidence and review references, not dependencies:
 This file is an **original project-specific synthesis**. No third-party skill or component is installed, copied or vendored. Original licenses and author notices must be reviewed before any future implementation import. Linked reference websites are not licensed design assets.
 
 ## 10. Review gauntlet — stop on any critical fail
-- **Identity (0–10):** looks like Future Champs with Round 8, typography, distinct editorial voice. No template feeling.
+- **Identity (0–10):** looks like Future Champs with Future Champs wordmark, typography, distinct editorial voice. No template feeling.
 - **Truth (pass/fail):** all named gyms, owners, URLs and interview claims backed by real sources; no fabricated photo/content.
 - **Reader journey (pass/fail):** visitor finds both official gym destinations in <=2 actions; no disabled pseudo-action.
 - **Craft (0–10):** intentional proportions, hierarchy, contrast, editing, alignment and optical typography.
@@ -139,3 +139,18 @@ This file is an **original project-specific synthesis**. No third-party skill or
 
 ## 11. Delivery and reversibility
 Keep changes scoped to the homepage first-screen block and its separate CSS, and this rules file. Do not touch the existing intro code, film assets, unapproved media or the live Coming Soon page. The directory and remaining publication sections remain independently staged. Rollback = revert the first-screen HTML/CSS commits on PR #26; production unaffected. No merge/deploy until human approval and independent review.
+
+
+## 14. StageShow audit integration — 2026-11-07 (design method, not new runtime)
+
+**Audited source:** [benjitaylor/skills/stageshow](https://github.com/benjitaylor/skills/tree/main/stageshow) at commit `299140fafd08df55a9c234e610c3f64af3f45531`. Full source evaluation, implementation slices and acceptance gates: [`03_BRAND/STAGESHOW_AUDIT_AND_DESIGN_UPGRADE_2026-11-07.md`](03_BRAND/STAGESHOW_AUDIT_AND_DESIGN_UPGRADE_2026-11-07.md).
+
+**Apply:** one focal subject and action; real evidence and words rather than filler; framed content at the actual display width; a re-composed phone layout instead of scaled desktop UI; poster-first motion and meaningful 3–5 beat interaction stories **only for a separately labeled UI illustration**. Check actual 390px/1440px frames, states and independent review. In a grid, one hero film takes priority and neighboring items contrast by purpose, not identical boxed cards.
+
+**Never confuse media with a simulated product demo.** The public boxing site and Review Room must present actual footage; StageShow's synthetic cursor and demo scene are illustrations, not proof of video playback, filming, editing, user submission or approval.
+
+**Canonical brand:** show **FUTURE CHAMPS** only with the true outlined `assets/future-champs-wordmark.svg`. The owner has retired prior identity wording and specified a boxing-bell sound at the **start** of branded films. All full source footage stays available; do not make motion timing a reason to trim good boxing action.
+
+**No kit added:** Stageshow is a React/TypeScript/Vite illustration system, not needed by this static editorial frontend. No asset/code copy; no dependency. For a justified future UI-only motion experiment, pin reviewed upstream commit and preserve MIT notice; third-party app marks are outside its general MIT license grant.
+
+**Next visual gate:** 390px and 1440px Review Room player/chapters/clip notes must be visually checked and independently critiqued while real owner-authorized playback (including audio) is tested separately. Preview is not production. Preserve current Vercel/Drive architecture and no-merge PR #26.
