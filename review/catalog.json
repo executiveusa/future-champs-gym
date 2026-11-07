@@ -14,7 +14,34 @@
       "version": "v4",
       "status": "REVIEW",
       "driveId": "11fUyc2zXkJo8kAfQcCnaVXFBdQnMXL2q",
-      "summary": "Future Champs boxing bell and identity first, then three complete source clips in sequence without trimming: training (46.6s), fight night (21.1s), ringside (86.1s). Original camera audio maintained."
+      "summary": "Future Champs boxing bell and identity first, then three complete source clips in sequence without trimming: training (46.6s), fight night (21.1s), ringside (86.1s). Original camera audio maintained.",
+      "chapters": [
+        {
+          "startSeconds": 0,
+          "label": "Future Champs • Bell intro",
+          "note": "Signature intro precedes all footage; verify the bell and cut.",
+          "sourceDriveId": null
+        },
+        {
+          "startSeconds": 3.417,
+          "label": "Training • Full source",
+          "note": "Complete 46.56-second original; watch for moments worth retaining.",
+          "sourceDriveId": "1SVi1Q6f2Gt3I6wfEOTnm238-78RpVzXB"
+        },
+        {
+          "startSeconds": 49.973,
+          "label": "Fight night • Full source",
+          "note": "Complete 21.13-second original; note action beats.",
+          "sourceDriveId": "1z5XiH-uS2AQ2dTC1-VEaN3HRXK1kxhZr"
+        },
+        {
+          "startSeconds": 71.104,
+          "label": "Ringside • Full source",
+          "note": "Complete 86.13-second original; note atmosphere and continuity.",
+          "sourceDriveId": "1hya_zgXCmQr7WfYo2e10LaQ1K3Ko2FfL"
+        }
+      ],
+      "reviewPolicy": "No shortening without an owner-selected keep/trim decision. Timestamps are offsets in the edited full-play file; use Drive player scrubber for seeks."
     },
     {
       "id": "nomad-full-portrait-v4",
@@ -25,7 +52,34 @@
       "version": "v4",
       "status": "REVIEW",
       "driveId": "1MD89uaR6oycyh6fOR-OOxDeOgGNl6MRG",
-      "summary": "The Future Champs portrait intro comes first, followed by the same three complete source videos. Video is fit without cropping action; no excerpts omitted."
+      "summary": "The Future Champs portrait intro comes first, followed by the same three complete source videos. Video is fit without cropping action; no excerpts omitted.",
+      "chapters": [
+        {
+          "startSeconds": 0,
+          "label": "Future Champs • Bell intro",
+          "note": "Signature intro precedes all footage; verify the bell and cut.",
+          "sourceDriveId": null
+        },
+        {
+          "startSeconds": 2.517,
+          "label": "Training • Full source",
+          "note": "Complete 46.56-second original; watch for moments worth retaining.",
+          "sourceDriveId": "1SVi1Q6f2Gt3I6wfEOTnm238-78RpVzXB"
+        },
+        {
+          "startSeconds": 49.073,
+          "label": "Fight night • Full source",
+          "note": "Complete 21.13-second original; note action beats.",
+          "sourceDriveId": "1z5XiH-uS2AQ2dTC1-VEaN3HRXK1kxhZr"
+        },
+        {
+          "startSeconds": 70.204,
+          "label": "Ringside • Full source",
+          "note": "Complete 86.13-second original; note atmosphere and continuity.",
+          "sourceDriveId": "1hya_zgXCmQr7WfYo2e10LaQ1K3Ko2FfL"
+        }
+      ],
+      "reviewPolicy": "No shortening without an owner-selected keep/trim decision. Timestamps are offsets in the edited full-play file; use Drive player scrubber for seeks."
     },
     {
       "id": "nomad-film-v3",
@@ -181,5 +235,11 @@
       "driveId": "1cm8VMk2VZwS0iFLSIlaJrciZT1JZW8Rr",
       "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
     }
-  ]
+  ],
+  "reviewProcess": {
+    "mode": "owner-timecode-notes",
+    "feedbackPersistence": "clipboard-only; nothing is stored on the server",
+    "rights": "owner has affirmed footage rights; reviewers still verify individuals and sound",
+    "nextGate": "Owner chooses keep/trim moments, then make an approved editorial cut; full-play v4 remains immutable"
+  }
 }
