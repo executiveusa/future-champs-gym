@@ -80,3 +80,22 @@ Source listing contains **19 MP4 files**, but filenames and file metadata do not
 - **External live links / sources**: not counted as audited by static regex checks. Validate in a real browser before release.
 - **Rights & founder gate**: unchanged, BLOCKED pending clearances. None of 19 archived MP4s assigned without viewing and source proof.
 - **Production**: no merge, no deployment, no preview service created.
+
+
+## Follow-up — Actual screenshot review and mobile correction, 2026-11-06
+Commit evaluated: `89874b7c7e95bc5782172d6684b879d6e273838d`.
+GitHub workflow: https://github.com/executiveusa/future-champs-gym/actions/runs/42322614904
+Visual evidence: GitHub Actions artifact `future-champs-browser-evidence` (artifact ID `13554150116`), with 390px and 1440px captures of Coaches, Our Story, Founder, Gym Directory and Nomad.
+
+**Verified:**
+- Read actual screenshots from previous green run `42316934184` and current run `42322614904`.
+- 13 routes × 4 viewport widths = 52 visual-smoke checks. Current run completed successfully with **zero reported failures**.
+- Static/editorial checks and local preview build both successful.
+- Mobile gym-directory header reduced from seven to five routes, using consistent editorial navigation.
+- Promoted official gym links ahead of internal profiles for Summers and Barron's; Nomad already used the official gym as primary action.
+- Increased mobile body and footnote readability; secondary links and directory navigation have >=44px minimum interaction height.
+- Original hero and gym page types remain intact; no content, family or footage approvals inferred.
+
+**Visual critique:** Magazine hierarchy and charcoal / cool-white palette render consistently. Mobile directory remains intentionally long-form; photographs, individual coach interviews and documentary media have not been invented or backfilled from stock content. Screen captures do NOT prove consent or a working user-submission flow. Visual inspection by the builder is **not independent review**.
+
+**Remaining stop conditions:** independent design/accessibility reviewer, verified identity and rights for 19 archived MP4s (including minors), Glen Singleton Jr.'s approval of family history and Muhammad Ali lineage wording, external-link freshness before publication, explicit human release authorization, and reconciliation against the live Coming Soon branch. No merge/deploy was performed.
