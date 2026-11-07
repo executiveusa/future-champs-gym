@@ -60,3 +60,33 @@ The summaries intentionally describe broad visual categories rather than guessed
 - **Next necessary proof:** ask Glen / Nomad which if any of the 19 source clips are Nomad; request original shoot metadata and release approvals. Once verified, extract a 20–30s internal-only edit and submit for owner review. Keep the original source unchanged.
 
 Approval remains gated. PR #26 stays DRAFT / NO MERGE / NO DEPLOY.
+
+
+## D. Owner-identified Nomad source set — 2026-11-06
+The project owner provided **nine Google Drive source links** and said, "this is from nomad." These exact IDs were read back against the existing Google Drive `BOXING VIDEOS GLEN` folder. **Association status: OWNER-ATTRIBUTED TO NOMAD; independent location/person/rights verification still open.** This supersedes the earlier statement of zero *positively visually identified* files for these nine items only, without implying scene or subject verification.
+
+| File | Bytes | Status |
+| --- | ---: | --- |
+| `7e9334fa233135d3bcc115f01d3e93a5.mp4` | 73,822,912 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `FB_VID_4213978428419504448.mp4` | 5,926,033 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `cad195eb4a2d82e3e13035d4977ed7b5.mp4` | 31,262,873 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `VID_20260912_123201506.mp4` | 74,630,379 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `VID_20260912_101459339.mp4` | 189,843,784 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `VID_20260912_153741642.mp4` | 53,818,969 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `VID_20260913_021749_700.mp4` | 99,125,080 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `VID_20260913_052146_481.mp4` | 65,766,232 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+| `VID_20260913_052218_615.mp4` | 33,342,684 | OWNER-ATTRIBUTED, NOT YET PUBLICATION-CLEARED |
+
+Total: **627,538,946 bytes (627.5 decimal MB, 598.5 MiB)**.
+
+Do not check public Google Drive download links or temporary signed source URLs into GitHub. Original source IDs are already in the private Google Drive folder. Unchanged originals stay there until a verified owner-controlled archive is approved.
+
+### Publish gate and production distinction
+- `claimed_org=nomad`; `association_evidence=owner_message_2026-11-06`; `identity_verified=false`; `venue_verified=false`; `publication_rights=unverified`; `guardian_release=unverified`; `publish=false`.
+- Mark separate candidate ranges only after timestamped scene review; flag minors and unsourced background music. No face recognition.
+- Make one **internal-only** 20–30s montage proof of concept (not yet authorized for public screening), preserve all original files, keep cuts and credits tracked.
+- Deliver via portable video manifest: `id, title, posterUrl, playbackUrl, captionsUrl, aspectRatio, durationSeconds, rightsStatus`. Publish only `approved` items.
+- Existing Montage staging plugin is authenticated at its boundary but owner binding and token are not configured, so it cannot presently accept a project; reuse it after authorized owner configuration, otherwise edit locally via FFmpeg with the same manifest.
+- Mobile deliverables: 16:9 editorial cut, optional 9:16 short, H.264/AAC, poster, captions, controls, no autoplay with sound, `preload=none` and user-initiated play.
+- Storage: original Google Drive (or private R2 once approved); Cloudflare R2 Standard is the free-first object store, with separately generated renditions; Cloudflare Stream is the managed paid HLS/DASH option. Both are separate from site hosting.
+- **No merge, deploy, upload, public embed or content publication at this stage.**
