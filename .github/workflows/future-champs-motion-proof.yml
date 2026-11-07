@@ -1,0 +1,47 @@
+name: Future Champs motion source verification
+on:
+  push:
+    branches:
+      - design/gyms-editorial-partner-first-2026-10-13
+    paths:
+      - 'motion/future-champs-intro/**'
+      - 'assets/future-champs-wordmark.svg'
+      - '.github/workflows/future-champs-motion-proof.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  brand-motion:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Stage exact Future Champs wordmark
+        run: |
+          test -s assets/future-champs-wordmark.svg
+          mkdir -p motion/future-champs-intro/assets
+          cp assets/future-champs-wordmark.svg motion/future-champs-intro/assets/future-champs-wordmark.svg
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+      - name: Lint HyperFrames composition
+        working-directory: motion/future-champs-intro
+        run: npx --yes hyperframes@0.9.19 lint
+      - name: Render brand animation source (silent)
+        working-directory: motion/future-champs-intro
+        run: npx --yes hyperframes@0.9.19 render --output future-champs-identity-visual.mp4
+      - name: Verify MP4 visual source
+        working-directory: motion/future-champs-intro
+        run: ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 future-champs-identity-visual.mp4
+      - name: Save visual render
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: future-champs-motion-source-review
+          path: motion/future-champs-intro/future-champs-identity-visual.mp4
+          if-no-files-found: warn
+          retention-days: 14
