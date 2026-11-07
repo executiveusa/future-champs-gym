@@ -23,7 +23,7 @@
         track.src = data.captionsUrl; video.append(track);
       }
       button.hidden = false;
-      setStatus("Tap to play · approximately 17 seconds.");
+      setStatus("Tap to play · approximately 21 seconds.");
       button.addEventListener("click", async () => {
         button.hidden = true;
         video.hidden = false;
