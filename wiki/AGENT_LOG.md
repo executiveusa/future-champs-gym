@@ -200,3 +200,21 @@ Every agent must append one entry on arrival and one exit note before leaving. N
 - Release: **READY FOR PREVIEW**; no merge, no deploy; current Coming Soon page on main unchanged.
 - Rollback: revert review-branch hero/CSS/doc edits; no production rollback needed.
 - Next action: review cover composition, then redesign The Corner section one bounded slice at a time.
+
+
+### ENTRY — 2026-11-07T17:01:00Z — ChatGPT / GPT-6
+- Intent: Audit benjitaylor StageShow skill and upgrade Future Champs existing design plan in PR #26.
+- Mode: Brownfield source/design audit; no runtime/build/deployment edits.
+- Target: Publication, Watch, Review Room, and branded video editorial rules.
+- Constraints: Actual documentary media only; owner-controlled Drive, existing static Vercel site, canonical Future Champs wordmark and bell-first intro; no youth claims/rights bypass; no merge.
+- Proof: Read upstream skill, license, notice, main reference files, film helper; pin upstream SHA; inspect existing designrules and governance; commit isolated documentation with rollback.
+
+### EXIT — 2026-11-07T17:01:00Z — ChatGPT / GPT-6
+- Work performed: Audited StageShow source as faux UI illustration methodology; accepted framing, reduction, compact layouts, story beats where relevant, and fresh-eye capture gates, rejected StageShow-as-video-editor and React runtime adoption.
+- Files changed: `03_BRAND/STAGESHOW_AUDIT_AND_DESIGN_UPGRADE_2026-11-07.md`, `designrules.md`, and this agent log.
+- Decisions: USE its quality and rehearsal method, PARK its runtime kit. Future Champs wordmark is `assets/future-champs-wordmark.svg`; prior branding removed from current designrules; full-source video and bell-first intro are preserved.
+- Tests/evidence: Upstream commit `299140fafd08df55a9c234e610c3f64af3f45531`, source/license documentation checked. GitHub file write/readback to be verified; no upstream executable tests or media playback claimed.
+- Risks/blockers: Existing agent/older documents still contain historical legacy identity; real mobile authenticated video playback and independent visual review remain pending; StageShow version metadata differs between SKILL.md and package.json.
+- Rollback: Revert design document, designrules addendum/brand wording, and this log update on the draft branch; do not modify production/main, source footage or Cloudflare.
+- Next action: Implement one mobile Review Room layout improvement on the draft branch only, then run 14×4 smoke/screenshots, independent review and signed-in mobile video/audio playback.
+- Beads updated: No runtime available; plan stored in existing GitHub PR rather than creating a duplicate issue.
