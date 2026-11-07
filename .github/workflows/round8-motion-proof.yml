@@ -26,6 +26,11 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
           test -x /usr/bin/ffmpeg
+      - name: Stage canonical Round 8 vector inside render root
+        run: |
+          mkdir -p motion/round8-intro/assets
+          cp assets/future-champs-round8.svg motion/round8-intro/assets/future-champs-round8.svg
+          cmp assets/future-champs-round8.svg motion/round8-intro/assets/future-champs-round8.svg
       - name: Lint HyperFrames composition
         working-directory: motion/round8-intro
         run: npx --yes hyperframes@0.9.19 lint
