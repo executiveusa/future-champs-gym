@@ -1,12 +1,12 @@
 {
-  "id": "nomad-ringside-v1",
-  "title": "Nomad Boxing Club — Ringside (working cut)",
+  "id": "nomad-work-to-ring-review-v2",
+  "title": "Nomad Boxing Club — The Work to the Ring (editorial preview)",
   "posterUrl": null,
   "playbackUrl": null,
   "captionsUrl": null,
   "aspectRatio": "16:9",
-  "durationSeconds": 21,
+  "durationSeconds": 34.63,
   "rightsStatus": "owner-confirmed",
   "publish": false,
-  "source": "Owner-confirmed Nomad source set; first review cut uses archival ring footage; no third-party broadcast material"
+  "source": "Owner-confirmed Nomad source footage; working edit uses boxing-training and ringside scenes and canonical Round 8 motion identity; public delivery pending reviewer approval"
 }
