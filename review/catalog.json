@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "project": "Future Champs",
+  "updated": "2026-11-07",
+  "access": "Google Drive owner-authenticated",
+  "status": "Internal creative review · not approved for publication",
+  "videos": [
+    {
+      "id": "nomad-film-v2",
+      "title": "Nomad / The Work to the Ring",
+      "kind": "Film edit",
+      "ratio": "16:9",
+      "duration": "00:35",
+      "version": "v2",
+      "status": "REVIEW",
+      "driveId": "1iOlq2Ufl4fA4Ec3vZvyfrEfYTjNJswjf",
+      "summary": "Revised documentary cut. Training to ringside. Owner-supplied footage."
+    },
+    {
+      "id": "nomad-vertical-v2",
+      "title": "Nomad / Mobile Story",
+      "kind": "Vertical edit",
+      "ratio": "9:16",
+      "duration": "00:21",
+      "version": "v2",
+      "status": "REVIEW",
+      "driveId": "1hCH8KpHQ3UZ-sz7XGumfhz3eSO3PDoBA",
+      "summary": "Portrait framing and faster sequence built for mobile."
+    },
+    {
+      "id": "round8-main-v1",
+      "title": "Round 08 / Main Film Opener",
+      "kind": "Brand identity",
+      "ratio": "16:9",
+      "duration": "00:04",
+      "version": "v1",
+      "status": "REVIEW",
+      "driveId": "1rI2WpLeavITRedhizrlyk2p10oF3EsL6",
+      "summary": "Custom outlined wordmark and original sonic cue."
+    },
+    {
+      "id": "round8-social-v1",
+      "title": "Round 08 / Fast Intro",
+      "kind": "Brand identity",
+      "ratio": "16:9",
+      "duration": "00:02",
+      "version": "v1",
+      "status": "REVIEW",
+      "driveId": "1kR20MoWRhpMHWOESPAnVWmDXarR_XQsZ",
+      "summary": "Short opening identity for social/video cuts."
+    },
+    {
+      "id": "round8-vertical-v1",
+      "title": "Round 08 / Vertical Identity",
+      "kind": "Brand identity",
+      "ratio": "9:16",
+      "duration": "00:03",
+      "version": "v1",
+      "status": "REVIEW",
+      "driveId": "1gqEJ9BGXpNeiLxm_XUvGzj0w6mK0LM7c",
+      "summary": "9:16 wordmark identity; not a stretched horizontal crop."
+    }
+  ]
+}
