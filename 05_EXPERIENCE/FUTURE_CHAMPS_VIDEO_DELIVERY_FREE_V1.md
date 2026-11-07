@@ -52,3 +52,23 @@ Delete only the dedicated empty R2 development bucket (requires verifying it con
 
 ## Ownership / next approval
 Cloudflare billing controls remain with the account owner. Human must approve identifiable footage and publication rights. Montage staging owner binding is not yet configured. Explicit approval required for public bucket access, uploads, hosted video publication and any deployment.
+
+
+## Implemented proof-of-concept, 2026-11-06
+Owner confirmed the Nomad clips' project usage rights in chat and instructed moving ahead. This replaces the earlier *owner rights not confirmed* assumption for the nine nominated source files; it does **not** independently establish every depicted person's identity or the provenance of background soundtrack.
+
+Produced local review artifact only (not in Git or Cloudflare):
+- `nomad-ringside-review-720p.mp4`, 20.96s, 1280×720, H.264/24fps, silent, 1,827,437 bytes.
+- Source edit decisions: `VID_20260912_153741642.mp4` at 00:05–00:11 and 00:14–00:19, `FB_VID_4213978428419504448.mp4` at 00:52–00:58. Short original title/end cards; no broadcast footage.
+- Poster `nomad-poster.jpg`; offline `preview.html`; SHA256 final MP4: `d9353bb2427b8d7c1173cf49039db4a0b94ab07a7db7d4838143fe33145268f8`.
+- Existing PR #26 page now has a responsive player, fetched JSON manifest and a manual-play gate. `assets/nomad-video.json` has `publish:false` and null URLs until delivery is proven. The actual MP4 is intentionally not in Git.
+- Playback source attaches only when an approved HTTPS URL is present and the viewer presses Play. No preload, autoplay, third-party embed, or live publication.
+
+### Upload handoff, no secret sharing
+1. Open the connected Cloudflare dashboard → R2 → `future-champs-media-dev`. Do not use unrelated buckets.
+2. Upload the 1.8 MB finished `nomad-ringside-review-720p.mp4` as `nomad/v1/roughcut-720.mp4` and `nomad-poster.jpg` as `nomad/v1/poster.jpg` into the *private* bucket.
+3. Verify both object sizes and content types: video/mp4 and image/jpeg. Compare the local MP4 SHA256 before upload.
+4. To make a web-playable URL, configure a **separately reviewed delivery hostname or access endpoint** that supports range reads; leave it inaccessible to the public until allowed. A private bucket object key alone is not a URL.
+5. When the real HTTPS video/poster URL and HTTP byte range behavior are verified, change the manifest `playbackUrl`/`posterUrl` and `rightsStatus:"approved"`/`publish:true` in a review branch, run Chromium, and verify actual iOS and Android playback before any public deploy. Do not expose Cloudflare tokens or signed URLs in source control.
+
+The connected Cloudflare management tools support bucket provisioning but have no secure binary handoff from this local file to the object-put API in this chat session. No upload can be claimed. Rollback: revert only player/manifest code and optionally delete the empty dedicated staging bucket after readback; original footage remains intact in Drive.
