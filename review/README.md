@@ -47,3 +47,16 @@ Owner instruction (2026-11-07): "the intro should lead the videos" and "let each
 - Originals remain untouched in Drive. The new exports are appended as versioned files in `FUTURE CHAMPS — Permanent Demo Masters`.
 - Site and demo stay on the protected preview branch. No merge, production deploy, or public video publication approved.
 - For a later polished documentary, first log timestamped selects **after watching the complete sources**. Do not silently shorten or omit footage again.
+
+## Source-preserving v4 selection gate (2026-11-07)
+
+The full-play landscape (157.248 s) and portrait (156.349 s) exports are independently probed locally. Their pipeline is an intact Future Champs **boxing-bell intro first**, then complete source media in this order: `cad195eb4a2d82e3e13035d4977ed7b5.mp4` 46.556 s, `VID_20260912_153741642.mp4` 21.133 s, and `FB_VID_4213978428419504448.mp4` 86.128 s. No source frame trimming was authored in `build_nomad_full_plays.py`; the videos are format-normalized/re-encoded (which may affect audio sound), not raw identical codec streams.
+
+This is **three** complete clips, not all nine originals. All nine owner-submitted sources appear as individual review catalog entries; the six other original clips remain out of the compilation.
+
+- `review/catalog.json` now includes four chapter landmarks for each full-play master, with exact cumulative offsets and direct original-file links.
+- `review/index.html` shows original-source links and a small **KEEP / TRIM / REVIEW** timecoded note form. Notes are **clipboard-only**; no backend is added and a successful copy is not a persistent submission.
+- With Google Drive's cross-origin iframe, seeking from a native web page is not reliable; seek manually in the embedded Google player using the chapter timestamp, or open the full original directly. No seek functionality is falsely advertised.
+- No further excerpts should be cut until the owner selects keep/trim moments. Independent editorial approval and authenticated mobile playback are still gates.
+
+**Rollback:** revert the chapter fields and Review Room controls on this draft branch; full-play v4 masters and Google Drive originals are unaffected.
