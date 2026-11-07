@@ -71,7 +71,6 @@ const screenshots = new Set([
           const selected = await page.locator("#title").textContent();
           if (!selected.includes("Mobile Story"))
             failures.push(route + " @" + viewport.width + ": selecting second cut failed");
-          await page.locator("#play").click();
           const iframeSrc = await page.locator("#screen iframe").getAttribute("src");
           if (!iframeSrc?.startsWith("https://drive.google.com/file/d/"))
             failures.push(route + " @" + viewport.width + ": missing real Drive playback embed");
