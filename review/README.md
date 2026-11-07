@@ -29,3 +29,21 @@ Five MP4 masters are stored there. No base64 blobs, videos, or token URLs are co
 
 ## Rollback
 Revert `review/index.html`, `review/catalog.json`, and their `build-preview.sh` inclusion in the draft branch. Drive media files are preserved. Reverting changes does not alter Vercel `main` or the `future-champs-media-dev` R2 bucket.
+
+
+## v4 editorial decision: introduction must lead; source footage must play through
+Owner instruction (2026-11-07): "the intro should lead the videos" and "let each one play through because you cut good footage out."
+
+- Featured full-play screenings:
+  - `nomad-full-landscape-v4`: 157.248s, 960×540, 44,688,964 bytes, Drive ID `11fUyc2zXkJo8kAfQcCnaVXFBdQnMXL2q`.
+  - `nomad-full-portrait-v4`: 156.349s, 540×960, 66,302,836 bytes, Drive ID `1MD89uaR6oycyh6fOR-OOxDeOgGNl6MRG`.
+- Both exports start with the Future Champs wordmark + boxing bell; then each of these **complete** source files, **without source-range trimming or footage cropping**:
+  1. `cad195eb4a2d82e3e13035d4977ed7b5.mp4` (46.556s)
+  2. `VID_20260912_153741642.mp4` (21.133s)
+  3. `FB_VID_4213978428419504448.mp4` (86.128s)
+- Native proportions are preserved with padding when necessary, not cropped to fill. The camera audio follows each original, without the previous synthetic swoosh/impact overdub. Codec normalization: H.264 24fps video / AAC stereo 48kHz; MP4 faststart.
+- The other six owner-identified source files are now also listed with direct, uncut Drive preview links under `Uncut owner source`. This keeps footage reviewable without pretending the six were already included in a master compilation.
+- Existing shorter v3 edits stay in the review catalog as alternate *edited* cuts. They are no longer the featured defaults.
+- Originals remain untouched in Drive. The new exports are appended as versioned files in `FUTURE CHAMPS — Permanent Demo Masters`.
+- Site and demo stay on the protected preview branch. No merge, production deploy, or public video publication approved.
+- For a later polished documentary, first log timestamped selects **after watching the complete sources**. Do not silently shorten or omit footage again.
