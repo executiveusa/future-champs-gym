@@ -9,7 +9,7 @@ const routes = [
   "/", "/about/", "/coaches/", "/founder/", "/our-story/",
   "/gyms-and-corners/", "/gyms-and-corners/summers-boxing-club/",
   "/gyms-and-corners/barrons-boxing/", "/gyms-and-corners/nomad-boxing-club/",
-  "/watch/", "/fighters/", "/blog/", "/get-involved/",
+  "/watch/", "/fighters/", "/blog/", "/get-involved/", "/review/",
 ];
 const sizes = [
   {width: 320, height: 740}, {width: 390, height: 844},
@@ -17,7 +17,7 @@ const sizes = [
 ];
 const screenshots = new Set([
   "/coaches/", "/our-story/", "/founder/", "/gyms-and-corners/",
-  "/gyms-and-corners/nomad-boxing-club/",
+  "/gyms-and-corners/nomad-boxing-club/", "/review/",
 ]);
 (async () => {
   fs.mkdirSync(path.join(process.cwd(), "browser-evidence"), {recursive: true});
@@ -58,6 +58,27 @@ const screenshots = new Set([
         }
         if (stats.h1 !== 1 || !stats.main || !stats.title)
           failures.push(route + " @" + viewport.width + ": invalid page semantics " + JSON.stringify(stats));
+        if (route === "/review/") {
+          await page.waitForSelector("#items .item:nth-child(5)", {timeout: 5000});
+          const catalog = await page.evaluate(() => ({
+            count: document.querySelectorAll("#items .item").length,
+            source: document.querySelector("#source")?.getAttribute("href") || "",
+            selection: document.querySelector("#title")?.textContent || ""
+          }));
+          if (catalog.count !== 5 || !catalog.source.startsWith("https://drive.google.com/file/d/"))
+            failures.push(route + " @" + viewport.width + ": review catalog mismatch " + JSON.stringify(catalog));
+          await page.locator("#items .item").nth(1).click();
+          const selected = await page.locator("#title").textContent();
+          if (!selected.includes("Mobile Story"))
+            failures.push(route + " @" + viewport.width + ": selecting second cut failed");
+          await page.locator("#play").click();
+          const iframeSrc = await page.locator("#screen iframe").getAttribute("src");
+          if (!iframeSrc?.startsWith("https://drive.google.com/file/d/"))
+            failures.push(route + " @" + viewport.width + ": missing real Drive playback embed");
+          await page.locator("#reset").click();
+          if (await page.locator("#screen iframe").count())
+            failures.push(route + " @" + viewport.width + ": stop left player active");
+        }
         for (const err of localErrors) failures.push(route + " @" + viewport.width + ": " + err);
         results.push({route, width: viewport.width, ...stats, localErrors});
         if (screenshots.has(route) && (viewport.width === 390 || viewport.width === 1440)) {
