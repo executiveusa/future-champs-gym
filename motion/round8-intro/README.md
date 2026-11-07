@@ -17,7 +17,7 @@ npx hyperframes lint
 npx hyperframes preview
 npx hyperframes render --output round8-identity-v1.mp4
 ```
-The exact CLI render and linter have **not yet been executed** in this environment. Do not claim a finished HyperFrames render until tested.
+**Verified:** GitHub Actions executed HyperFrames 0.9.19 lint and rendered a 4.000-second 1920×1080 MP4 at 30fps successfully. See https://github.com/executiveusa/future-champs-gym/actions/runs/42332025695 (artifact `round8-hyperframes-review`). Initial failed lints were repaired before this passing proof. Production remains untouched.
 
 ## Editorial sequence following the sting
 The film needs its own cut. Recommended direction: immediate boxing action for 1.5–2 seconds, then sustained 3–5 second shots with a clear person/setting/meaning; no random food or crowd cutaways. Sound should be sourced from approved location recordings rather than generic cinematic drums. Tell the story with authentic ambient audio and human voices before overlay music.
