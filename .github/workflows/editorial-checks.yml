@@ -23,3 +23,35 @@ jobs:
           test -f dist-preview/coaches/index.html
           test -f dist-preview/founder/index.html
           test -f dist-preview/our-story/index.html
+
+  visual-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build local-only preview
+        run: bash scripts/build-preview.sh
+      - name: Install temporary browser tooling (CI only)
+        run: |
+          npm install --no-save --no-package-lock playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Start local preview server
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist-preview > /tmp/futurechamps-preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/futurechamps-preview.log
+          exit 1
+      - name: Check 13 pages at 4 widths and capture evidence
+        run: node scripts/browser-review.cjs
+      - name: Preserve review evidence even if visual checks fail
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: future-champs-browser-evidence
+          path: browser-evidence/
+          if-no-files-found: warn
+          retention-days: 14
