@@ -154,3 +154,11 @@ Keep changes scoped to the homepage first-screen block and its separate CSS, and
 **No kit added:** Stageshow is a React/TypeScript/Vite illustration system, not needed by this static editorial frontend. No asset/code copy; no dependency. For a justified future UI-only motion experiment, pin reviewed upstream commit and preserve MIT notice; third-party app marks are outside its general MIT license grant.
 
 **Next visual gate:** 390px and 1440px Review Room player/chapters/clip notes must be visually checked and independently critiqued while real owner-authorized playback (including audio) is tested separately. Preview is not production. Preserve current Vercel/Drive architecture and no-merge PR #26.
+
+## 15. Site-wide implementation priority — 2026-11-07
+
+The StageShow-informed design upgrade applies to the entire public publication, **not just the internal Review Room**. Exact audit and bounded code-slice priorities: [site-wide design plan](05_EXPERIENCE/SITEWIDE_STAGESHOW_DESIGN_PLAN_2026-11-07.md).
+
+**P0:** common Future Champs wordmark/header + homepage intro, purpose, proof and official gym links. **P1:** Watch release-ready film shell and the gym directory/profile family. **P2:** truthful Fighters empty state and a coherent The Corner editorial desk. **P3:** supporting editorial pages. Internal Review Room polishing follows public UX, not the reverse.
+
+The first patch must be a **single reversible wordmark/nav/phone-type slice**, with film playback untouched, test baseline and independent screenshot critique. Do not convert the project to StageShow/React or falsely claim filmed source integrity based on animated UI testing.
