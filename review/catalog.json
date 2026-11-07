@@ -3,8 +3,30 @@
   "project": "Future Champs",
   "updated": "2026-11-07",
   "access": "Google Drive owner-authenticated",
-  "status": "Internal audio-corrected v3 review · no public release",
+  "status": "Internal full-footage v4 review · source originals preserved",
   "videos": [
+    {
+      "id": "nomad-full-landscape-v4",
+      "title": "Nomad / FULL PLAY — Intro First",
+      "kind": "Full footage screening",
+      "ratio": "16:9",
+      "duration": "02:37",
+      "version": "v4",
+      "status": "REVIEW",
+      "driveId": "11fUyc2zXkJo8kAfQcCnaVXFBdQnMXL2q",
+      "summary": "Future Champs boxing bell and identity first, then three complete source clips in sequence without trimming: training (46.6s), fight night (21.1s), ringside (86.1s). Original camera audio maintained."
+    },
+    {
+      "id": "nomad-full-portrait-v4",
+      "title": "Nomad / FULL PLAY — Portrait",
+      "kind": "Full footage screening",
+      "ratio": "9:16",
+      "duration": "02:36",
+      "version": "v4",
+      "status": "REVIEW",
+      "driveId": "1MD89uaR6oycyh6fOR-OOxDeOgGNl6MRG",
+      "summary": "The Future Champs portrait intro comes first, followed by the same three complete source videos. Video is fit without cropping action; no excerpts omitted."
+    },
     {
       "id": "nomad-film-v3",
       "title": "Nomad / Training to Ringside — Audio Restored",
@@ -59,6 +81,105 @@
       "status": "REVIEW",
       "driveId": "1qptl3rYPbopDOG7h6UqrEpsmSB-mU4lq",
       "summary": "Purpose-built vertical Future Champs wordmark and bell."
+    },
+    {
+      "id": "nomad-original-01",
+      "title": "Nomad Source 01 — Original Full Clip",
+      "kind": "Uncut owner source",
+      "ratio": "9:16",
+      "duration": "01:47",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1FHJhrclLmViRw0FJNSXhBQWicEMig6LC",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-02",
+      "title": "Nomad Source 02 — Ringside Original",
+      "kind": "Uncut owner source",
+      "ratio": "9:16",
+      "duration": "01:26",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1hya_zgXCmQr7WfYo2e10LaQ1K3Ko2FfL",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-03",
+      "title": "Nomad Source 03 — Training Original",
+      "kind": "Uncut owner source",
+      "ratio": "9:16",
+      "duration": "00:47",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1SVi1Q6f2Gt3I6wfEOTnm238-78RpVzXB",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-04",
+      "title": "Nomad Source 04 — Original Full Clip",
+      "kind": "Uncut owner source",
+      "ratio": "16:9",
+      "duration": "FULL",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1feWTY9tPfxea4VPn5qznchtHlCkb8WJe",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-05",
+      "title": "Nomad Source 05 — Original Full Clip",
+      "kind": "Uncut owner source",
+      "ratio": "16:9",
+      "duration": "FULL",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1vFCoi3cxGxRiDYzfGG5pMjFCXX60a1Qi",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-06",
+      "title": "Nomad Source 06 — Fight Night Original",
+      "kind": "Uncut owner source",
+      "ratio": "16:9",
+      "duration": "00:21",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1z5XiH-uS2AQ2dTC1-VEaN3HRXK1kxhZr",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-07",
+      "title": "Nomad Source 07 — Original Full Clip",
+      "kind": "Uncut owner source",
+      "ratio": "9:16",
+      "duration": "FULL",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1oObpVZwFVYv501sP2d3sqVERikW1pO5e",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-08",
+      "title": "Nomad Source 08 — Original Full Clip",
+      "kind": "Uncut owner source",
+      "ratio": "9:16",
+      "duration": "FULL",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1JTeLW34YG4N5Et73lkS9wdRB75nTojcD",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
+    },
+    {
+      "id": "nomad-original-09",
+      "title": "Nomad Source 09 — Original Full Clip",
+      "kind": "Uncut owner source",
+      "ratio": "9:16",
+      "duration": "FULL",
+      "version": "original",
+      "status": "SOURCE",
+      "driveId": "1cm8VMk2VZwS0iFLSIlaJrciZT1JZW8Rr",
+      "summary": "Unedited source clip supplied for Nomad; no footage was removed. Access requires original Drive permissions."
     }
   ]
 }
