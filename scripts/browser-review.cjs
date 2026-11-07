@@ -45,8 +45,17 @@ const screenshots = new Set([
           main: !!document.querySelector("main"),
           fonts: document.fonts?.status || "unknown",
         }));
-        if (stats.scroll > stats.viewport + 1)
-          failures.push(route + " @" + viewport.width + ": horizontal overflow " + stats.scroll + " > " + stats.viewport);
+        if (stats.scroll > stats.viewport + 1) {
+          const offenders = await page.evaluate(() => [...document.querySelectorAll("body *")].filter(el => {
+            const r = el.getBoundingClientRect();
+            return r.width > 0 && r.right > document.documentElement.clientWidth + 1 && getComputedStyle(el).position !== "fixed";
+          }).slice(0, 12).map(el => ({
+            tag: el.tagName.toLowerCase(), cls: String(el.className).slice(0, 65),
+            text: (el.textContent || "").trim().slice(0, 45),
+            right: Math.round(el.getBoundingClientRect().right)
+          })));
+          failures.push(route + " @" + viewport.width + ": horizontal overflow " + stats.scroll + " > " + stats.viewport + "; offenders " + JSON.stringify(offenders));
+        }
         if (stats.h1 !== 1 || !stats.main || !stats.title)
           failures.push(route + " @" + viewport.width + ": invalid page semantics " + JSON.stringify(stats));
         for (const err of localErrors) failures.push(route + " @" + viewport.width + ": " + err);
