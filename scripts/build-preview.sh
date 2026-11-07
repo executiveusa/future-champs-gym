@@ -15,6 +15,8 @@ cp -R assets dist-preview/assets
 cp sitemap.xml dist-preview/sitemap.xml
 
 copy_route watch
+copy_route review
+cp review/catalog.json dist-preview/review/catalog.json
 copy_route fighters
 copy_route gyms-and-corners
 copy_route blog
